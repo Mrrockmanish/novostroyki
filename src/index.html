@@ -4,7 +4,7 @@
 <body class="relative">
 //= templates/header.html
 <section class="main-screen bg-cover bg-no-repeat bg-center" style="background-image:url(/img/screens/1.jpg);">
-    <div class="container h-full">
+    <div class="container px-4 h-full">
         <div class="flex h-full flex-col content-end justify-end lg:pb-10">
             <div class="flex">
                 <h1 class="bigger-title lg:text-white">
@@ -117,66 +117,138 @@
         </div>
     </div>
 </section>
-<div class="tags mt-6">
-    <div class="container">
-        <div class="overflow-x-scroll lg:overflow-x-visible pb-2">
-            <ul class="flex text-primary text-sm whitespace-no-wrap -mx-3">
-                <li class="px-3">
-                    Ипотека на 1-комн. в новостройке
-                </li>
-                <li class="px-3">
-                    Материнский капитал на 3-комн.
-                </li>
-                <li class="px-3">
-                    Студия до 1,5 млн. ₽
-                </li>
-                <li class="px-3">
-                    2-комн. до 3 млн. ₽
-                </li>
-                <li class="px-3">
-                    Коттедж в ипотеку
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<section class="new-building mt-6">
-    <div class="container">
+//= templates/tags.html
+<section class="new-buildings overflow-hidden mt-6">
+    <div class="container pl-4 lg:pr-4">
         <h2>
             Новостройки
         </h2>
-        <div class="overflow-x-scroll overflow-y-hidden lg:overflow-x-visible lg:overflow-y-visible border-b border-border">
-            <ul class="filter-categories">
-                <li class="active">
-                    <a href="">
-                        ЖК
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Квартиры
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Коттеджи
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Участки
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Коммерческие помещения
-                    </a>
-                </li>
-            </ul>
+        //= templates/buildings-tabs.html
+    </div>
+    <div class="buildings container pl-4 lg:pr-4">
+        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch -mx-2 lg:-mx-4 pb-4">
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+        </div>
+    </div>
+    <div class="flex mt-6 justify-center">
+        <a href="#" class="bg-primary rounded-sm hover:bg-border transition duration-300 text-white hover:text-dark select-none h-10 px-6">
+            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                Смотреть все новостройки
+            </span>
+        </a>
+    </div>
+</section>
+<section class="objects overflow-hidden mt-16">
+    <div class="container pl-4 lg:pr-4">
+        <h2>
+            Объекты
+        </h2>
+        //= templates/objects-tabs.html
+    </div>
+    <div class="buildings container pl-4 lg:pr-4">
+        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch -mx-2 lg:-mx-4 pb-4">
+            //= templates/object-example.html
+            //= templates/object-example.html
+            //= templates/object-example.html
+            //= templates/object-example.html
+            //= templates/object-example.html
+            //= templates/object-example.html
+            //= templates/object-example.html
+            //= templates/object-example.html
+        </div>
+    </div>
+    <div class="flex mt-6 justify-center">
+        <a href="#" class="bg-primary rounded-sm hover:bg-border transition duration-300 text-white hover:text-dark select-none h-10 px-6">
+            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                Все коттеджи
+            </span>
+        </a>
+    </div>
+</section>
+<section class="developers overflow-hidden mt-16">
+    <div class="container px-4">
+        <h2>
+            Надёжные застройщики Краснодара
+        </h2>
+    </div>
+    <div class="container pl-4 sm:pr-4">
+        <div class="developers-slider mt-4">
+            <div class="developer-item flex flex-col outline-none pr-4">
+                <div class="developer-item__logo flex justify-center items-center w-24 h-24 border border-border rounded-full bg-no-repeat bg-center"
+                style="background-image:url(img/developers/1.png);"></div>
+                <div class="mt-3 w-full font-semibold text-main text-base leading-none truncate" title="СпецСтройКубань">
+                    СпецСтройКубань
+                </div>
+                <div class="text-light text-sm leading-relaxed truncate mt-1" title="Краснодар, Краснодар, ул. Фадеева, 214">
+                    Краснодар, Краснодар, ул. Фадеева, 214
+                </div>
+                <div class="flex items-start flex-col mt-2">
+                    <div class="achievement bg-primary text-white text-xs tracking-tighter font-semibold h-6 flex justify-center items-center mt-1">
+                        ТОП застройщик
+                    </div>
+                    <div class="achievement bg-orange text-white text-xs tracking-tighter font-semibold h-6 flex justify-center items-center mt-1">
+                        Надёжный застройщик
+                    </div>
+                </div>
+            </div>
+            <div class="developer-item flex flex-col outline-none pr-4">
+                <div class="developer-item__logo flex justify-center items-center w-24 h-24 border border-border rounded-full bg-no-repeat bg-center"
+                     style="background-image:url(img/developers/2.png);"></div>
+                <div class="mt-3 w-full font-semibold text-main text-base leading-none truncate" title="СпецСтройКубань">
+                    Догма
+                </div>
+                <div class="text-light text-sm leading-relaxed truncate mt-1" title="Краснодар, Краснодар, ул. Фадеева, 214">
+                    Краснодар, Краснодар, ул. Фадеева, 214
+                </div>
+                <div class="flex items-start flex-col mt-2">
+                    <div class="achievement bg-primary text-white text-xs tracking-tighter font-semibold h-6 flex justify-center items-center mt-1">
+                        ТОП застройщик
+                    </div>
+                    <div class="achievement bg-orange text-white text-xs tracking-tighter font-semibold h-6 flex justify-center items-center mt-1">
+                        Надёжный застройщик
+                    </div>
+                </div>
+            </div>
+            <div class="developer-item flex flex-col outline-none pr-4">
+                <div class="developer-item__logo flex justify-center items-center w-24 h-24 border border-border rounded-full bg-no-repeat bg-center"
+                     style="background-image:url(img/developers/3.png);"></div>
+                <div class="mt-3 w-full font-semibold text-main text-base leading-none truncate" title="СпецСтройКубань">
+                    Алмакс
+                </div>
+                <div class="text-light text-sm leading-relaxed truncate mt-1" title="Краснодар, Краснодар, ул. Фадеева, 214">
+                    Краснодар, Краснодар, ул. Фадеева, 214
+                </div>
+                <div class="flex items-start flex-col mt-2">
+                    <div class="achievement bg-orange text-white text-xs tracking-tighter font-semibold h-6 flex justify-center items-center mt-1">
+                        Надёжный застройщик
+                    </div>
+                </div>
+            </div>
+            <div class="developer-item flex flex-col outline-none pr-4">
+                <div class="developer-item__logo flex justify-center items-center w-24 h-24 border border-border rounded-full bg-no-repeat bg-center"
+                     style="background-image:url(img/developers/4.png);"></div>
+                <div class="mt-3 w-full font-semibold text-main text-base leading-none truncate" title="СпецСтройКубань">
+                    ССК
+                </div>
+                <div class="text-light text-sm leading-relaxed truncate mt-1" title="Краснодар, Краснодар, ул. Фадеева, 214">
+                    Краснодар, Краснодар, ул. Фадеева, 214
+                </div>
+                <div class="flex items-start flex-col mt-2">
+                    <div class="achievement bg-orange text-white text-xs tracking-tighter font-semibold h-6 flex justify-center items-center mt-1">
+                        Надёжный застройщик
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
 
 
 //= templates/footer.html

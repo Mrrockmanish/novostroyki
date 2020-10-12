@@ -1,6 +1,7 @@
 module.exports = {
   theme: {
     screens: {
+      'xs': '375px',
       'sm': '576px',
       'md': '768px',
       'lg': '1024px',
@@ -9,6 +10,7 @@ module.exports = {
 
     fontSize: {
       xs: '0.75rem',
+      '13px': '0.8125rem',
       sm: '0.875rem',
       base: '1rem',
       lg: '1.125rem',
@@ -37,7 +39,11 @@ module.exports = {
       'inputs': '#F2F4F7',
       'icon': '#D0D6DA',
       'D6DCE0': '#D6DCE0',
-      'F2F4F7': '#F2F4F7'
+      'F2F4F7': '#F2F4F7',
+
+      'green-007': '#EFFAF5',
+      'orange-007': '#FFF5EA',
+      'purple-007': '#F4E8F9'
     },
 
     maxWidth: (theme, { breakpoints }) => ({
