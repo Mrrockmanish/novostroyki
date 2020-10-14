@@ -40,7 +40,7 @@ module.exports = {
       'icon': '#D0D6DA',
       'D6DCE0': '#D6DCE0',
       'F2F4F7': '#F2F4F7',
-
+      'light-bg': '#F8F9FB',
       'green-007': '#EFFAF5',
       'orange-007': '#FFF5EA',
       'purple-007': '#F4E8F9'
