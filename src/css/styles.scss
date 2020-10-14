@@ -183,8 +183,26 @@ a {
             font-size: s(14);
         }
 
+        a {
+            transition: .3s;
+        }
+
+        a:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: s(2);
+            background-color: transparent;
+            bottom: - s(1);
+        }
+
         &:hover {
             opacity: .75;
+
+            a:before {
+                background-color: #B9C9D4;
+            }
         }
 
         &.active {
@@ -192,13 +210,7 @@ a {
             pointer-events: none;
 
             a:before {
-                content: '';
-                position: absolute;
-                display: block;
-                width: 100%;
-                height: s(2);
                 background-color: $primary;
-                bottom: - s(1);
             }
         }
     }
@@ -210,6 +222,18 @@ a {
         position: relative;
     }
 
+}
+
+h1 {
+    font-weight: bold;
+    font-size: s(24);
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+
+    @media (min-width: 1024px) {
+        font-size: s(32);
+        line-height: 1.25;
+    }
 }
 
 h2 {
@@ -418,4 +442,79 @@ h3 {
     @media (min-width: 1266px) {
         background-position: right bottom;
     }
+}
+
+.breadcrumb {
+    li {
+        transition: .3s;
+        align-items: center;
+        &.active {
+            color: $light;
+            pointer-events: none;
+        }
+
+        &:hover {
+            opacity: .75;
+        }
+    }
+
+    li:not(:first-child) {
+        &::before {
+            content: '•';
+            display: inline-flex;
+            margin-left: s(6);
+            margin-right: s(6);
+            color: $light;
+        }
+    }
+}
+
+.pagination {
+    background: #E8EAEE;
+    color: black;
+
+    li:first-child, li:last-child {
+        width: s(48);
+        display: none;
+        
+        @media (min-width: 576px) {
+            display: flex;
+        }
+    }
+
+    li:nth-child(4) {
+        display: none;
+
+        @media (min-width: 576px) {
+            display: flex;
+        }
+    }
+
+    li {
+        width: s(32);
+        height: s(32);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+
+        &:hover {
+            opacity: .75;
+        }
+
+        &.active {
+            background-color: #fff;
+            border-radius: s(4);
+            pointer-events: none;
+        }
+    }
+
+    a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
