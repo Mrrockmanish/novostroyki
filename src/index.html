@@ -24,25 +24,25 @@
                     </div>
                     <div class="flex">
                         <label class="room-size flex-grow">
-                            <input type="radio" name="room-size" class="room-size__checkbox hidden" value="Студия">
+                            <input type="checkbox" name="room-studio" class="room-size__checkbox hidden" value="Студия">
                             <span class="room-size__custom flex items-center justify-center bg-inputs text-sm text-dark rounded-l h-12 px-4 flex-shrink-0">
                             Студия
                         </span>
                         </label>
                         <label class="room-size room-size__room-count flex flex-grow">
-                            <input type="radio" name="room-size" class="room-size__checkbox hidden" value="1">
+                            <input type="checkbox" name="room-1" class="room-size__checkbox hidden" value="1">
                             <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-sm text-dark border-border border-l h-12">
                             1
                         </span>
                         </label>
                         <label class="room-size room-size__room-count flex flex-grow">
-                            <input type="radio" name="room-size" class="room-size__checkbox hidden" value="2">
+                            <input type="checkbox" name="room-2" class="room-size__checkbox hidden" value="2">
                             <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-sm text-dark h-12 border-border border-l">
                             2
                         </span>
                         </label>
                         <label class="room-size room-size__room-count flex flex-grow">
-                            <input type="radio" name="room-size" class="room-size__checkbox hidden" value="3+">
+                            <input type="checkbox" name="room-3" class="room-size__checkbox hidden" value="3+">
                             <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-sm text-dark border-border border-l rounded-r h-12">
                             3+
                         </span>
@@ -223,7 +223,7 @@
                 </div>
             </div>
             <div class="flex w-full lg:w-4/12 px-4 mt-5 lg:mt-0">
-                <div class="border border-border w-full h-full rounded p-6">
+                <div class="border-t border-b sm:border border-border flex-grow h-full rounded py-8 px-4 sm:p-8 lg:p-4 xl:p-8">
                     <div class="text-xl font-bold">
                         Калькулятор ипотеки от <span class="text-green">6,5%</span>
                     </div>
@@ -277,7 +277,7 @@
                             </div>
                         </div>
                         <div class="form-group w-full mt-5">
-                            <button type="submit" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none w-full h-12 px-6">
+                            <button type="submit" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none w-full sm:w-auto lg:w-full h-12 px-6">
                                 <span class="flex justify-center items-center w-full h-full font-bold text-sm">Смотреть все новостройки</span>
                             </button>
                         </div>
@@ -512,58 +512,12 @@
         </div>
     </div>
 </section>
-<section class="section blog-items mt-16">
+<section class="blog-items mt-16">
     <div class="container px-4">
         <h2>
             Блог
         </h2>
-        <div class="flex flex-wrap -mx-4 mt-1">
-            <div class="blog-item w-full lg:w-1/3 px-4 mt-2">
-                <div class="blog-item__inner flex flex-col items-start w-full h-full border rounded border-border p-6">
-                    <div class="flex rounded border border-green items-center h-6 px-2">
-                        <span class="text-sm text-green">Событие</span>
-                    </div>
-                    <div class="mt-2 text-base font-bold w-full hover:text-primary">
-                        <p>
-                            <a href="#">Летние акции от ГК «Дарстрой» уже действуют: скидка 2 000 ₽ с каждого квадратного метра!</a>
-                        </p>
-                    </div>
-                    <div class="mt-auto text-light text-sm">
-                        29.06.2018
-                    </div>
-                </div>
-            </div>
-            <div class="blog-item w-full lg:w-1/3 px-4 mt-2">
-                <div class="blog-item__inner flex flex-col items-start w-full h-full border rounded border-border p-6">
-                    <div class="flex rounded border border-border items-center h-6 px-2">
-                        <span class="text-sm text-dark">Новость</span>
-                    </div>
-                    <div class="mt-2 text-base font-bold w-full hover:text-primary">
-                        <p>
-                            <a href="#">Жилой Комплекс первого класса "На Высоте" занял первое место!</a>
-                        </p>
-                    </div>
-                    <div class="mt-auto text-light text-sm">
-                        29.06.2018
-                    </div>
-                </div>
-            </div>
-            <div class="blog-item w-full lg:w-1/3 px-4 mt-2">
-                <div class="blog-item__inner flex flex-col items-start w-full h-full border rounded border-border p-6">
-                    <div class="flex rounded border border-border items-center h-6 px-2">
-                        <span class="text-sm text-dark">Новость</span>
-                    </div>
-                    <div class="mt-2 text-base font-bold w-full hover:text-primary">
-                        <p>
-                            <a href="#">Жилой Комплекс первого класса "На Высоте" занял первое место!</a>
-                        </p>
-                    </div>
-                    <div class="mt-auto text-light text-sm">
-                        29.06.2018
-                    </div>
-                </div>
-            </div>
-        </div>
+        //= templates/blog-items.html
     </div>
 </section>
 <section class="overflow-hidden mt-16">

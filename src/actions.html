@@ -3,7 +3,7 @@
 //= templates/head.html
 <body class="relative">
 //= templates/header.html
-
+//= templates/breadcrumb.html
 <section class="mt-6">
     <div class="container px-4">
         <h1>
@@ -120,63 +120,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-between -mx-2 xs:-mx-4 mt-6">
-            <div class="flex px-2 xs:px-4">
-                <a href="#" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
-                    <span class="flex justify-center items-center w-full h-full font-bold text-sm">
-                        Ещё
-                    </span>
-                </a>
-            </div>
-            <div class="flex px-2 xs:px-4">
-                <ul class="pagination flex rounded leading-none text-sm items-center py-2 px-4 sm:px-0">
-                    <li>
-                        <a href="#">
-                            <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.68446 6L6 0.745807L4.88391 0L0 6L4.88391 12L6 11.2542L1.68446 6Z" fill="#3B454E"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="#">
-                            1
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            2
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            3
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            4
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            ...
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            9
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.31554 6L0 0.745807L1.11609 0L6 6L1.11609 12L0 11.2542L4.31554 6Z" fill="#3B454E"/>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        //= templates/pagination-section.html
     </div>
 </section>
 <section class="overflow-hidden mt-16">
@@ -208,24 +152,6 @@
 </section>
 //= templates/services.html
 //= templates/viewed.html
-<section class="mt-16">
-    <div class="container px-4">
-        <h3>Найти квартиру в новостройке</h3>
-        <div class="leading-relaxed mt-3">
-            <p>
-                Novostroi-ki.ru – портал, объединяющий застройщиков Москвы, Крыма, Краснодара и Ростова-на-Дону. На портале представлены лучшие предложения рынка недвижимости в различном ценовом сегменте.
-            </p>
-            <p>
-                Сайт Novostroi-ki.ru абсолютно бесплатно поможет Вам подобрать за короткий срок идеальную квартиру по различным параметрам: городу, району, классу жилья, количеству комнат, сроку сдачи и даже материалу, используемому при строительстве. Выбрав необходимые критерии, Вы сможете
-                подробнее узнать о каждом застройщике и жилом комплексе из карточки объекта. Описание комплексов постоянно обновляется, в нем Вы всегда найдете актуальную информацию о вариантах покупки квартиры, акциях от застройщика, необходимую документацию, ежемесячные фотоотчеты со строительной
-                площадки, отзывы и многое другие.
-            </p>
-        </div>
-        <div>
-            <a href="#" class="text-sm font-semibold hover:opacity-75">Подробнее</a>
-        </div>
-    </div>
-</section>
 <div class="mt-12">
     //= templates/tags.html
 </div>

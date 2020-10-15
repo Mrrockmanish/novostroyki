@@ -50,7 +50,7 @@ body {
     }
 }
 
-input, button {
+input, button, select {
     outline: none!important;
 
     &:hover {
@@ -99,6 +99,7 @@ a {
 
 
 .room-size {
+    cursor: pointer;
     &__room-count {
         @media (min-width: 1266px) {
             width: s(50);
