@@ -17,6 +17,7 @@ $(document).ready(function () {
   // в подвале
   slideContent('.footer-category__caption', '.footer-category__menu', '.footer-category__chevron');
 
+  // слайдер застройщики
   $('.developers-slider').slick({
     slidesToScroll: 4,
     slidesToShow: 4,
@@ -64,7 +65,7 @@ $(document).ready(function () {
       }
     ]
   });
-
+  // слайдер услуги
   $('.services-slider').slick({
     slidesToScroll: 6,
     slidesToShow: 6,
@@ -114,8 +115,38 @@ $(document).ready(function () {
     ]
   });
 
+  // слайдер статистика
+  $('.statistic-slider').slick({
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    dots: false,
+    arrows: true,
+    prevArrow: '<div class="slick-prev slick-arrow">' +
+      '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+      '<path d="M2.82823 5.00002L5.65723 2.17202L4.24323 0.757019L0.000226974 5.00002L4.24323 9.24302L5.65723 7.82802L2.82823 5.00002Z" fill="black"/>\n' +
+      '</svg></div>',
+    nextArrow: '<div class="slick-next slick-arrow">' +
+      '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+      '<path d="M3.17177 5.00002L0.342773 2.17202L1.75677 0.757019L5.99977 5.00002L1.75677 9.24302L0.342773 7.82802L3.17177 5.00002Z" fill="black"/>\n' +
+      '</svg></div>'
+  });
 
+  // отображаем названия прикрепляемого фойла
+  const clipFile = (clipInputSelector, clipTextTagSelector, clipText) => {
+    $(clipInputSelector).on('change', function (){
+      let inputVal = $(this).val();
+      const sliceSymbPosition = inputVal.lastIndexOf('\\');
+      inputVal = inputVal.slice(sliceSymbPosition + 1);
+      console.log(inputVal);
 
+      if (inputVal !== '') {
+        $(this).closest('label').find(clipTextTagSelector).text(inputVal);
+      } else {
+        $(this).closest('label').find(clipTextTagSelector).text(clipText);
+      }
+    });
+  };
+  clipFile('.clip-file__input', '.clip-file__text', 'Прикрепить резюме');
 
 
 

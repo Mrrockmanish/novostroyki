@@ -519,3 +519,49 @@ h3 {
     }
 
 }
+
+.company-menu {
+    li {
+        &.active {
+            pointer-events: none;
+            color: $primary;
+        }
+    }
+}
+
+.history {
+    &__left-circle {
+        border: s(2) solid #D0D6DA;
+    }
+
+    &__left-line {
+        width: s(2);
+        background-color: #D0D6DA;
+    }
+
+    &__right {
+        width: s(562);
+    }
+
+    &:last-child {
+        .history__left-line {
+            display: none;
+        }
+    ;
+    }
+}
+
+.vacancy {
+    &__ul {
+        list-style-type: circle;
+    }
+    li {
+        margin-bottom: 1rem;
+    }
+}
+
+.clip-file {
+    &__text {
+        width: s(260);
+    }
+}

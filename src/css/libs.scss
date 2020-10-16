@@ -74,7 +74,7 @@ $root-font-size: 16;
   }
 }
 
-.services-slider, .developers-slider {
+.services-slider, .developers-slider, .statistic-slider {
   .slick-arrow {
     width: s(48);
     height: s(48);
@@ -98,6 +98,16 @@ $root-font-size: 16;
   }
   .slick-next::before {
     display: none;
+  }
+}
+
+.statistic-slider {
+  .slick-prev {
+    left: - s(15);
+  }
+
+  .slick-next {
+    right: - s(15);
   }
 }
 
