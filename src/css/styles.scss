@@ -97,6 +97,26 @@ a {
     }
 }
 
+.check-button:checked {
+    & + .check-button__custom {
+        background-color: $inputs;
+        border: s(1) solid rgba(0, 0, 0, 0.3);
+    }
+}
+
+.check-gray:checked {
+    & + .check-gray__custom::before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        background-color: $inputs;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 
 .room-size {
     cursor: pointer;
@@ -363,6 +383,16 @@ h3 {
             height: s(220);
         }
     }
+
+    &__left-img {
+        width: s(100);
+        height: s(100);
+
+        @media (min-width: 1024px) {
+            width: s(186);
+            height: s(220);
+        }
+    }
 }
 
 .viewed-item {
@@ -563,5 +593,49 @@ h3 {
 .clip-file {
     &__text {
         width: s(260);
+    }
+}
+
+.map-container {
+    iframe {
+        width: 100%;
+    }
+}
+
+.write-question {
+    height: s(100);
+    resize: none;
+}
+
+.first {
+    background-position: center;
+    height: s(120);
+
+    @media (min-width: 768px) {
+        height: s(250);
+    }
+
+    @media (min-width: 1024px) {
+        height: s(500);
+    }
+    
+    &__desc {
+        max-width: s(405);
+    }
+}
+
+.consult-block {
+    max-width: s(294);
+
+    &__avatar {
+        width: s(98);
+        height: s(98);
+    }
+}
+
+.how-to-send {
+    &__block {
+        max-width: s(192);
+        height: s(80);
     }
 }

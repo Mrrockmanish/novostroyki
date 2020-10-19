@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body class="relative">
+//= templates/header.html
+//= templates/breadcrumb.html
+<div class="container px-4">
+    <div class="flex flex-wrap justify-between -mx-4 mt-8">
+        //= templates/aside-menu2.html
+        <main class="w-full lg:w-8/12 px-4 mt-8">
+            <h1>
+                Индивидуальный подбор
+            </h1>
+            <div class="mt-5">
+                <p>
+                    Мы бесплатно подберём для вас предложения по выбранному вами фильтру и пришлём вам на почту. Обязательными для отправки только контактные поля.
+                </p>
+            </div>
+            <form action="" class="flex flex-wrap items-end -mx-2">
+                <div class="form-group flex flex-wrap w-full sm:w-1/2 xl:w-1/3 flex-col px-2 mt-5">
+                    <div class="flex w-full text-light text-sm leading-7">
+                        Комнаты
+                    </div>
+                    <div class="flex">
+                        <label class="room-size flex-grow">
+                            <input type="checkbox" name="type-all" class="room-size__checkbox hidden" value="Все">
+                            <span class="room-size__custom flex items-center justify-center bg-inputs text-xs xs:text-sm text-dark rounded-l h-12 flex-shrink-0">
+                                Студия
+                            </span>
+                        </label>
+                        <label class="room-size flex flex-grow">
+                            <input type="checkbox" name="type-second" class="room-size__checkbox hidden" value="Вторича">
+                            <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark border-border border-l h-12">
+                                1
+                            </span>
+                        </label>
+                        <label class="room-size flex flex-grow">
+                            <input type="checkbox" name="type-new" class="room-size__checkbox hidden" value="Новостройка">
+                            <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark h-12 border-border border-l">
+                                2
+                            </span>
+                        </label>
+                        <label class="room-size flex flex-grow">
+                            <input type="checkbox" name="type-cottage" class="room-size__checkbox hidden" value="Коттедж">
+                            <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark border-border border-l rounded-r h-12">
+                                3+
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group w-full sm:w-1/2 xl:w-1/3 px-2 mt-5">
+                    <label for="price" class="text-sm text-light">
+                        Цена
+                    </label>
+                    <div class="form-control w-full mt-1">
+                        <input type="text" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="price" placeholder="до 10 000 0000">
+                    </div>
+                </div>
+                <div class="form-group w-full sm:w-1/2 xl:w-1/3 px-2 mt-5">
+                    <label for="complete-time" class="text-sm text-light">
+                        Срок сдачи
+                    </label>
+                    <div class="form-control w-full mt-1">
+                        <select name="complete-time" class="w-full bg-inputs text-sm text-dark rounded placeholder-light px-4 h-12" id="complete-time">
+                            <option value="Любой срок">Любой срок</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group w-full sm:w-1/2 xl:w-1/3 px-2 mt-5">
+                    <label for="building-name" class="text-sm text-light">
+                        Название ЖК
+                    </label>
+                    <div class="form-control w-full mt-1">
+                        <input type="text" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="building-name" placeholder="Любой">
+                    </div>
+                </div>
+                <div class="form-group w-full sm:w-1/2 xl:w-1/3 px-2 mt-5">
+                    <label for="town" class="text-sm text-light">
+                        Район
+                    </label>
+                    <div class="form-control w-full mt-1">
+                        <input type="text" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="town" placeholder="Любой">
+                    </div>
+                </div>
+                <div class="form-group w-full sm:w-1/2 xl:w-1/3 px-2 mt-5">
+                    <label for="developer" class="text-sm text-light">
+                        Застройщик
+                    </label>
+                    <div class="form-control w-full mt-1">
+                        <select name="developer" class="w-full bg-inputs text-sm text-dark rounded placeholder-light px-4 h-12" id="developer">
+                            <option value="Любой застройщик">Любой застройщик</option>
+                            <option value="ССК">ССК</option>
+                            <option value="СтройинвестДевелопмент">СтройинвестДевелопмент</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-full px-2">
+                    <div class="flex flex-wrap items-center -mx-1">
+                        <div class="form-group px-1 mt-5">
+                            <label>
+                                <input name="mortgage" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Ипотека от 3.1%
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-5">
+                            <label>
+                                <input name="mat-capital" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Материнский капитал
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-5">
+                            <label>
+                                <input name="military-mortgage" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Военная ипотека
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-5">
+                            <label>
+                                <input name="credit" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Рассрочка
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-5">
+                            <label class="flex items-center">
+                                <input name="credit" type="checkbox" class="hidden check-gray">
+                                <span class="check-gray__custom inline-flex relative w-6 h-6 flex-shrink-0 rounded border border-border ml-1 mr-1"></span>
+                                <span class="inline-flex">C ремонтом</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full flex flex-wrap mt-8">
+                    <div class="form-group w-full md:w-1/3 lg:w-full xl:w-1/2 xl:w-1/3 px-2 mt-5">
+                        <label for="name" class="text-sm text-light">
+                            Как вас зовут?*
+                        </label>
+                        <div class="form-control w-full mt-1">
+                            <input name="name" type="text" class="w-full bg-white border border-border text-sm text-dark placeholder-light rounded px-4 h-12" id="name" placeholder="до 10 000 0000">
+                        </div>
+                    </div>
+                    <div class="form-group w-full md:w-1/3 lg:w-full xl:w-1/2 xl:w-1/3 px-2 mt-5">
+                        <label for="phone" class="text-sm text-light">
+                            Телефон
+                        </label>
+                        <div class="form-control w-full mt-1">
+                            <input type="tel" name="tel" class="w-full bg-white border border-border text-sm text-dark placeholder-light rounded px-4 h-12" id="phone" placeholder="+7 (___) ___ - __ - __">
+                        </div>
+                    </div>
+                    <div class="form-group w-full md:w-1/3 lg:w-full xl:w-1/2 xl:w-1/3 px-2 mt-5">
+                        <label for="individual-email" class="text-sm text-light">
+                            Электронная почта
+                        </label>
+                        <div class="form-control w-full mt-1">
+                            <input type="email" name="email" class="w-full bg-white border border-border text-sm text-dark placeholder-light rounded px-4 h-12" id="individual-email" placeholder="example@mail.ru">
+                        </div>
+                    </div>
+                    <div class="form-group text-light w-full md:w-7/12 px-2 mt-5">
+                        <div>Я согласен на <span class="text-main">обработку персональных данных</span></div>
+                        <div>* Обязательные поля</div>
+                    </div>
+                    <div class="form-group flex md:justify-end w-full md:w-5/12 px-2 mt-5">
+                        <button type="submit" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none w-full sm:w-auto  h-12 px-5">
+                            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                                Подобрать
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+</div>
+<section class="overflow-hidden mt-16">
+    <div class="container pl-4 lg:pr-4">
+        <h2>
+            Популяные ЖК
+        </h2>
+        //= templates/buildings-tabs.html
+    </div>
+    <div class="buildings container pl-4 lg:pr-4">
+        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch -mx-2 lg:-mx-4 pb-4">
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+        </div>
+    </div>
+    <div class="flex mt-6 justify-center">
+        <a href="#" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
+            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                Смотреть все новостройки
+            </span>
+        </a>
+    </div>
+</section>
+//= templates/services.html
+//= templates/viewed.html
+<div class="mt-12">
+    //= templates/tags.html
+</div>
+
+//= templates/footer.html
+//= templates/scripts.html
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body class="relative">
+//= templates/header.html
+//= templates/breadcrumb.html
+<div class="container px-4">
+    <div class="flex flex-wrap justify-between -mx-4 mt-8">
+        //= templates/aside-menu.html
+        <main class="w-full lg:w-8/12 px-4 mt-8">
+            <h1>
+                Контакты
+            </h1>
+            <div class="flex flex-wrap mt-5 -mx-4">
+                <div class="w-full xl:w-3/12 px-4">
+                    <div>Единый/Отдел продаж</div>
+                    <a href="tel:+78005113902" class="block font-medium text-base hover:opacity-75 mt-2">8 800 511-39-02</a>
+                </div>
+                <div class="w-full xl:w-5/12 px-4 mt-4 xl:mt-0">
+                    <div>Отдел рекламы и администрирования</div>
+                    <a href="tel:+78612139072" class="block font-medium text-base hover:opacity-75 mt-2">8 861 213-90-72</a>
+                </div>
+                <div class="w-full xl:w-4/12 px-4 mt-4 xl:mt-0">
+                    <div>Электронная почта</div>
+                    <a href="mailto:info@novostroi-ki.ru" class="block font-medium text-primary text-base hover:opacity-75 mt-2">info@novostroi-ki.ru</a>
+                </div>
+            </div>
+            <h2 class="mt-10">
+                Адрес
+            </h2>
+            <ul class="filter-categories overflow-x-auto lg:overflow-x-visible overflow-y-hidden">
+                <li class="active">
+                    <a href="#">
+                        Главный офис
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Филиал
+                    </a>
+                </li>
+            </ul>
+            <div class="mt-5">
+                Краснодар, ул. Митрофана Седина, д. 159, офис 510
+            </div>
+            <div class="map-container mt-5">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A76c2484171a96b0a46598daa6e9411a684e7788c32d3b2872b9684cd32a18654&amp;source=constructor" width="834" height="400" frameborder="0"></iframe>
+            </div>
+        </main>
+    </div>
+</div>
+<section class="overflow-hidden mt-16">
+    <div class="container pl-4 lg:pr-4">
+        <h2>
+            Популяные ЖК
+        </h2>
+        //= templates/buildings-tabs.html
+    </div>
+    <div class="buildings container pl-4 lg:pr-4">
+        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch -mx-2 lg:-mx-4 pb-4">
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+        </div>
+    </div>
+    <div class="flex mt-6 justify-center">
+        <a href="#" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
+            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                Смотреть все новостройки
+            </span>
+        </a>
+    </div>
+</section>
+//= templates/services.html
+//= templates/viewed.html
+<div class="mt-12">
+    //= templates/tags.html
+</div>
+
+//= templates/footer.html
+//= templates/scripts.html
+</body>
+
+</html>

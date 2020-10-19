@@ -61,7 +61,7 @@ module.exports = {
       full: '100%',
       80: '5rem',
       50: '3.125rem',
-
+      '52rem': '52rem',
       ...breakpoints(theme('screens')),
     }),
 
