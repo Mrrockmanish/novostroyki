@@ -639,3 +639,108 @@ h3 {
         height: s(80);
     }
 }
+
+.check-inline {
+    &__icon {
+        opacity: 0;
+    }
+
+    &:checked{
+        & + .check-inline__custom {
+            color: $primary;
+            .check-inline__icon {
+                opacity: 1;
+            }
+        }
+
+    }
+}
+
+.room-item {
+    &__img {
+        width: s(60);
+        height: s(60);
+    }
+
+    &__like {
+        width: s(28);
+        height: s(28);
+        transition: .3s;
+        cursor: pointer;
+        &:hover {
+            opacity: .75;
+        }
+        
+    }
+
+    &__img-wrap {
+        @media (min-width: 1024px) {
+            width: s(92);
+        }
+    }
+
+    &__type {
+        width: s(85);
+        @media (min-width: 1024px) {
+        }
+    }
+
+    &__floor {
+        width: s(85);
+        @media (min-width: 1024px) {
+        }
+    }
+    &__period {
+        @media (min-width: 1024px) {
+            width: s(120);
+        }
+    }
+    &__building-name {
+        @media (min-width: 1024px) {
+            width: s(220);
+        }
+    }
+    &__price {
+        @media (min-width: 1024px) {
+            width: s(125);
+        }
+    }
+    &__icons {
+        @media (min-width: 1024px) {
+            width: s(215);
+        }
+    }
+}
+
+.question {
+    &__content {
+        max-width: s(835);
+    }
+
+    &__chevron {
+        &.open {
+            transform: rotateZ(45deg);
+        }
+    }
+}
+
+.program {
+    &__text {
+        max-width: s(470);
+    }
+
+    &__img-wrap {
+        width: s(36);
+        height: s(36);
+        @media (min-width: 572px) {
+            width: s(72);
+            height: s(72);
+        }
+    }
+}
+
+.h {
+    &-56px {
+        height: s(56);
+    }
+}

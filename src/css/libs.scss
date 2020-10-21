@@ -1,10 +1,12 @@
 @import '../../node_modules/magnific-popup/dist/magnific-popup';
 @import '../../bower_components/arcticModal/arcticmodal/jquery.arcticmodal';
 
-//@import '../../node_modules/flickity/dist/flickity';
-
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+
+@import "../../node_modules/jquery-ui/themes/base/core";
+@import "../../node_modules/jquery-ui/themes/base/slider";
+@import "../../node_modules/jquery-ui/themes/base/theme";
 
 $black: #000000;
 $white: #FFFFFF;
@@ -120,4 +122,30 @@ $root-font-size: 16;
   .slick-next {
     right: 0;
   }
+}
+
+.ui-slider-handle {
+  border-radius: 50%;
+  border: s(2) solid $primary!important;
+  background-color: white!important;
+  width: 1rem!important;
+  height: 1rem!important;
+  top: 50%!important;
+  margin-top: -0.5rem!important;
+  margin-left: - s(3)!important;
+
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.ui-slider-horizontal {
+  height: s(2);
+  background-color: $primary;
+}
+
+
+.ui-widget.ui-widget-content {
+  border: none;
 }

@@ -8,13 +8,15 @@ $(document).ready(function () {
   const slideContent = (caption, content, chevron) => {
     $(caption).on('click', function (){
       $(this).find(chevron).toggleClass('open');
-      $(this).next(content).slideToggle();
+      $(this).next(content).fadeToggle();
     })
   };
   // в карточке застройщика
   slideContent('.building__rooms-caption', '.building__rooms-content', '.building__rooms-chevron');
   // в подвале
   slideContent('.footer-category__caption', '.footer-category__menu', '.footer-category__chevron');
+  // в частозадаваемых вопросах
+  slideContent('.question__caption', '.question__content', '.question__chevron');
 
   // слайдер застройщики
   $('.developers-slider').slick({
@@ -157,10 +159,18 @@ $(document).ready(function () {
   clipFileName('.clip-file__input', '.clip-file__text', 'Прикрепить резюме');
 
 
-
-
-
-
+  // кастомные ползунки
+  $('.range-slider').each(function (){
+    const el = $(this);
+    $(this).slider({
+      min: el.data('min'),
+      max: el.data('max'),
+      step: el.data('step'),
+      // slide: function (event, ui){
+      //   console.log(ui.value);
+      // }
+    });
+  });
 
 
 });

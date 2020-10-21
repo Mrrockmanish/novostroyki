@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body class="relative">
+//= templates/header.html
+//= templates/breadcrumb.html
+<section class="first bg-light bg-cover bg-center bg-no-repeat lg:pt-10 lg:pb-12" style="background-image:url(img/backgrounds/banks.jpg);">
+    <div class="container px-4 h-full">
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full flex flex-col lg:w-1/2 px-4">
+                <h1 class="hidden lg:block bigger-title">
+                    Банки
+                </h1>
+                <div class="hidden lg:block first__desc mt-4">
+                    Здесь представлены условия взятия ипотека у разных банков
+                </div>
+                <a href="#" class="text-primary hidden lg:flex items-center hover:opacity-75 mt-auto">
+                    <span class="mr-1">
+                        Более 20 программ
+                    </span>
+                    <span>
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 4.99998L1.49973 9.50024L-6.56019e-08 7.99945L3.00053 4.99998L-3.27824e-07 2.00051L1.49973 0.499713L6 4.99998Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="hidden lg:block w-full lg:w-1/2 px-4">
+                <div class="consult-block text-center bg-white rounded shadow-md lg:shadow-none lg:ml-auto p-6 mt-6 lg:mt-0">
+                    <div>
+                        Вас проконсультирует
+                    </div>
+                    <div class="consult-block__slider">
+                        <div class="consult-block__slide">
+                            <div class="consult-block__avatar rounded-full bg-no-repeat bg-center bg-cover bg-inputs mx-auto mt-3" style="background-image:url(img/backgrounds/consult-avatar.jpg);">
+
+                            </div>
+                            <div class="font-semibold text-lg mt-3">
+                                Наталья
+                            </div>
+                            <div>
+                                <a href="tel:+78612034542" class="text-primary hover:opacity-75">8 861 203-45-42</a>
+                            </div>
+                        </div>
+                        <div class="consult-block__slide">
+                            <div class="consult-block__avatar rounded-full bg-no-repeat bg-center bg-cover bg-inputs mx-auto mt-3" style="background-image:url(img/backgrounds/consult-avatar.jpg);">
+
+                            </div>
+                            <div class="font-semibold text-lg mt-3">
+                                Наталья
+                            </div>
+                            <div>
+                                <a href="tel:+78612034542" class="text-primary hover:opacity-75">8 861 203-45-42</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        Звоните по телефону или оставьте свой номер и я вам перезвоню
+                    </div>
+                    <form action="">
+                        <div class="form-group mt-4">
+                            <div class="form-control w-full mt-1">
+                                <input type="tel" name="tel" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" placeholder="+7 (___) ___ - __ - __">
+                            </div>
+                        </div>
+                        <button type="submit" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark w-full select-none h-12 px-6 mt-3">
+                            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                                Перезвоните мне
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<main class="container mt-16 px-4">
+    <h2>
+        Ипотечный калькулятор
+    </h2>
+    <div class="flex flex-wrap justify-between -mx-4">
+        <div class="w-full lg:w-4/12 px-4">
+            <form action="" class="flex flex-wrap -mx-2">
+                <div class="form-group w-full md:w-1/2 lg:w-full px-2 mt-5">
+                    <label class="text-light text-sm leading-7" for="building-price">
+                        Стоимость недвижимости
+                    </label>
+                    <div class="form-control">
+                        <input type="text" name="building-price" id="building-price" class="h-12 w-full p-4 text-dark placeholder-light bg-inputs rounded text-sm" placeholder="до 10 000 000 ₽">
+                        <div class="range-slider" data-min="300000" data-max="65000000" data-step="100000"></div>
+                    </div>
+                    <div class="flex text-dark text-xs justify-between mt-2">
+                        <div>300 000 ₽</div>
+                        <div>65 000 000 ₽</div>
+                    </div>
+                </div>
+                <div class="form-group w-full md:w-1/2 lg:w-full px-2 mt-5">
+                    <label class="text-light text-sm leading-7" for="first-price">
+                        Первоначальный взнос
+                    </label>
+                    <div class="form-control">
+                        <input type="text" name="building-price" id="first-price" class="h-12 w-full p-4 text-dark placeholder-light bg-inputs rounded text-sm" placeholder="2 000 000 ₽">
+                        <div class="range-slider" data-min="300000" data-max="65000000" data-step="100000"></div>
+                    </div>
+                    <div class="flex text-dark text-xs justify-between mt-2">
+                        <div>300 000 ₽</div>
+                        <div>65 000 000 ₽</div>
+                    </div>
+                </div>
+                <div class="form-group w-full md:w-1/2 lg:w-full px-2 mt-5">
+                    <label class="text-light text-sm leading-7" for="mortgage-period">
+                        На срок
+                    </label>
+                    <div class="form-control">
+                        <input type="text" name="building-price" id="mortgage-period" class="h-12 w-full p-4 text-dark placeholder-light bg-inputs rounded text-sm" placeholder="30 лет">
+                        <div class="range-slider" data-min="1" data-max="30" data-step="1"></div>
+                    </div>
+                    <div class="flex text-dark text-xs justify-between mt-2">
+                        <div>1 год</div>
+                        <div>30 лет</div>
+                    </div>
+                </div>
+                <div class="w-full mt-3 px-2">
+                    <div class="flex flex-wrap items-center -mx-1">
+                        <div class="form-group px-1 mt-5">
+                            <label>
+                                <input name="mortgage" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Ипотека от 3.1%
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-5">
+                            <label>
+                                <input name="mat-capital" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Материнский капитал
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-5">
+                            <label>
+                                <input name="military-mortgage" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Военная ипотека
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-5">
+                            <label>
+                                <input name="credit" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Рассрочка
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-builder-info flex items-center px-2 py-5">
+                    <a href="#" class="flex flex-shrink-0 rounded-full bg-no-repeat bg-cover bg-center hover-effect w-12 lg:w-16 h-12 lg:h-16 mr-3 lg:mr-4" style="background-image:url(img/backgrounds/nataly.jpg);"></a>
+                    <div class="flex flex-col">
+                        <a href="#" class="flex text-sm lg:text-xl font-semibold hover:opacity-75">
+                            Наталья
+                        </a>
+                        <div class="text-xs lg:text-sm text-second">
+                            Ипотечный брокер
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-2">
+                    <div class="flex items-start w-full h-full border border-border rounded p-4 xl:p-6">
+                        <div class="flex flex-shrink-0 w-10 sm:w-12 xl:w-16 h-10 sm:w-12 xl:h-16 mr-4">
+                            <svg class="w-full h-full" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 57.6C38.7895 57.6 45.301 54.9029 50.1019 50.1019C54.9029 45.301 57.6 38.7895 57.6 32C57.6 25.2105 54.9029 18.699 50.1019 13.8981C45.301 9.09714 38.7895 6.4 32 6.4C25.2105 6.4 18.699 9.09714 13.8981 13.8981C9.09714 18.699 6.4 25.2105 6.4 32C6.4 38.7895 9.09714 45.301 13.8981 50.1019C18.699 54.9029 25.2105 57.6 32 57.6ZM32 64C14.3264 64 0 49.6736 0 32C0 14.3264 14.3264 0 32 0C49.6736 0 64 14.3264 64 32C64 49.6736 49.6736 64 32 64ZM32 44.8C35.3948 44.8 38.6505 43.4514 41.051 41.051C43.4514 38.6505 44.8 35.3948 44.8 32C44.8 28.6052 43.4514 25.3495 41.051 22.949C38.6505 20.5486 35.3948 19.2 32 19.2C28.6052 19.2 25.3495 20.5486 22.949 22.949C20.5486 25.3495 19.2 28.6052 19.2 32C19.2 35.3948 20.5486 38.6505 22.949 41.051C25.3495 43.4514 28.6052 44.8 32 44.8ZM32 51.2C26.9078 51.2 22.0243 49.1772 18.4236 45.5765C14.8229 41.9758 12.8 37.0922 12.8 32C12.8 26.9078 14.8229 22.0243 18.4236 18.4236C22.0243 14.8229 26.9078 12.8 32 12.8C37.0922 12.8 41.9758 14.8229 45.5765 18.4236C49.1772 22.0243 51.2 26.9078 51.2 32C51.2 37.0922 49.1772 41.9758 45.5765 45.5765C41.9758 49.1772 37.0922 51.2 32 51.2Z" fill="#D0D6DA"/>
+                                <path d="M27.3745 36.4255C28.5748 37.6257 30.2026 38.3 31.9 38.3C33.5974 38.3 35.2252 37.6257 36.4255 36.4255C37.6257 35.2252 38.3 33.5974 38.3 31.9C38.3 30.2026 37.6257 28.5748 36.4255 27.3745C35.2252 26.1743 33.5974 25.5 31.9 25.5C30.2026 25.5 28.5748 26.1743 27.3745 27.3745C26.1743 28.5748 25.5 30.2026 25.5 31.9C25.5 33.5974 26.1743 35.2252 27.3745 36.4255Z" fill="#F02E2E"/>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col w-full leading-relaxed">
+                            <div>Подавая заявку в несколько банков, вы увеличиваете шанс на одобрение ипотеки</div>
+                            <div class="mt-2">
+                                <button class="border border-border hover:border-transparent rounded text-dark bg-white hover:text-white hover:bg-primary transition duration-300 h-12">
+                                    <span class="w-full h-full font-semibold text-sm px-6">
+                                        Узнать у нас почему
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="w-full lg:w-8/12 xl:w-7/12 px-4">
+            <div class="text-second mt-5">
+                Подходит 12 программ
+            </div>
+            <div class="-mt-2">
+                <div class="program rounded overflow-hidden w-full shadow-md mt-4">
+                    <div class="w-full pt-4 px-4 md:pt-8 md:px-8">
+                        <div class="flex justify-between w-full">
+                            <div class="program__text mr-2 sm:mr-4">
+                                <div class="text-light">
+                                    ВТБ
+                                </div>
+                                <div class="text-primary font-semibold leading-tight text-base sm:text-xl mt-2">
+                                    Ипотека «Рефинансирование»
+                                </div>
+                                <div class="mt-2">
+                                    Квартира в новостройке, квартира во вторичке, дом или коттедж, стройка/ремонт
+                                </div>
+                            </div>
+                            <div class="program__img-wrap flex-shrink-0">
+                                <img src="img/banks/1.png" alt="название банка" title="название банка">
+                            </div>
+                        </div>
+                        <div class="mortgage-props max-w-2xl whitespace-no-wrap py-6 border-t border-border mt-5">
+                            <div class="flex flex-wrap md:flex-no-wrap w-full justify-between -mx-2">
+                                <div class="w-1/2 sm:w-auto px-2">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Ставка
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        8,5%
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Срок до
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        30 лет
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Сумма кредита
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        12 340 000 ₽
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Платёж в месяц
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        37 808 ₽
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Сумма процентов
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        1 024 040 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex w-full">
+                        <div class="flex-grow border-t border-border pl-4 sm:pl-8 py-4">
+                            <a href="#" class="text-primary hover:opacity-75">Подробнее</a>
+                        </div>
+                        <button type="submit" class="bg-primary h-56px hover:bg-border transition duration-300 text-white hover:text-dark select-none px-6 ">
+                            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                                Отправить заявку
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="program rounded overflow-hidden w-full shadow-md mt-4">
+                    <div class="w-full pt-4 px-4 md:pt-8 md:px-8">
+                        <div class="flex justify-between w-full">
+                            <div class="program__text mr-2 sm:mr-4">
+                                <div class="text-light">
+                                    ВТБ
+                                </div>
+                                <div class="text-primary font-semibold leading-tight text-base sm:text-xl mt-2">
+                                    Ипотека «Рефинансирование»
+                                </div>
+                                <div class="mt-2">
+                                    Квартира в новостройке, квартира во вторичке, дом или коттедж, стройка/ремонт
+                                </div>
+                            </div>
+                            <div class="program__img-wrap flex-shrink-0">
+                                <img src="img/banks/1.png" alt="название банка" title="название банка">
+                            </div>
+                        </div>
+                        <div class="mortgage-props max-w-2xl whitespace-no-wrap py-6 border-t border-border mt-5">
+                            <div class="flex flex-wrap md:flex-no-wrap w-full justify-between -mx-2">
+                                <div class="w-1/2 sm:w-auto px-2">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Ставка
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        8,5%
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Срок до
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        30 лет
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Сумма кредита
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        12 340 000 ₽
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Платёж в месяц
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        37 808 ₽
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Сумма процентов
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        1 024 040 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex w-full">
+                        <div class="flex-grow border-t border-border pl-4 sm:pl-8 py-4">
+                            <a href="#" class="text-primary hover:opacity-75">Подробнее</a>
+                        </div>
+                        <button type="submit" class="bg-primary h-56px hover:bg-border transition duration-300 text-white hover:text-dark select-none px-6 ">
+                            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                                Отправить заявку
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="program rounded overflow-hidden w-full shadow-md mt-4">
+                    <div class="w-full pt-4 px-4 md:pt-8 md:px-8">
+                        <div class="flex justify-between w-full">
+                            <div class="program__text mr-2 sm:mr-4">
+                                <div class="text-light">
+                                    ВТБ
+                                </div>
+                                <div class="text-primary font-semibold leading-tight text-base sm:text-xl mt-2">
+                                    Ипотека «Рефинансирование»
+                                </div>
+                                <div class="mt-2">
+                                    Квартира в новостройке, квартира во вторичке, дом или коттедж, стройка/ремонт
+                                </div>
+                            </div>
+                            <div class="program__img-wrap flex-shrink-0">
+                                <img src="img/banks/1.png" alt="название банка" title="название банка">
+                            </div>
+                        </div>
+                        <div class="mortgage-props max-w-2xl whitespace-no-wrap py-6 border-t border-border mt-5">
+                            <div class="flex flex-wrap md:flex-no-wrap w-full justify-between -mx-2">
+                                <div class="w-1/2 sm:w-auto px-2">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Ставка
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        8,5%
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Срок до
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        30 лет
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Сумма кредита
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        12 340 000 ₽
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Платёж в месяц
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        37 808 ₽
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Сумма процентов
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        1 024 040 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex w-full">
+                        <div class="flex-grow border-t border-border pl-4 sm:pl-8 py-4">
+                            <a href="#" class="text-primary hover:opacity-75">Подробнее</a>
+                        </div>
+                        <button type="submit" class="bg-primary h-56px hover:bg-border transition duration-300 text-white hover:text-dark select-none px-6 ">
+                            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                                Отправить заявку
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="program rounded overflow-hidden w-full shadow-md mt-4">
+                    <div class="w-full pt-4 px-4 md:pt-8 md:px-8">
+                        <div class="flex justify-between w-full">
+                            <div class="program__text mr-2 sm:mr-4">
+                                <div class="text-light">
+                                    ВТБ
+                                </div>
+                                <div class="text-primary font-semibold leading-tight text-base sm:text-xl mt-2">
+                                    Ипотека «Рефинансирование»
+                                </div>
+                                <div class="mt-2">
+                                    Квартира в новостройке, квартира во вторичке, дом или коттедж, стройка/ремонт
+                                </div>
+                            </div>
+                            <div class="program__img-wrap flex-shrink-0">
+                                <img src="img/banks/1.png" alt="название банка" title="название банка">
+                            </div>
+                        </div>
+                        <div class="mortgage-props max-w-2xl whitespace-no-wrap py-6 border-t border-border mt-5">
+                            <div class="flex flex-wrap md:flex-no-wrap w-full justify-between -mx-2">
+                                <div class="w-1/2 sm:w-auto px-2">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Ставка
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        8,5%
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Срок до
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        30 лет
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Сумма кредита
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        12 340 000 ₽
+                                    </div>
+                                </div>
+                                <div class="w-1/2 sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Платёж в месяц
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        37 808 ₽
+                                    </div>
+                                </div>
+                                <div class="w-full sm:w-auto px-2 mt-1 sm:mt-0">
+                                    <div class="text-xs md:text-sm text-light">
+                                        Сумма процентов
+                                    </div>
+                                    <div class="text-base md:text-xl">
+                                        1 024 040 ₽
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex w-full">
+                        <div class="flex-grow border-t border-border pl-4 sm:pl-8 py-4">
+                            <a href="#" class="text-primary hover:opacity-75">Подробнее</a>
+                        </div>
+                        <button type="submit" class="bg-primary h-56px hover:bg-border transition duration-300 text-white hover:text-dark select-none px-6 ">
+                            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                                Отправить заявку
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            //= templates/pagination-section.html
+        </div>
+    </div>
+</main>
+<section class="overflow-hidden mt-16">
+    <div class="container pl-4 lg:pr-4">
+        <h2>
+            Популяные ЖК
+        </h2>
+        //= templates/buildings-tabs.html
+    </div>
+    <div class="buildings container pl-4 lg:pr-4">
+        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch -mx-2 lg:-mx-4 pb-4">
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+        </div>
+    </div>
+    <div class="flex mt-6 justify-center">
+        <a href="#" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
+            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                Смотреть все новостройки
+            </span>
+        </a>
+    </div>
+</section>
+//= templates/services.html
+//= templates/viewed.html
+<section class="mt-16">
+    <div class="container px-4">
+        <h3>Найти квартиру в новостройке</h3>
+        <div class="leading-relaxed mt-3">
+            <p>
+                Novostroi-ki.ru – портал, объединяющий застройщиков Москвы, Крыма, Краснодара и Ростова-на-Дону. На портале представлены лучшие предложения рынка недвижимости в различном ценовом сегменте.
+            </p>
+            <p>
+                Сайт Novostroi-ki.ru абсолютно бесплатно поможет Вам подобрать за короткий срок идеальную квартиру по различным параметрам: городу, району, классу жилья, количеству комнат, сроку сдачи и даже материалу, используемому при строительстве. Выбрав необходимые критерии, Вы сможете
+                подробнее узнать о каждом застройщике и жилом комплексе из карточки объекта. Описание комплексов постоянно обновляется, в нем Вы всегда найдете актуальную информацию о вариантах покупки квартиры, акциях от застройщика, необходимую документацию, ежемесячные фотоотчеты со строительной
+                площадки, отзывы и многое другие.
+            </p>
+        </div>
+        <div>
+            <a href="#" class="text-sm font-semibold hover:opacity-75">Подробнее</a>
+        </div>
+    </div>
+</section>
+<div class="mt-12">
+    //= templates/tags.html
+</div>
+
+//= templates/footer.html
+//= templates/scripts.html
+</body>
+
+</html>

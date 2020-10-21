@@ -24,6 +24,7 @@ module.exports = {
     },
 
     colors: {
+      'transparent': 'transparent',
       'black': '#000000',
       'white': '#FFFFFF',
       'main': '#1E1F21',
@@ -62,6 +63,8 @@ module.exports = {
       80: '5rem',
       50: '3.125rem',
       '52rem': '52rem',
+      '60rem': '60rem',
+      '70rem': '70rem',
       ...breakpoints(theme('screens')),
     }),
 

@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body class="relative">
+//= templates/header.html
+//= templates/breadcrumb.html
+<section class="first bg-cover bg-center bg-no-repeat lg:pt-10 lg:pb-12" style="background-image:url(img/backgrounds/mortgage.jpg);">
+    <div class="container px-4 h-full">
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full lg:text-white lg:w-1/2 px-4">
+                <h1 class="hidden lg:block bigger-title">
+                    Ипотека
+                </h1>
+                <div class="hidden lg:block first__desc mt-4">
+                    Вся актуальная информация о новостройках. Цены, планировки, стадии строительства, отзывы и др.
+                </div>
+            </div>
+            <div class="hidden lg:block w-full lg:w-1/2 px-4">
+                <div class="consult-block text-center bg-white rounded shadow-md lg:shadow-none lg:ml-auto p-6 mt-6 lg:mt-0">
+                    <div>
+                        Вас проконсультирует
+                    </div>
+                    <div class="consult-block__slider">
+                        <div class="consult-block__slide">
+                            <div class="consult-block__avatar rounded-full bg-no-repeat bg-center bg-cover bg-inputs mx-auto mt-3" style="background-image:url(img/backgrounds/consult-avatar.jpg);">
+
+                            </div>
+                            <div class="font-semibold text-lg mt-3">
+                                Наталья
+                            </div>
+                            <div>
+                                <a href="tel:+78612034542" class="text-primary hover:opacity-75">8 861 203-45-42</a>
+                            </div>
+                        </div>
+                        <div class="consult-block__slide">
+                            <div class="consult-block__avatar rounded-full bg-no-repeat bg-center bg-cover bg-inputs mx-auto mt-3" style="background-image:url(img/backgrounds/consult-avatar.jpg);">
+
+                            </div>
+                            <div class="font-semibold text-lg mt-3">
+                                Наталья
+                            </div>
+                            <div>
+                                <a href="tel:+78612034542" class="text-primary hover:opacity-75">8 861 203-45-42</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        Звоните по телефону или оставьте свой номер и я вам перезвоню
+                    </div>
+                    <form action="">
+                        <div class="form-group mt-4">
+                            <div class="form-control w-full mt-1">
+                                <input type="tel" name="tel" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" placeholder="+7 (___) ___ - __ - __">
+                            </div>
+                        </div>
+                        <button type="submit" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark w-full select-none h-12 px-6 mt-3">
+                            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                                Перезвоните мне
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container px-4 mt-16">
+    <h2>
+        Ипотечный калькулятор
+    </h2>
+    <div class="text-second">
+        Рассчитайте примерный ежемесячный платёж по ипотеке в банках России с помощью универсального онлайн-калькулятора.
+    </div>
+    <div class="max-w-70rem">
+        <form action="" class="flex flex-wrap -mx-2">
+            <div class="form-group flex flex-wrap w-full md:w-1/2 xl:w-4/12 flex-col px-2 mt-5">
+                <div class="flex w-full text-light text-sm leading-7">
+                    Тип жилья
+                </div>
+                <div class="flex">
+                    <label class="room-size flex-grow">
+                        <input type="checkbox" name="type-all" class="room-size__checkbox hidden" value="Все">
+                        <span class="room-size__custom flex items-center justify-center bg-inputs text-xs xs:text-sm text-dark rounded-l h-12 flex-shrink-0">
+                        Все
+                    </span>
+                    </label>
+                    <label class="room-size flex flex-grow">
+                        <input type="checkbox" name="type-second" class="room-size__checkbox hidden" value="Вторича">
+                        <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark border-border border-l h-12">
+                        Вторичка
+                    </span>
+                    </label>
+                    <label class="room-size flex flex-grow">
+                        <input type="checkbox" name="type-new" class="room-size__checkbox hidden" value="Новостройка">
+                        <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark h-12 border-border border-l">
+                        Новостройка
+                    </span>
+                    </label>
+                    <label class="room-size flex flex-grow">
+                        <input type="checkbox" name="type-cottage" class="room-size__checkbox hidden" value="Коттедж">
+                        <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark border-border border-l rounded-r h-12">
+                        Коттедж
+                    </span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group w-full md:w-1/2 xl:w-4/12 px-2 mt-5">
+                <label class="text-light text-sm leading-7" for="building-price">
+                    Стоимость недвижимости
+                </label>
+                <div class="form-control">
+                    <input type="text" name="building-price" id="building-price" class="h-12 w-full p-4 text-dark placeholder-light bg-inputs rounded text-sm" placeholder="до 10 000 000 ₽">
+                    <div class="range-slider" data-min="300000" data-max="65000000" data-step="100000"></div>
+                </div>
+                <div class="flex text-dark text-xs justify-between mt-2">
+                    <div>300 000 ₽</div>
+                    <div>65 000 000 ₽</div>
+                </div>
+            </div>
+            <div class="form-group w-full md:w-1/2 xl:w-4/12 px-2 mt-5">
+                <label class="text-light text-sm leading-7" for="first-price">
+                    Первоначальный взнос
+                </label>
+                <div class="form-control">
+                    <input type="text" name="building-price" id="first-price" class="h-12 w-full p-4 text-dark placeholder-light bg-inputs rounded text-sm" placeholder="2 000 000 ₽">
+                    <div class="range-slider" data-min="300000" data-max="65000000" data-step="100000"></div>
+                </div>
+                <div class="flex text-dark text-xs justify-between mt-2">
+                    <div>300 000 ₽</div>
+                    <div>65 000 000 ₽</div>
+                </div>
+            </div>
+            <div class="form-group w-full md:w-1/2 xl:w-1/3 px-2 mt-5">
+                <label class="text-light text-sm leading-7" for="mortgage-period">
+                    На срок
+                </label>
+                <div class="form-control">
+                    <input type="text" name="building-price" id="mortgage-period" class="h-12 w-full p-4 text-dark placeholder-light bg-inputs rounded text-sm" placeholder="30 лет">
+                    <div class="range-slider" data-min="1" data-max="30" data-step="1"></div>
+                </div>
+                <div class="flex text-dark text-xs justify-between mt-2">
+                    <div>1 год</div>
+                    <div>30 лет</div>
+                </div>
+            </div>
+            <div class="form-group self-center flex w-full md:w-1/2 xl:w-4/12 px-2 mt-5">
+                <div class="flex flex-wrap -mx-2">
+                    <label class="form-control w-1/2 px-2">
+                        <input type="checkbox" name="mortgage" class="hidden check-inline" checked>
+                        <span class="check-inline__custom flex items-center cursor-pointer">
+                        <span class="check-inline__icon flex-shrink-0 mr-1">
+                            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>Ипотека 3.1%</span>
+                    </span>
+                    </label>
+                    <label class="form-control w-1/2 px-2">
+                        <input type="checkbox" name="mat-capital" class="hidden check-inline">
+                        <span class="check-inline__custom flex items-center cursor-pointer">
+                        <span class="check-inline__icon flex-shrink-0 mr-1">
+                            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>Материнский капитал</span>
+                    </span>
+                    </label>
+                    <label class="form-control w-1/2 px-2 mt-1">
+                        <input type="checkbox" name="military-mortgage" class="hidden check-inline">
+                        <span class="check-inline__custom flex items-center cursor-pointer">
+                        <span class="check-inline__icon flex-shrink-0 mr-1">
+                            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>Военная ипотека</span>
+                    </span>
+                    </label>
+                    <label class="form-control w-1/2 px-2 mt-1">
+                        <input type="checkbox" name="credit" class="hidden check-inline">
+                        <span class="check-inline__custom flex items-center cursor-pointer">
+                        <span class="check-inline__icon flex-shrink-0 mr-1">
+                            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>Рассрочка</span>
+                    </span>
+                    </label>
+                </div>
+            </div>
+            <div class="self-center w-full xl:w-3/12 px-2 mt-6">
+                <div class="bottom-builder-info flex items-center">
+                    <a href="#" class="flex flex-shrink-0 rounded-full bg-no-repeat bg-cover bg-center hover-effect w-12 lg:w-16 h-12 lg:h-16 mr-3 lg:mr-4" style="background-image:url(img/backgrounds/nataly.jpg);"></a>
+                    <div class="flex flex-col">
+                        <a href="#" class="flex text-sm lg:text-xl font-semibold hover:opacity-75">
+                            Наталья
+                        </a>
+                        <div class="text-xs lg:text-sm text-second">
+                            Ипотечный брокер
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<section class="bg-light-bg mt-16 py-16">
+    <div class="container px-4">
+        <h2>
+            12 324 квартир в Краснодаре
+        </h2>
+        <div class="flex mt-4">
+            <select name="sort" class="bg-light-bg mr-5">
+                <option value="дешевле">Сортировка</option>
+                <option value="дешевле">дешевле</option>
+                <option value="дешевле">Дороже</option>
+            </select>
+            <div>
+                16 предложений
+            </div>
+        </div>
+        <div class="max-w-70rem mt-5">
+            <div class="room-item flex bg-white py-4 px-4 md:px-8 -mx-4 sm:mx-0 mt-2">
+                <div class="flex w-full flex-wrap lg:flex-no-wrap xl:flex-wrap justify-between items-center -mx-3">
+                    <div class="room-item__img-wrap flex-shrink-0 w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="room-item__img block bg-no-repeat bg-contain bg-center hover:opacity-75" style="background-image:url(img/plans/plan1.jpg);"></a>
+                    </div>
+                    <div class="room-item__type w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="text-primary block hover:opacity-75">
+                            Студия
+                        </a>
+                        <div class="text-xs text-light">
+                            22.4 м2
+                        </div>
+                    </div>
+                    <div class="room-item__floor w-1/2 sm:w-1/4 px-3">
+                        <div>
+                            13 этаж
+                        </div>
+                        <div class="text-light text-xs">
+                            из 16
+                        </div>
+                    </div>
+                    <div class="room-item__period flex-shrink-0 w-1/2 sm:w-1/4  px-3 mt-3 sm:mt-0">
+                        <div>
+                            3 кв. 2022 г.
+                        </div>
+                        <div class="text-light text-xs">
+                            литер 3
+                        </div>
+                    </div>
+                    <div class="room-item__building-name w-full sm:w-4/12 md:w-5/12 px-3 mt-3">
+                        <div>
+                            ЖК Самый совершенный
+                            дом на районе
+                        </div>
+                        <div class="text-light text-xs">
+                            ул. Восточно-кругликовская,
+                            34/5 корпус 2
+                        </div>
+                    </div>
+                    <div class="room-item__price flex-shrink-0 w-5/12 sm:w-3/12 md:w-3/12 px-3 mt-3">
+                        <div>
+                            100 433 698 ₽
+                        </div>
+                        <div class="text-xs text-light">
+                            119 113 ₽/м2
+                        </div>
+                    </div>
+                    <div class="room-item__icons flex flex-shrink-0 items-center justify-end w-7/12 sm:w-5/12 md:w-4/12 px-3 mt-3">
+                        <div class="flex flex-shrink-0 items-center -mx-2">
+                            <div class="flex-shrink-0 px-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect opacity="0.1" width="24" height="24" rx="12" fill="#FF9F2F"/>
+                                    <path d="M17.5 13.9999C17.5 15.1045 16.6046 15.9999 15.5 15.9999C14.3954 15.9999 13.5 15.1045 13.5 13.9999C13.5 12.8954 14.3954 11.9999 15.5 11.9999C16.6046 11.9999 17.5 12.8954 17.5 13.9999Z" fill="#FF9F2F"/>
+                                    <path d="M10.5 9.99995C10.5 11.1045 9.60457 11.9999 8.5 11.9999C7.39543 11.9999 6.5 11.1045 6.5 9.99995C6.5 8.89538 7.39543 7.99995 8.5 7.99995C9.60457 7.99995 10.5 8.89538 10.5 9.99995Z" fill="#FF9F2F"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.10557 15.5527L13.1056 7.55273L14.8944 8.44716L10.8944 16.4472L9.10557 15.5527Z" fill="#FF9F2F"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col items-center px-2">
+                                <div class="flex text-xs lg:text-sm border border-orange text-orange rounded p-1">
+                                    Отделка
+                                </div>
+                                <div class="flex text-xs lg:text-sm border border-green text-green rounded p-1 mt-2">
+                                    Ипотека 0%
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="room-item__like text-red flex justify-center items-center border border-border rounded">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00132 1.01932C8.56732 -0.38668 10.9873 -0.340013 12.496 1.17132C14.004 2.68332 14.056 5.09132 12.6533 6.66199L6.99999 12.3233L1.34799 6.66199C-0.0546783 5.09132 -0.00201148 2.67932 1.50532 1.17132C3.01532 -0.338013 5.43066 -0.38868 7.00132 1.01932Z"
+                                              fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="room-item flex bg-white py-4 px-4 md:px-8 -mx-4 sm:mx-0 mt-2">
+                <div class="flex w-full flex-wrap lg:flex-no-wrap xl:flex-wrap justify-between items-center -mx-3">
+                    <div class="room-item__img-wrap flex-shrink-0 w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="room-item__img block bg-no-repeat bg-contain bg-center hover:opacity-75" style="background-image:url(img/plans/plan1.jpg);"></a>
+                    </div>
+                    <div class="room-item__type w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="text-primary block hover:opacity-75">
+                            Студия
+                        </a>
+                        <div class="text-xs text-light">
+                            22.4 м2
+                        </div>
+                    </div>
+                    <div class="room-item__floor w-1/2 sm:w-1/4 px-3">
+                        <div>
+                            13 этаж
+                        </div>
+                        <div class="text-light text-xs">
+                            из 16
+                        </div>
+                    </div>
+                    <div class="room-item__period flex-shrink-0 w-1/2 sm:w-1/4  px-3 mt-3 sm:mt-0">
+                        <div>
+                            3 кв. 2022 г.
+                        </div>
+                        <div class="text-light text-xs">
+                            литер 3
+                        </div>
+                    </div>
+                    <div class="room-item__building-name w-full sm:w-4/12 md:w-5/12 px-3 mt-3">
+                        <div>
+                            ЖК Самый совершенный
+                            дом на районе
+                        </div>
+                        <div class="text-light text-xs">
+                            ул. Восточно-кругликовская,
+                            34/5 корпус 2
+                        </div>
+                    </div>
+                    <div class="room-item__price flex-shrink-0 w-5/12 sm:w-3/12 md:w-3/12 px-3 mt-3">
+                        <div>
+                            100 433 698 ₽
+                        </div>
+                        <div class="text-xs text-light">
+                            119 113 ₽/м2
+                        </div>
+                    </div>
+                    <div class="room-item__icons flex flex-shrink-0 items-center justify-end w-7/12 sm:w-5/12 md:w-4/12 px-3 mt-3">
+                        <div class="flex flex-shrink-0 items-center -mx-2">
+                            <div class="flex flex-col items-center px-2">
+                                <div class="flex text-xs lg:text-sm border border-orange text-orange rounded p-1">
+                                    Отделка
+                                </div>
+                                <div class="flex text-xs lg:text-sm border border-green text-green rounded p-1 mt-2">
+                                    Ипотека 0%
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="room-item__like text-red flex justify-center items-center border border-border rounded">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00132 1.01932C8.56732 -0.38668 10.9873 -0.340013 12.496 1.17132C14.004 2.68332 14.056 5.09132 12.6533 6.66199L6.99999 12.3233L1.34799 6.66199C-0.0546783 5.09132 -0.00201148 2.67932 1.50532 1.17132C3.01532 -0.338013 5.43066 -0.38868 7.00132 1.01932Z"
+                                              fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="room-item flex bg-white py-4 px-4 md:px-8 -mx-4 sm:mx-0 mt-2">
+                <div class="flex w-full flex-wrap lg:flex-no-wrap xl:flex-wrap justify-between items-center -mx-3">
+                    <div class="room-item__img-wrap flex-shrink-0 w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="room-item__img block bg-no-repeat bg-contain bg-center hover:opacity-75" style="background-image:url(img/plans/plan1.jpg);"></a>
+                    </div>
+                    <div class="room-item__type w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="text-primary block hover:opacity-75">
+                            Студия
+                        </a>
+                        <div class="text-xs text-light">
+                            22.4 м2
+                        </div>
+                    </div>
+                    <div class="room-item__floor w-1/2 sm:w-1/4 px-3">
+                        <div>
+                            13 этаж
+                        </div>
+                        <div class="text-light text-xs">
+                            из 16
+                        </div>
+                    </div>
+                    <div class="room-item__period flex-shrink-0 w-1/2 sm:w-1/4  px-3 mt-3 sm:mt-0">
+                        <div>
+                            3 кв. 2022 г.
+                        </div>
+                        <div class="text-light text-xs">
+                            литер 3
+                        </div>
+                    </div>
+                    <div class="room-item__building-name w-full sm:w-4/12 md:w-5/12 px-3 mt-3">
+                        <div>
+                            ЖК Самый совершенный
+                            дом на районе
+                        </div>
+                        <div class="text-light text-xs">
+                            ул. Восточно-кругликовская,
+                            34/5 корпус 2
+                        </div>
+                    </div>
+                    <div class="room-item__price flex-shrink-0 w-5/12 sm:w-3/12 md:w-3/12 px-3 mt-3">
+                        <div>
+                            100 433 698 ₽
+                        </div>
+                        <div class="text-xs text-light">
+                            119 113 ₽/м2
+                        </div>
+                    </div>
+                    <div class="room-item__icons flex flex-shrink-0 items-center justify-end w-7/12 sm:w-5/12 md:w-4/12 px-3 mt-3">
+                        <div class="flex flex-shrink-0 items-center -mx-2">
+                            <div class="flex flex-col items-center px-2">
+                                <div class="flex text-xs lg:text-sm border border-orange text-orange rounded p-1">
+                                    Отделка
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="room-item__like text-red flex justify-center items-center border border-border rounded">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00132 1.01932C8.56732 -0.38668 10.9873 -0.340013 12.496 1.17132C14.004 2.68332 14.056 5.09132 12.6533 6.66199L6.99999 12.3233L1.34799 6.66199C-0.0546783 5.09132 -0.00201148 2.67932 1.50532 1.17132C3.01532 -0.338013 5.43066 -0.38868 7.00132 1.01932Z"
+                                              fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="room-item flex bg-white py-4 px-4 md:px-8 -mx-4 sm:mx-0 mt-2">
+                <div class="flex w-full flex-wrap lg:flex-no-wrap xl:flex-wrap justify-between items-center -mx-3">
+                    <div class="room-item__img-wrap flex-shrink-0 w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="room-item__img block bg-no-repeat bg-contain bg-center hover:opacity-75" style="background-image:url(img/plans/plan1.jpg);"></a>
+                    </div>
+                    <div class="room-item__type w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="text-primary block hover:opacity-75">
+                            Студия
+                        </a>
+                        <div class="text-xs text-light">
+                            22.4 м2
+                        </div>
+                    </div>
+                    <div class="room-item__floor w-1/2 sm:w-1/4 px-3">
+                        <div>
+                            13 этаж
+                        </div>
+                        <div class="text-light text-xs">
+                            из 16
+                        </div>
+                    </div>
+                    <div class="room-item__period flex-shrink-0 w-1/2 sm:w-1/4  px-3 mt-3 sm:mt-0">
+                        <div>
+                            3 кв. 2022 г.
+                        </div>
+                        <div class="text-light text-xs">
+                            литер 3
+                        </div>
+                    </div>
+                    <div class="room-item__building-name w-full sm:w-4/12 md:w-5/12 px-3 mt-3">
+                        <div>
+                            ЖК Самый совершенный
+                            дом на районе
+                        </div>
+                        <div class="text-light text-xs">
+                            ул. Восточно-кругликовская,
+                            34/5 корпус 2
+                        </div>
+                    </div>
+                    <div class="room-item__price flex-shrink-0 w-5/12 sm:w-3/12 md:w-3/12 px-3 mt-3">
+                        <div>
+                            100 433 698 ₽
+                        </div>
+                        <div class="text-xs text-light">
+                            119 113 ₽/м2
+                        </div>
+                    </div>
+                    <div class="room-item__icons flex flex-shrink-0 items-center justify-end w-7/12 sm:w-5/12 md:w-4/12 px-3 mt-3">
+                        <div class="flex flex-shrink-0 items-center -mx-2">
+                            <div class="px-2">
+                                <div class="room-item__like text-icon flex justify-center items-center border border-border rounded">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00132 1.01932C8.56732 -0.38668 10.9873 -0.340013 12.496 1.17132C14.004 2.68332 14.056 5.09132 12.6533 6.66199L6.99999 12.3233L1.34799 6.66199C-0.0546783 5.09132 -0.00201148 2.67932 1.50532 1.17132C3.01532 -0.338013 5.43066 -0.38868 7.00132 1.01932Z"
+                                              fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="block hover:opacity-75 mt-2">
+                <img src="img/screens/alfa-bank.jpg" alt="название акции" class="w-full" title="название акции">
+            </a>
+            <div class="room-item flex bg-white py-4 px-4 md:px-8 -mx-4 sm:mx-0 mt-2">
+                <div class="flex w-full flex-wrap lg:flex-no-wrap xl:flex-wrap justify-between items-center -mx-3">
+                    <div class="room-item__img-wrap flex-shrink-0 w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="room-item__img block bg-no-repeat bg-contain bg-center hover:opacity-75" style="background-image:url(img/plans/plan1.jpg);"></a>
+                    </div>
+                    <div class="room-item__type w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="text-primary block hover:opacity-75">
+                            Студия
+                        </a>
+                        <div class="text-xs text-light">
+                            22.4 м2
+                        </div>
+                    </div>
+                    <div class="room-item__floor w-1/2 sm:w-1/4 px-3">
+                        <div>
+                            13 этаж
+                        </div>
+                        <div class="text-light text-xs">
+                            из 16
+                        </div>
+                    </div>
+                    <div class="room-item__period flex-shrink-0 w-1/2 sm:w-1/4  px-3 mt-3 sm:mt-0">
+                        <div>
+                            3 кв. 2022 г.
+                        </div>
+                        <div class="text-light text-xs">
+                            литер 3
+                        </div>
+                    </div>
+                    <div class="room-item__building-name w-full sm:w-4/12 md:w-5/12 px-3 mt-3">
+                        <div>
+                            ЖК Самый совершенный
+                            дом на районе
+                        </div>
+                        <div class="text-light text-xs">
+                            ул. Восточно-кругликовская,
+                            34/5 корпус 2
+                        </div>
+                    </div>
+                    <div class="room-item__price flex-shrink-0 w-5/12 sm:w-3/12 md:w-3/12 px-3 mt-3">
+                        <div>
+                            100 433 698 ₽
+                        </div>
+                        <div class="text-xs text-light">
+                            119 113 ₽/м2
+                        </div>
+                    </div>
+                    <div class="room-item__icons flex flex-shrink-0 items-center justify-end w-7/12 sm:w-5/12 md:w-4/12 px-3 mt-3">
+                        <div class="flex flex-shrink-0 items-center -mx-2">
+                            <div class="flex-shrink-0 px-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect opacity="0.1" width="24" height="24" rx="12" fill="#FF9F2F"/>
+                                    <path d="M17.5 13.9999C17.5 15.1045 16.6046 15.9999 15.5 15.9999C14.3954 15.9999 13.5 15.1045 13.5 13.9999C13.5 12.8954 14.3954 11.9999 15.5 11.9999C16.6046 11.9999 17.5 12.8954 17.5 13.9999Z" fill="#FF9F2F"/>
+                                    <path d="M10.5 9.99995C10.5 11.1045 9.60457 11.9999 8.5 11.9999C7.39543 11.9999 6.5 11.1045 6.5 9.99995C6.5 8.89538 7.39543 7.99995 8.5 7.99995C9.60457 7.99995 10.5 8.89538 10.5 9.99995Z" fill="#FF9F2F"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.10557 15.5527L13.1056 7.55273L14.8944 8.44716L10.8944 16.4472L9.10557 15.5527Z" fill="#FF9F2F"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col items-center px-2">
+                                <div class="flex text-xs lg:text-sm border border-orange text-orange rounded p-1">
+                                    Отделка
+                                </div>
+                                <div class="flex text-xs lg:text-sm border border-green text-green rounded p-1 mt-2">
+                                    Ипотека 0%
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="room-item__like text-red flex justify-center items-center border border-border rounded">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00132 1.01932C8.56732 -0.38668 10.9873 -0.340013 12.496 1.17132C14.004 2.68332 14.056 5.09132 12.6533 6.66199L6.99999 12.3233L1.34799 6.66199C-0.0546783 5.09132 -0.00201148 2.67932 1.50532 1.17132C3.01532 -0.338013 5.43066 -0.38868 7.00132 1.01932Z"
+                                              fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="room-item flex bg-white py-4 px-4 md:px-8 -mx-4 sm:mx-0 mt-2">
+                <div class="flex w-full flex-wrap lg:flex-no-wrap xl:flex-wrap justify-between items-center -mx-3">
+                    <div class="room-item__img-wrap flex-shrink-0 w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="room-item__img block bg-no-repeat bg-contain bg-center hover:opacity-75" style="background-image:url(img/plans/plan1.jpg);"></a>
+                    </div>
+                    <div class="room-item__type w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="text-primary block hover:opacity-75">
+                            Студия
+                        </a>
+                        <div class="text-xs text-light">
+                            22.4 м2
+                        </div>
+                    </div>
+                    <div class="room-item__floor w-1/2 sm:w-1/4 px-3">
+                        <div>
+                            13 этаж
+                        </div>
+                        <div class="text-light text-xs">
+                            из 16
+                        </div>
+                    </div>
+                    <div class="room-item__period flex-shrink-0 w-1/2 sm:w-1/4  px-3 mt-3 sm:mt-0">
+                        <div>
+                            3 кв. 2022 г.
+                        </div>
+                        <div class="text-light text-xs">
+                            литер 3
+                        </div>
+                    </div>
+                    <div class="room-item__building-name w-full sm:w-4/12 md:w-5/12 px-3 mt-3">
+                        <div>
+                            ЖК Самый совершенный
+                            дом на районе
+                        </div>
+                        <div class="text-light text-xs">
+                            ул. Восточно-кругликовская,
+                            34/5 корпус 2
+                        </div>
+                    </div>
+                    <div class="room-item__price flex-shrink-0 w-5/12 sm:w-3/12 md:w-3/12 px-3 mt-3">
+                        <div>
+                            100 433 698 ₽
+                        </div>
+                        <div class="text-xs text-light">
+                            119 113 ₽/м2
+                        </div>
+                    </div>
+                    <div class="room-item__icons flex flex-shrink-0 items-center justify-end w-7/12 sm:w-5/12 md:w-4/12 px-3 mt-3">
+                        <div class="flex flex-shrink-0 items-center -mx-2">
+                            <div class="flex flex-col items-center px-2">
+                                <div class="flex text-xs lg:text-sm border border-orange text-orange rounded p-1">
+                                    Отделка
+                                </div>
+                                <div class="flex text-xs lg:text-sm border border-green text-green rounded p-1 mt-2">
+                                    Ипотека 0%
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="room-item__like text-red flex justify-center items-center border border-border rounded">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00132 1.01932C8.56732 -0.38668 10.9873 -0.340013 12.496 1.17132C14.004 2.68332 14.056 5.09132 12.6533 6.66199L6.99999 12.3233L1.34799 6.66199C-0.0546783 5.09132 -0.00201148 2.67932 1.50532 1.17132C3.01532 -0.338013 5.43066 -0.38868 7.00132 1.01932Z"
+                                              fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="room-item flex bg-white py-4 px-4 md:px-8 -mx-4 sm:mx-0 mt-2">
+                <div class="flex w-full flex-wrap lg:flex-no-wrap xl:flex-wrap justify-between items-center -mx-3">
+                    <div class="room-item__img-wrap flex-shrink-0 w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="room-item__img block bg-no-repeat bg-contain bg-center hover:opacity-75" style="background-image:url(img/plans/plan1.jpg);"></a>
+                    </div>
+                    <div class="room-item__type w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="text-primary block hover:opacity-75">
+                            Студия
+                        </a>
+                        <div class="text-xs text-light">
+                            22.4 м2
+                        </div>
+                    </div>
+                    <div class="room-item__floor w-1/2 sm:w-1/4 px-3">
+                        <div>
+                            13 этаж
+                        </div>
+                        <div class="text-light text-xs">
+                            из 16
+                        </div>
+                    </div>
+                    <div class="room-item__period flex-shrink-0 w-1/2 sm:w-1/4  px-3 mt-3 sm:mt-0">
+                        <div>
+                            3 кв. 2022 г.
+                        </div>
+                        <div class="text-light text-xs">
+                            литер 3
+                        </div>
+                    </div>
+                    <div class="room-item__building-name w-full sm:w-4/12 md:w-5/12 px-3 mt-3">
+                        <div>
+                            ЖК Самый совершенный
+                            дом на районе
+                        </div>
+                        <div class="text-light text-xs">
+                            ул. Восточно-кругликовская,
+                            34/5 корпус 2
+                        </div>
+                    </div>
+                    <div class="room-item__price flex-shrink-0 w-5/12 sm:w-3/12 md:w-3/12 px-3 mt-3">
+                        <div>
+                            100 433 698 ₽
+                        </div>
+                        <div class="text-xs text-light">
+                            119 113 ₽/м2
+                        </div>
+                    </div>
+                    <div class="room-item__icons flex flex-shrink-0 items-center justify-end w-7/12 sm:w-5/12 md:w-4/12 px-3 mt-3">
+                        <div class="flex flex-shrink-0 items-center -mx-2">
+                            <div class="flex flex-col items-center px-2">
+                                <div class="flex text-xs lg:text-sm border border-orange text-orange rounded p-1">
+                                    Отделка
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="room-item__like text-red flex justify-center items-center border border-border rounded">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00132 1.01932C8.56732 -0.38668 10.9873 -0.340013 12.496 1.17132C14.004 2.68332 14.056 5.09132 12.6533 6.66199L6.99999 12.3233L1.34799 6.66199C-0.0546783 5.09132 -0.00201148 2.67932 1.50532 1.17132C3.01532 -0.338013 5.43066 -0.38868 7.00132 1.01932Z"
+                                              fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="room-item flex bg-white py-4 px-4 md:px-8 -mx-4 sm:mx-0 mt-2">
+                <div class="flex w-full flex-wrap lg:flex-no-wrap xl:flex-wrap justify-between items-center -mx-3">
+                    <div class="room-item__img-wrap flex-shrink-0 w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="room-item__img block bg-no-repeat bg-contain bg-center hover:opacity-75" style="background-image:url(img/plans/plan1.jpg);"></a>
+                    </div>
+                    <div class="room-item__type w-1/2 sm:w-1/4 px-3">
+                        <a href="#" class="text-primary block hover:opacity-75">
+                            Студия
+                        </a>
+                        <div class="text-xs text-light">
+                            22.4 м2
+                        </div>
+                    </div>
+                    <div class="room-item__floor w-1/2 sm:w-1/4 px-3">
+                        <div>
+                            13 этаж
+                        </div>
+                        <div class="text-light text-xs">
+                            из 16
+                        </div>
+                    </div>
+                    <div class="room-item__period flex-shrink-0 w-1/2 sm:w-1/4  px-3 mt-3 sm:mt-0">
+                        <div>
+                            3 кв. 2022 г.
+                        </div>
+                        <div class="text-light text-xs">
+                            литер 3
+                        </div>
+                    </div>
+                    <div class="room-item__building-name w-full sm:w-4/12 md:w-5/12 px-3 mt-3">
+                        <div>
+                            ЖК Самый совершенный
+                            дом на районе
+                        </div>
+                        <div class="text-light text-xs">
+                            ул. Восточно-кругликовская,
+                            34/5 корпус 2
+                        </div>
+                    </div>
+                    <div class="room-item__price flex-shrink-0 w-5/12 sm:w-3/12 md:w-3/12 px-3 mt-3">
+                        <div>
+                            100 433 698 ₽
+                        </div>
+                        <div class="text-xs text-light">
+                            119 113 ₽/м2
+                        </div>
+                    </div>
+                    <div class="room-item__icons flex flex-shrink-0 items-center justify-end w-7/12 sm:w-5/12 md:w-4/12 px-3 mt-3">
+                        <div class="flex flex-shrink-0 items-center -mx-2">
+                            <div class="px-2">
+                                <div class="room-item__like text-icon flex justify-center items-center border border-border rounded">
+                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.00132 1.01932C8.56732 -0.38668 10.9873 -0.340013 12.496 1.17132C14.004 2.68332 14.056 5.09132 12.6533 6.66199L6.99999 12.3233L1.34799 6.66199C-0.0546783 5.09132 -0.00201148 2.67932 1.50532 1.17132C3.01532 -0.338013 5.43066 -0.38868 7.00132 1.01932Z"
+                                              fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-6">
+                <button class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark w-full sm:w-auto select-none h-12 px-6 mt-3">
+                    <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                        12 324 квартир в Краснодаре
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-16">
+    <div class="container px-4">
+        <div class="max-w-70rem mt-16">
+            <div class="flex flex-wrap border-t border-b sm:border border-border rounded">
+                <div class="flex lg:w-7/12 xl:w-1/2">
+                    <div class="form-img-girl hidden lg:flex h-full w-full bg-cover bg-no-repeat bg-left" style="background-image: url(img/backgrounds/form-girl.jpg);"></div>
+                </div>
+                <div class="flex flex-col w-full lg:w-5/12 xl:w-1/2 py-8 sm:p-8">
+                    <h2>
+                        Подписка на рассылку
+                    </h2>
+                    <div class="text-sm text-second mt-3">
+                        Выберите какие предложения вы хотите получать
+                    </div>
+                    //= templates/girl-form.html
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-16">
+    <div class="container px-4">
+        <div class="max-w-70rem mt-16">
+            <h2>
+                Частые вопросы
+            </h2>
+            <div class="mt-8">
+                <div class="question border-b border-border">
+                    <div class="question__caption flex items-center justify-between hover:opacity-75 cursor-pointer py-5 -mx-2">
+                        <div class="text-dark text-base lg:text-lg font-medium px-2">
+                            Какой срок действия документов для ипотеки?
+                        </div>
+                        <div class="flex-shrink-0 px-2">
+                            <svg class="question__chevron transition duration-300" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="7" width="2" height="16" fill="#1E1F21"/>
+                                <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#1E1F21"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="question__content hidden">
+                        <p>
+                            При подачи заявки с первоначальным взносом от 20% по программе «Ипотека 0% на 12 месяцев» достаточно заполнить анкету и приложить копию паспорта и СНИЛС. По другим программам стандартный пакет документов включает в себя заполненную анкету, скан всех страниц паспорта(включая пустые), заверенную копию трудовой книжки и справку о доходах (2НДФЛ или по форме банка). Многие банки также требуют СНИЛС и военный билет для мужчин, не достигших 27-летнего возраста
+                        </p>
+                        <p>
+                            При подачи заявки с первоначальным взносом от 20% по программе «Ипотека 0% на 12 месяцев» достаточно заполнить анкету и приложить копию паспорта и СНИЛС. По другим программам стандартный пакет документов включает в себя заполненную анкету, скан всех страниц паспорта(включая пустые), заверенную копию трудовой книжки и справку о доходах (2НДФЛ или по форме банка). Многие банки также требуют СНИЛС и военный билет для мужчин, не достигших 27-летнего возраста
+                        </p>
+                    </div>
+                </div>
+                <div class="question border-b border-border">
+                    <div class="question__caption flex items-center justify-between hover:opacity-75 cursor-pointer py-5 -mx-2">
+                        <div class="text-dark text-base lg:text-lg font-medium px-2">
+                            Я трудоустроен не официально, но доход стабилен, смогу ли получить одобрение?
+                        </div>
+                        <div class="flex-shrink-0 px-2">
+                            <svg class="question__chevron transition duration-300" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="7" width="2" height="16" fill="#1E1F21"/>
+                                <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#1E1F21"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="question__content hidden">
+                        <p>
+                            При подачи заявки с первоначальным взносом от 20% по программе «Ипотека 0% на 12 месяцев» достаточно заполнить анкету и приложить копию паспорта и СНИЛС. По другим программам стандартный пакет документов включает в себя заполненную анкету, скан всех страниц паспорта(включая пустые), заверенную копию трудовой книжки и справку о доходах (2НДФЛ или по форме банка). Многие банки также требуют СНИЛС и военный билет для мужчин, не достигших 27-летнего возраста
+                        </p>
+                        <p>
+                            При подачи заявки с первоначальным взносом от 20% по программе «Ипотека 0% на 12 месяцев» достаточно заполнить анкету и приложить копию паспорта и СНИЛС. По другим программам стандартный пакет документов включает в себя заполненную анкету, скан всех страниц паспорта(включая пустые), заверенную копию трудовой книжки и справку о доходах (2НДФЛ или по форме банка). Многие банки также требуют СНИЛС и военный билет для мужчин, не достигших 27-летнего возраста
+                        </p>
+                    </div>
+                </div>
+                <div class="question border-b border-border">
+                    <div class="question__caption flex items-center justify-between hover:opacity-75 cursor-pointer py-5 -mx-2">
+                        <div class="text-dark text-base lg:text-lg font-medium px-2">
+                            Какой срок действия документов для ипотеки?
+                        </div>
+                        <div class="flex-shrink-0 px-2">
+                            <svg class="question__chevron transition duration-300" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="7" width="2" height="16" fill="#1E1F21"/>
+                                <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#1E1F21"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="question__content hidden">
+                        <p>
+                            При подачи заявки с первоначальным взносом от 20% по программе «Ипотека 0% на 12 месяцев» достаточно заполнить анкету и приложить копию паспорта и СНИЛС. По другим программам стандартный пакет документов включает в себя заполненную анкету, скан всех страниц паспорта(включая пустые), заверенную копию трудовой книжки и справку о доходах (2НДФЛ или по форме банка). Многие банки также требуют СНИЛС и военный билет для мужчин, не достигших 27-летнего возраста
+                        </p>
+                        <p>
+                            При подачи заявки с первоначальным взносом от 20% по программе «Ипотека 0% на 12 месяцев» достаточно заполнить анкету и приложить копию паспорта и СНИЛС. По другим программам стандартный пакет документов включает в себя заполненную анкету, скан всех страниц паспорта(включая пустые), заверенную копию трудовой книжки и справку о доходах (2НДФЛ или по форме банка). Многие банки также требуют СНИЛС и военный билет для мужчин, не достигших 27-летнего возраста
+                        </p>
+                    </div>
+                </div>
+                <div class="question border-b border-border">
+                    <div class="question__caption flex items-center justify-between hover:opacity-75 cursor-pointer py-5 -mx-2">
+                        <div class="text-dark text-base lg:text-lg font-medium px-2">
+                            Какой срок действия документов для ипотеки?
+                        </div>
+                        <div class="flex-shrink-0 px-2">
+                            <svg class="question__chevron transition duration-300" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="7" width="2" height="16" fill="#1E1F21"/>
+                                <rect x="16" y="7" width="2" height="16" transform="rotate(90 16 7)" fill="#1E1F21"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="question__content hidden">
+                        <p>
+                            При подачи заявки с первоначальным взносом от 20% по программе «Ипотека 0% на 12 месяцев» достаточно заполнить анкету и приложить копию паспорта и СНИЛС. По другим программам стандартный пакет документов включает в себя заполненную анкету, скан всех страниц паспорта(включая пустые), заверенную копию трудовой книжки и справку о доходах (2НДФЛ или по форме банка). Многие банки также требуют СНИЛС и военный билет для мужчин, не достигших 27-летнего возраста
+                        </p>
+                        <p>
+                            При подачи заявки с первоначальным взносом от 20% по программе «Ипотека 0% на 12 месяцев» достаточно заполнить анкету и приложить копию паспорта и СНИЛС. По другим программам стандартный пакет документов включает в себя заполненную анкету, скан всех страниц паспорта(включая пустые), заверенную копию трудовой книжки и справку о доходах (2НДФЛ или по форме банка). Многие банки также требуют СНИЛС и военный билет для мужчин, не достигших 27-летнего возраста
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="overflow-hidden mt-16">
+    <div class="container pl-4 lg:pr-4">
+        <h2>
+            Популяные ЖК
+        </h2>
+        //= templates/buildings-tabs.html
+    </div>
+    <div class="buildings container pl-4 lg:pr-4">
+        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch -mx-2 lg:-mx-4 pb-4">
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+            //= templates/building-example-one.html
+            //= templates/building-example-two.html
+        </div>
+    </div>
+    <div class="flex mt-6 justify-center">
+        <a href="#" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
+            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                Смотреть все новостройки
+            </span>
+        </a>
+    </div>
+</section>
+//= templates/services.html
+//= templates/viewed.html
+<section class="mt-16">
+    <div class="container px-4">
+        <h3>Найти квартиру в новостройке</h3>
+        <div class="leading-relaxed mt-3">
+            <p>
+                Novostroi-ki.ru – портал, объединяющий застройщиков Москвы, Крыма, Краснодара и Ростова-на-Дону. На портале представлены лучшие предложения рынка недвижимости в различном ценовом сегменте.
+            </p>
+            <p>
+                Сайт Novostroi-ki.ru абсолютно бесплатно поможет Вам подобрать за короткий срок идеальную квартиру по различным параметрам: городу, району, классу жилья, количеству комнат, сроку сдачи и даже материалу, используемому при строительстве. Выбрав необходимые критерии, Вы сможете
+                подробнее узнать о каждом застройщике и жилом комплексе из карточки объекта. Описание комплексов постоянно обновляется, в нем Вы всегда найдете актуальную информацию о вариантах покупки квартиры, акциях от застройщика, необходимую документацию, ежемесячные фотоотчеты со строительной
+                площадки, отзывы и многое другие.
+            </p>
+        </div>
+        <div>
+            <a href="#" class="text-sm font-semibold hover:opacity-75">Подробнее</a>
+        </div>
+    </div>
+</section>
+<div class="mt-12">
+    //= templates/tags.html
+</div>
+
+//= templates/footer.html
+//= templates/scripts.html
+</body>
+
+</html>
