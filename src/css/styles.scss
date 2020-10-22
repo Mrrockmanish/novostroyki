@@ -35,6 +35,10 @@ body {
     line-height: 1.5;
     font-weight: 400;
     word-wrap: break-word;
+    padding-top: s(42);
+    @media (min-width: 1024px) {
+        padding-top: 0;
+    }
 }
 
 .container {
@@ -281,14 +285,23 @@ h3 {
 }
 
 .building {
-    max-width: 18rem;
+    width: s(288);
+    flex-shrink: 0;
 
     @media (min-width: 375px) {
-        max-width: s(312);
+        width: s(312);
     }
 
     @media (min-width: 1024px) {
-        max-width: s(326);
+        width: s(326);
+    }
+
+    @media (min-width: 1266px) {
+        width: 25%;
+    }
+
+    &__inner {
+        width: s(296);
     }
 
     &__developer-name {
@@ -742,5 +755,11 @@ h3 {
 .h {
     &-56px {
         height: s(56);
+    }
+}
+
+.program-property {
+    li {
+        margin-bottom: 1rem;
     }
 }
