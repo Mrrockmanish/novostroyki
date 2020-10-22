@@ -4,9 +4,11 @@
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
 
-@import "../../node_modules/jquery-ui/themes/base/core";
-@import "../../node_modules/jquery-ui/themes/base/slider";
-@import "../../node_modules/jquery-ui/themes/base/theme";
+//@import "../../node_modules/jquery-ui/themes/base/core";
+//@import "../../node_modules/jquery-ui/themes/base/slider";
+//@import "../../node_modules/jquery-ui/themes/base/theme";
+//@import "../../node_modules/jquery-ui/themes/base/tooltip";
+@import "jquery-ui-custom/jquery-ui";
 
 $black: #000000;
 $white: #FFFFFF;
@@ -27,6 +29,12 @@ $root-font-size: 16;
 
 @function s($size) {
   @return $size / $root-font-size * 1rem;
+}
+
+.slick-slide {
+  &:focus {
+    outline: none!important;
+  }
 }
 
 .services-slider {
@@ -124,6 +132,35 @@ $root-font-size: 16;
   }
 }
 
+.building-carousel {
+  cursor: grab;
+  
+  &:active {
+    cursor: grabbing;
+  }
+  
+  .slick-arrow {
+    border: none;
+    background: rgba(0,0,0,.4);
+    width: s(35);
+    height: s(35);
+  }
+  .slick-prev {
+    left: s(4);
+    svg {
+      width: s(20);
+      height: s(20);
+    }
+  }
+  .slick-next {
+    right: s(4);
+    svg {
+      width: s(20);
+      height: s(20);
+    }
+  }
+}
+
 .ui-slider-handle {
   border-radius: 50%;
   border: s(2) solid $primary!important;
@@ -148,4 +185,13 @@ $root-font-size: 16;
 
 .ui-widget.ui-widget-content {
   border: none;
+}
+
+.ui-tooltip-content {
+  font-size: s(14)!important;
+  color: $second!important;
+}
+
+.ui-tooltip {
+  box-shadow: 1px 2px 4px rgba(0,0,0,.16)!important;
 }

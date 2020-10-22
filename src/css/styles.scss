@@ -334,6 +334,20 @@ h3 {
         }
     }
 
+    &__best-seller-icon {
+        left: s(12);
+        top: s(12)
+    }
+
+    &__like-icon {
+        right: s(12);
+        top: s(12);
+    }
+
+    &__achievements {
+        left: s(12);
+        bottom: s(12);
+    }
 }
 
 .mortgage-info {
