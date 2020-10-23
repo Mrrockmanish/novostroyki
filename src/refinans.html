@@ -226,11 +226,13 @@
     </div>
 </main>
 <section class="overflow-hidden mt-16">
-    <div class="container pl-4 lg:pr-4">
+    <div class="container px-4">
         <h2>
             Объекты, участвующие в программе
         </h2>
-        <ul class="filter-categories overflow-x-auto lg:overflow-x-visible overflow-y-hidden">
+    </div>
+    <div class="container pl-2 lg:px-4">
+        <ul class="filter-categories overflow-x-auto lg:overflow-y-hidden">
             <li class="active">
                 <a href="#">
                     Списком
@@ -243,8 +245,8 @@
             </li>
         </ul>
     </div>
-    <div class="buildings container pl-4 lg:pr-4">
-        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch -mx-2 lg:-mx-4 pb-4">
+    <div class="container pl-2 lg:px-4">
+        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch lg:-mx-4 pb-4">
             //= templates/building-example-one.html
             //= templates/building-example-two.html
             //= templates/building-example-one.html
@@ -254,13 +256,13 @@
             //= templates/building-example-one.html
             //= templates/building-example-two.html
         </div>
-    </div>
-    <div class="flex mt-6 justify-center">
-        <a href="#" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
+        <div class="flex mt-6 justify-center">
+            <a href="#" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
             <span class="flex justify-center items-center w-full h-full font-bold text-sm">
                 Все жк застройщика
             </span>
-        </a>
+            </a>
+        </div>
     </div>
 </section>
 <section class="section mt-16">
@@ -739,15 +741,15 @@
         </div>
     </div>
 </section>
-<section class="overflow-hidden mt-16">
-    <div class="container pl-4 lg:pr-4">
+<section class="mt-16">
+    <div class="container px-4">
         <h2>
             Популяные ЖК
         </h2>
-        //= templates/buildings-tabs.html
     </div>
-    <div class="buildings container pl-4 lg:pr-4">
-        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch -mx-2 lg:-mx-4 pb-4">
+    <div class="container pl-2 lg:px-4">
+        //= templates/buildings-tabs.html
+        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch lg:-mx-4 pb-4">
             //= templates/building-example-one.html
             //= templates/building-example-two.html
             //= templates/building-example-one.html

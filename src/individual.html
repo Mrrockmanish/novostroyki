@@ -133,9 +133,16 @@
                         <div class="form-group px-1 mt-5">
                             <label class="flex items-center">
                                 <input name="credit" type="checkbox" class="hidden check-gray">
-                                <span class="check-gray__custom inline-flex relative w-6 h-6 flex-shrink-0 rounded border border-border ml-1 mr-1"></span>
+                                <span class="check-gray__custom inline-flex relative w-5 h-5 flex-shrink-0 rounded border border-border ml-1 mr-1"></span>
                                 <span class="inline-flex">C ремонтом</span>
                             </label>
+                        </div>
+                        <div class="form-group px-1 mt-5">
+                            <select name="more-filters">
+                                <option value="Еще фильтры" selected>Еще фильтры</option>
+                                <option value="Фильтр 1">Фильтр 1</option>
+                                <option value="Фильтр 1">Фильтр 1</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -180,15 +187,15 @@
         </main>
     </div>
 </div>
-<section class="overflow-hidden mt-16">
-    <div class="container pl-4 lg:pr-4">
+<section class="mt-16">
+    <div class="container px-4">
         <h2>
             Популяные ЖК
         </h2>
-        //= templates/buildings-tabs.html
     </div>
-    <div class="buildings container pl-4 lg:pr-4">
-        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch -mx-2 lg:-mx-4 pb-4">
+    <div class="container pl-2 lg:px-4">
+        //= templates/buildings-tabs.html
+        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch lg:-mx-4 pb-4">
             //= templates/building-example-one.html
             //= templates/building-example-two.html
             //= templates/building-example-one.html

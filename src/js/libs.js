@@ -9,9 +9,4 @@
 //= ../../node_modules/slick-carousel/slick/slick.js
 
 
-// ../../node_modules/jquery-ui/ui/widget.js
-// ../../node_modules/jquery-ui/ui/position.js
-// ../../node_modules/jquery-ui/ui/widgets/mouse.js
-// ../../node_modules/jquery-ui/ui/widgets/slider.js
-// ../../node_modules/jquery-ui/ui/unique-id.js
-// ../../node_modules/jquery-ui/ui/widgets/tooltip.js
+

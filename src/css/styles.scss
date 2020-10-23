@@ -173,25 +173,23 @@ a {
     display: flex;
     white-space: nowrap;
     position: relative;
-    margin-left: - s(8);
-    margin-right: - s(8);
 
     @media (min-width: 1024px) {
         margin-left: - s(12);
         margin-right: - s(12);
     }
 
-    &::after{
-        content: '';
-        display: block;
-        position: absolute;
-        height: s(1);
-        background-color: $border;
-        width: 97.5%;
-        bottom: 0;
-        left: 1rem;
-        z-index: -1;
-    }
+    //&::after{
+    //    content: '';
+    //    display: block;
+    //    position: absolute;
+    //    height: s(1);
+    //    background-color: $border;
+    //    width: 97.5%;
+    //    bottom: 0;
+    //    left: 1rem;
+    //    z-index: -1;
+    //}
 
 
     li {
@@ -293,15 +291,22 @@ h3 {
     }
 
     @media (min-width: 1024px) {
-        width: s(326);
+        width: 33.3333%;
     }
 
     @media (min-width: 1266px) {
         width: 25%;
     }
 
-    &__inner {
-        width: s(296);
+    &_percent-width {
+        width: 100%;
+
+        @media (min-width: 572px) {
+            width: 50%;
+        }
+        @media (min-width: 1024px) {
+            width: 33.33333%;
+        }
     }
 
     &__developer-name {
@@ -670,6 +675,7 @@ h3 {
 .check-inline {
     &__icon {
         opacity: 0;
+        width: s(12);
     }
 
     &:checked{
@@ -775,5 +781,12 @@ h3 {
 .program-property {
     li {
         margin-bottom: 1rem;
+    }
+}
+
+.view-variant {
+    &.active {
+        color: $light;
+        pointer-events: none;
     }
 }
