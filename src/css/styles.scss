@@ -112,12 +112,14 @@ a {
     & + .check-gray__custom::before {
         content: '';
         position: absolute;
-        width: 50%;
-        height: 50%;
-        background-color: $inputs;
+        width: s(8);
+        height: s(8);
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        background-image: url(../img/elements/check.png);
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
@@ -306,6 +308,9 @@ h3 {
         }
         @media (min-width: 1024px) {
             width: 33.33333%;
+        }
+        @media (min-width: 1266px) {
+            width: 25%;
         }
     }
 
@@ -707,40 +712,41 @@ h3 {
     }
 
     &__img-wrap {
+        flex-shrink: 0;
         @media (min-width: 1024px) {
-            width: s(92);
+            width: s(70);
         }
     }
 
     &__type {
-        width: s(85);
         @media (min-width: 1024px) {
+            width: s(85);
         }
     }
 
     &__floor {
-        width: s(85);
         @media (min-width: 1024px) {
+            width: 4rem;
         }
     }
     &__period {
         @media (min-width: 1024px) {
-            width: s(120);
+            width: 5.7rem;
         }
     }
     &__building-name {
         @media (min-width: 1024px) {
-            width: s(220);
+            width: s(200);
         }
     }
     &__price {
         @media (min-width: 1024px) {
-            width: s(125);
+            width: s(110);
         }
     }
     &__icons {
         @media (min-width: 1024px) {
-            width: s(215);
+            width: s(185);
         }
     }
 }
@@ -788,5 +794,41 @@ h3 {
     &.active {
         color: $light;
         pointer-events: none;
+    }
+}
+
+.form-control {
+    position: relative;
+    &__unit {
+        right: s(11);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.rounded-price {
+    border-radius: s(32);
+}
+
+.room-plan-img {
+    max-width: s(600);
+
+    &__desc {
+        left: s(24);
+        bottom: s(24)
+    }
+}
+
+.map-points {
+    width: s(200);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    right: s(24);
+    top: s(48);
+
+    &__chevron {
+        transition: .3s;
+        &.open {
+            transform: rotateX(180deg);
+        }
     }
 }

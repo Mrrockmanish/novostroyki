@@ -17,6 +17,9 @@ $(document).ready(function () {
   slideContent('.footer-category__caption', '.footer-category__menu', '.footer-category__chevron');
   // в частозадаваемых вопросах
   slideContent('.question__caption', '.question__content', '.question__chevron');
+  // для точек на карте
+  slideContent('.map-points__caption', '.map-points__content', '.map-points__chevron');
+
 
   // слайдер застройщики
   $('.developers-slider').slick({
