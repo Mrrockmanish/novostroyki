@@ -1,0 +1,75 @@
+<form class="flex flex-wrap -mx-4">
+    <div class="w-full lg:w-5/12 px-4">
+        <div class="flex flex-wrap -mx-2">
+            <div class="form-group w-full md:w-1/2 lg:w-full px-2 mt-5">
+                <label class="text-light text-sm leading-7" for="building-price">
+                    Стоимость недвижимости
+                </label>
+                <div class="form-control">
+                    <input type="text" name="building-price" id="building-price" class="h-12 w-full p-4 text-dark placeholder-light bg-inputs rounded text-sm" placeholder="до 10 000 000 ₽">
+                    <div class="range-slider" data-min="300000" data-max="65000000" data-step="100000"></div>
+                </div>
+                <div class="flex text-dark text-xs justify-between mt-2">
+                    <div>300 000 ₽</div>
+                    <div>65 000 000 ₽</div>
+                </div>
+            </div>
+            <div class="form-group w-full md:w-1/2 lg:w-full px-2 mt-5">
+                <label class="text-light text-sm leading-7" for="first-price">
+                    Первоначальный взнос
+                </label>
+                <div class="form-control">
+                    <input type="text" name="building-price" id="first-price" class="h-12 w-full p-4 text-dark placeholder-light bg-inputs rounded text-sm" placeholder="2 000 000 ₽">
+                    <div class="range-slider" data-min="300000" data-max="65000000" data-step="100000"></div>
+                </div>
+                <div class="flex text-dark text-xs justify-between mt-2">
+                    <div>300 000 ₽</div>
+                    <div>65 000 000 ₽</div>
+                </div>
+            </div>
+            <div class="form-group w-full md:w-1/2 lg:w-full px-2 mt-5">
+                <label class="text-light text-sm leading-7" for="mortgage-period">
+                    На срок
+                </label>
+                <div class="form-control">
+                    <input type="text" name="building-price" id="mortgage-period" class="h-12 w-full p-4 text-dark placeholder-light bg-inputs rounded text-sm" placeholder="30 лет">
+                    <div class="range-slider" data-min="1" data-max="30" data-step="1"></div>
+                </div>
+                <div class="flex text-dark text-xs justify-between mt-2">
+                    <div>1 год</div>
+                    <div>30 лет</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full lg:w-7/12 px-4 mt-6">
+        <div class="border border-border rounded p-4 sm:p-8">
+            <div class="text-xl">
+                Ежемесячный платёж - <span class="whitespace-no-wrap font-bold">от 8 322 ₽</span>
+            </div>
+            <div class="text-xl mt-4">
+                Размер кредита - <span class="whitespace-no-wrap font-bold">1 020 000 ₽</span>
+            </div>
+            <div class="mt-6">
+                <img src="img/banks/items.png">
+            </div>
+            <div class="text-medium text-primary flex justify-start items-center hover:opacity-75 mt-8">
+                <a href="#" class="mr-1">
+                    Все ипотечные программы
+                </a>
+                <div>
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 4.99998L1.49973 9.50024L-6.56019e-08 7.99945L3.00053 4.99998L-3.27824e-07 2.00051L1.49973 0.499713L6 4.99998Z" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="mt-6">
+                <button type="submit" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none w-full sm:w-auto h-12 px-6">
+                    <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                        Подать заявку онлайн
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

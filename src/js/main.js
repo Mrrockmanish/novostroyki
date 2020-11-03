@@ -206,4 +206,26 @@ $(document).ready(function () {
   } );
 
 
+
+  // попап-галерея
+  const magnificGallery = (element) => {
+    $(element).each(function () {
+      $(this).magnificPopup({
+        delegate: '.etaps__item',
+        type: 'image',
+        gallery: {
+          enabled: true
+        }
+      });
+    });
+  };
+  // для этапов строительства
+  magnificGallery('.etaps');
+
+
+
+
+
+
+
 });
