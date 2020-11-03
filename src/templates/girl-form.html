@@ -81,8 +81,15 @@
             <input type="text" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="email" placeholder="sample@gmail.com">
         </div>
     </div>
-    <div class="text-light text-sm leading-none mt-5">
-        * Я согласен на <span class="text-main">обработку персональных данных</span>
+    <div class="form-group text-sm leading-none mt-5">
+        <label class="flex items-center">
+            <input name="i-agree" type="checkbox" class="hidden check-gray">
+            <span class="check-gray__custom inline-flex relative w-5 h-5 flex-shrink-0 rounded border border-border mr-2"></span>
+            <span class="block">
+                <span class="text-light">Я согласен на обработку </span>
+                <a href="#" target="_blank" class="hover:opacity-75">персональных данных</a>
+            </span>
+        </label>
     </div>
     <div class="form-group w-full mt-5">
         <button type="submit" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none w-full sm:w-auto h-12 px-6">

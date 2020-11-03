@@ -190,8 +190,15 @@
                         </textarea>
                 </div>
             </div>
-            <div class="mt-5">
-                <span class="text-light">Я согласен</span> на обработку персональных данных
+            <div class="form-group mt-5">
+                <label class="flex items-center">
+                    <input name="i-agree" type="checkbox" class="hidden check-gray">
+                    <span class="check-gray__custom inline-flex relative w-5 h-5 flex-shrink-0 rounded border border-border mr-2"></span>
+                    <span class="block">
+                        <span class="text-light">Я согласен на обработку </span>
+                            <a href="#" target="_blank" class="hover:opacity-75">персональных данных</a>
+                        </span>
+                </label>
             </div>
             <div class="form-group mt-5">
                 <button type="submit" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">

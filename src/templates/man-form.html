@@ -1,13 +1,13 @@
-<div class="mt-12">
-    <div class="flex bg-light-bg -mx-4 sm:ml-0 sm:mr-0">
-        <div class="w-full md:w-9/12 lg:w-full xl:w-7/12 px-4 py-12 md:pl-12 md:pr-12 xl:pr-0">
+<div class="man-form mt-12">
+    <div class="flex justify-between bg-light-bg -mx-4 sm:mx-0">
+        <div class="man-form__left w-full px-4 py-12 md:pl-12 md:pr-12 xl:pr-0">
             <h2>
                 Узнать больше
             </h2>
             <div class="text-xs sm:text-sm text-second leading-relaxed mt-2">
                 Мы можем проконсультировать вас по всем вопросам. Оставьте свой телефон и мы перезвоним в течение 5 минут
             </div>
-            <form class="flex items-end -mx-1 mt-4">
+            <form class="flex items-end flex-wrap -mx-1 mt-4">
                 <div class="form-group w-1/2 px-1">
                     <label for="man-form-tel" class="text-sm text-light">
                         Телефон
@@ -21,12 +21,19 @@
                         <span class="flex justify-center items-center w-full h-full font-bold text-sm">Перезвоните мне</span>
                     </button>
                 </div>
+                <div class="form-group w-full text-sm mt-4">
+                    <label class="flex items-center">
+                        <input name="i-agree" type="checkbox" class="hidden check-gray">
+                        <span class="check-gray__custom inline-flex relative w-5 h-5 flex-shrink-0 rounded border border-border mr-2"></span>
+                        <span class="block">
+                            <span class="text-light">Я согласен на обработку </span>
+                            <a href="#" target="_blank" class="hover:opacity-75">персональных данных</a>
+                        </span>
+                    </label>
+                </div>
             </form>
-            <div class="text-sm text-light mt-4">
-                Я согласен на <span class="text-dark">обработку персональных данных</span>
-            </div>
         </div>
-        <div class="hidden xl:block xl:w-5/12 relative">
+        <div class="man-form__right hidden xl:block w-full relative">
             <img src="img/elements/form-man.png" class="absolute bottom-0 right-0" alt="новосторйки" title="новостройки">
         </div>
     </div>

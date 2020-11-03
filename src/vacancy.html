@@ -80,9 +80,9 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-12">
-                <div class="flex bg-light-bg -mx-4 sm:ml-0 sm:mr-0">
-                    <div class="w-full md:w-9/12 lg:w-full xl:w-7/12 px-4 py-12 md:pl-12 md:pr-12 xl:pr-0">
+            <div class="man-form mt-12">
+                <div class="flex bg-light-bg -mx-4 sm:mx-0">
+                    <div class="man-form__left w-full  px-4 py-12 md:pl-12 md:pr-12 xl:pr-0">
                         <h2>
                             Не нашли нужную вакансию?
                         </h2>
@@ -103,7 +103,7 @@
                                     <span class="flex justify-center items-center w-full h-full font-bold text-sm">Перезвоните мне</span>
                                 </button>
                             </div>
-                            <div class="flex w-full mt-4">
+                            <div class="form-group flex w-full mt-4 px-1">
                                 <label class="clip-file flex items-center justify-start cursor-pointer hover:opacity-75">
                                     <span class="flex-shrink-0 mr-2">
                                         <svg class="clip-file__icon" width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,12 +116,19 @@
                                     <input type="file" class="clip-file__input w-full h-full hidden" accept=".txt,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
                                 </label>
                             </div>
+                            <div class="form-group text-sm mt-4 px-1">
+                                <label class="flex items-center">
+                                    <input name="i-agree" type="checkbox" class="hidden check-gray">
+                                    <span class="check-gray__custom inline-flex relative w-5 h-5 flex-shrink-0 rounded border border-border mr-2"></span>
+                                    <span class="block">
+                                        <span class="text-light">Я согласен на обработку </span>
+                                        <a href="#" target="_blank" class="hover:opacity-75">персональных данных</a>
+                                    </span>
+                                </label>
+                            </div>
                         </form>
-                        <div class="text-sm text-light mt-4">
-                            Я согласен на <span class="text-dark">обработку персональных данных</span>
-                        </div>
                     </div>
-                    <div class="hidden xl:block xl:w-5/12 relative">
+                    <div class="man-form__right hidden xl:block xl:w-5/12 relative">
                         <img src="img/elements/form-man.png" class="absolute bottom-0 right-0" alt="новосторйки" title="новостройки">
                     </div>
                 </div>
@@ -139,17 +146,13 @@
         //= templates/buildings-tabs.html
         <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch lg:-mx-4 pb-4">
             //= templates/building-example-one.html
-            //= templates/building-example-one
-.html
             //= templates/building-example-one.html
-            //= templates/building-example-one
-.html
             //= templates/building-example-one.html
-            //= templates/building-example-one
-.html
             //= templates/building-example-one.html
-            //= templates/building-example-one
-.html
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
         </div>
     </div>
     <div class="flex mt-6 justify-center">

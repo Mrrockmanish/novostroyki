@@ -872,3 +872,13 @@ h3 {
         height: s(140);
     }
 }
+
+.man-form {
+    &__left {
+        max-width: 30rem;
+        @media (min-width: 768px) {
+            width: 30rem;
+            flex-shrink: 0;
+        }
+    }
+}
