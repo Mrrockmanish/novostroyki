@@ -154,7 +154,8 @@ $(document).ready(function () {
         nextArrow: '<div class="slick-next slick-arrow">' +
           '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
           '<path d="M3.17177 5.00002L0.342773 2.17202L1.75677 0.757019L5.99977 5.00002L1.75677 9.24302L0.342773 7.82802L3.17177 5.00002Z" fill="black"/>\n' +
-          '</svg></div>'
+          '</svg></div>',
+        infinite: false
       })
     });
   };
@@ -163,6 +164,8 @@ $(document).ready(function () {
 
   // слайдер статистики
   singleSlider('.statistic-slider');
+  // главная карусель на странице объекта
+  singleSlider('.carousel-full');
 
   // отображаем названия прикрепляемого фойла
   const clipFileName = (clipInputSelector, clipTextTagSelector, clipText) => {
@@ -206,12 +209,11 @@ $(document).ready(function () {
   } );
 
 
-
   // попап-галерея
-  const magnificGallery = (element) => {
+  const magnificGallery = (element, delegateElement) => {
     $(element).each(function () {
       $(this).magnificPopup({
-        delegate: '.etaps__item',
+        delegate: delegateElement,
         type: 'image',
         gallery: {
           enabled: true
@@ -220,9 +222,9 @@ $(document).ready(function () {
     });
   };
   // для этапов строительства
-  magnificGallery('.etaps');
-
-
+  magnificGallery('.etaps', '.etaps__item');
+  // для карусели объектов
+  magnificGallery('.carousel-full', 'a');
 
 
 
