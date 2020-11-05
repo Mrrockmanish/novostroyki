@@ -21,6 +21,7 @@ $border: #DEE8EE;
 $inputs: #F2F4F7;
 $D6DCE0: #D6DCE0;
 $F2F4F7: #F2F4F7;
+$icon: #D0D6DA;
 
 @function s($size) {
     @return $size / $root-font-size * 1rem;
@@ -348,9 +349,13 @@ h3 {
         top: s(12)
     }
 
-    &__like-icon {
+    &__favorite-icon {
         right: s(12);
         top: s(12);
+        color: $icon;
+        &.active {
+            color: red;
+        }
     }
 
     &__achievements {
@@ -827,8 +832,12 @@ h3 {
     }
 }
 
-.rounded-price {
+.rounded-price, .rounded-mortgage {
     border-radius: s(32);
+}
+
+.rounded-mortgage {
+    background-color: #EFFAF5;
 }
 
 .room-plan-img {
