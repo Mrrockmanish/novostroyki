@@ -75,10 +75,16 @@ $root-font-size: 16;
     }
   }
   .slick-prev {
-    left: s(25);
+    left: s(15);
+    @media (min-width: 768px) {
+      left: s(25);
+    }
   }
   .slick-next {
-    right: s(25)
+    right: s(15);
+    @media (min-width: 768px) {
+        right: s(25);
+    }
   }
 
   &__plate {

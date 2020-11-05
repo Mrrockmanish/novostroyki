@@ -63,74 +63,102 @@
     </div>
     <div class="flex flex-wrap -mx-4 mt-4">
         <div class="w-full xl:w-9/12 px-4">
-            <div class="carousel-full">
-                <div class="carousel-full__slide">
-                    <a href="img/carousel/1full.jpg" class="w-full h-full block bg-no-repeat bg-center bg-cover outline-none hover-effect" style="background-image:url(img/carousel/1full.jpg);"></a>
+            //= templates/carousel-full.html
+            <div class="w-full flex mt-6">
+                <div class="md:w-20 md:h-20 hidden md:block rounded overflow-hidden mr-3 md:mr-6">
+                    <img src="img/elements/map-icon.png" class="w-full">
                 </div>
-                <div class="carousel-full__plates bg-no-repeat bg-center bg-cover">
-                    <div class="carousel-full__plates-inner flex flex-wrap w-full h-full">
-                        <div class="carousel-full__plate w-1/2">
-                            <a href="img/carousel/1.jpg" class="block w-full h-full bg-no-repeat bg-center bg-cover outline-none hover-effect" style="background-image:url(img/carousel/1.jpg);"></a>
+                <div class="flex-grow w-full mr-3">
+                    <div class="text-base">
+                        Краснодар, Старокубанская, 2/23
+                    </div>
+                    <div class="text-second text-sm mt-1">
+                        Западный обход, Микрорайон Черемушки (ЧМР)
+                    </div>
+                    <div class="flex text-second text-sm flex-wrap w-full -mx-2">
+                        <div class="px-2 mt-2">
+                            <div class="flex items-center w-full">
+                                <div class="flex-shrink-0 mr-1">
+                                    <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.34736 6.26L5.01819 4.32C5.31801 4.10059 5.68269 3.98793 6.05402 4C6.50695 4.01129 6.9451 4.16342 7.30756 4.43524C7.67003 4.70705 7.93881 5.08504 8.07652 5.51667C8.23152 6.0025 8.37319 6.33083 8.50152 6.50167C8.88928 7.019 9.39228 7.43884 9.97061 7.72786C10.5489 8.01688 11.1867 8.16712 11.8332 8.16667V9.83333C10.9726 9.83427 10.1225 9.6444 9.34411 9.27739C8.56571 8.91038 7.87835 8.37535 7.33152 7.71083L6.75069 11.0067L8.46819 12.4483L10.3207 17.5383L8.75402 18.1083L7.05402 13.4383L4.22902 11.0675C3.99719 10.8803 3.81979 10.6344 3.71529 10.3553C3.61079 10.0762 3.58301 9.77427 3.63486 9.48083L4.05902 7.07667L3.49486 7.48667L1.72236 9.92667L0.374023 8.94667L2.33319 6.25L2.34736 6.26ZM7.24986 3.58333C6.80783 3.58333 6.38391 3.40774 6.07135 3.09518C5.75879 2.78262 5.58319 2.35869 5.58319 1.91667C5.58319 1.47464 5.75879 1.05072 6.07135 0.738155C6.38391 0.425595 6.80783 0.25 7.24986 0.25C7.69188 0.25 8.11581 0.425595 8.42837 0.738155C8.74093 1.05072 8.91652 1.47464 8.91652 1.91667C8.91652 2.35869 8.74093 2.78262 8.42837 3.09518C8.11581 3.40774 7.69188 3.58333 7.24986 3.58333ZM4.77319 14.5675L2.09486 17.7592L0.81819 16.6883L3.29819 13.7333L3.91986 11.9167L5.41236 13.1667L4.77319 14.5675Z"
+                                              fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    25 мин. до центра (Галерея)
+                                </div>
+                            </div>
                         </div>
-                        <div class="carousel-full__plate w-1/2">
-                            <a href="img/carousel/2.jpg" class="block w-full h-full bg-no-repeat bg-center bg-cover outline-none hover-effect" style="background-image:url(img/carousel/1.jpg);"></a>
-                        </div>
-                        <div class="carousel-full__plate w-1/2">
-                            <a href="img/carousel/1.jpg" class="block w-full h-full bg-no-repeat bg-center bg-cover outline-none hover-effect" style="background-image:url(img/carousel/2.jpg);"></a>
-                        </div>
-                        <div class="carousel-full__plate w-1/2">
-                            <a href="img/carousel/2.jpg" class="block w-full h-full bg-no-repeat bg-center bg-cover outline-none hover-effect" style="background-image:url(img/carousel/2.jpg);"></a>
+                        <div class="px-2 mt-2">
+                            <div class="flex items-center w-full">
+                                <div class="flex-shrink-0 mr-1">
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.3333 8.24967V14.4997C18.3333 14.7207 18.2455 14.9327 18.0893 15.0889C17.933 15.2452 17.721 15.333 17.5 15.333H16.6667C16.4457 15.333 16.2337 15.2452 16.0774 15.0889C15.9211 14.9327 15.8333 14.7207 15.8333 14.4997V13.6663H4.16667V14.4997C4.16667 14.7207 4.07887 14.9327 3.92259 15.0889C3.76631 15.2452 3.55435 15.333 3.33333 15.333H2.5C2.27899 15.333 2.06702 15.2452 1.91074 15.0889C1.75446 14.9327 1.66667 14.7207 1.66667 14.4997V8.24967L0.630833 7.99134C0.450628 7.9462 0.290674 7.84213 0.176379 7.69568C0.0620851 7.54923 4.88369e-06 7.36878 0 7.18301L0 6.58301C0 6.4725 0.0438987 6.36652 0.122039 6.28838C0.200179 6.21024 0.30616 6.16634 0.416667 6.16634H1.97917L3.76083 1.41467C3.87994 1.09692 4.09321 0.823093 4.37213 0.629802C4.65105 0.436511 4.98232 0.332966 5.32167 0.333008H14.6783C15.0177 0.332966 15.349 0.436511 15.6279 0.629802C15.9068 0.823093 16.1201 1.09692 16.2392 1.41467L18.0208 6.16634H19.5833C19.6938 6.16634 19.7998 6.21024 19.878 6.28838C19.9561 6.36652 20 6.4725 20 6.58301V7.18301C20 7.36878 19.9379 7.54923 19.8236 7.69568C19.7093 7.84213 19.5494 7.9462 19.3692 7.99134L18.3333 8.24967ZM3.33333 9.49967V11.1663C3.33333 11.3874 3.42113 11.5993 3.57741 11.7556C3.73369 11.9119 3.94565 11.9997 4.16667 11.9997H6.87083C6.94279 11.9996 7.01348 11.9808 7.07604 11.9453C7.13859 11.9097 7.19088 11.8586 7.2278 11.7968C7.26472 11.7351 7.28502 11.6648 7.28672 11.5929C7.28842 11.5209 7.27146 11.4498 7.2375 11.3863C6.56667 10.128 5.265 9.49967 3.33333 9.49967ZM16.6667 9.49967C14.7358 9.49967 13.4342 10.1288 12.7617 11.3863C12.7277 11.4498 12.7107 11.5211 12.7125 11.5931C12.7142 11.6651 12.7346 11.7354 12.7716 11.7972C12.8086 11.8589 12.861 11.9101 12.9237 11.9456C12.9863 11.9811 13.0571 11.9997 13.1292 11.9997H15.8333C16.0543 11.9997 16.2663 11.9119 16.4226 11.7556C16.5789 11.5993 16.6667 11.3874 16.6667 11.1663V9.49967ZM5 1.99967L3.69917 5.90301C3.65746 6.02822 3.64609 6.16154 3.666 6.29201C3.6859 6.42247 3.7365 6.54634 3.81364 6.65342C3.89078 6.76051 3.99224 6.84774 4.10969 6.90793C4.22713 6.96813 4.35719 6.99957 4.48917 6.99967H15.5108C15.6428 6.99957 15.7729 6.96813 15.8903 6.90793C16.0078 6.84774 16.1092 6.76051 16.1864 6.65342C16.2635 6.54634 16.3141 6.42247 16.334 6.29201C16.3539 6.16154 16.3425 6.02822 16.3008 5.90301L15 1.99967H5Z"
+                                              fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    15 мин. до центра (Галерея)
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="developer-logo-w-120 hidden md:flex items-start flex-shrink-0">
+                    <img src="img/developers/neo.png" class="block ml-auto" alt="название застройщика" title="название застройщика">
+                </div>
+            </div>
+            <div class="bg-F2F4F7 overflow-x-auto lg:overflow-y-hidden -mx-4 sm:mx-0 px-3 xl:px-5 mt-5">
+                <ul class="filter-categories">
+                    <li class="flex flex-shrink-0 items-center active">
+                        <a href="">
+                            Описание
+                        </a>
+                    </li>
+                    <li class="flex flex-shrink-0 items-center">
+                        <a href="">
+                            Расположение
+                        </a>
+                    </li>
+                    <li class="flex flex-shrink-0 items-center">
+                        <a href="" class="mr-1">
+                            Коттеджи
+                        </a>
+                        <span class="rounded-full flex flex-shrink-0 items-center justify-center w-6 h-6 bg-D6DCE0 text-xs font-semibold">
+                                12
+                            </span>
+                    </li>
+                    <li class="flex flex-shrink-0 items-center">
+                        <a href="">
+                            Стадии строительства
+                        </a>
+                    </li>
+                    <li class="flex flex-shrink-0 items-center">
+                        <a href="" class="mr-1">
+                            Отзывы
+                        </a>
+                        <span class="rounded-full flex flex-shrink-0 items-center justify-center w-6 h-6 bg-D6DCE0 text-xs font-semibold">
+                                12
+                            </span>
+                    </li>
+                    <li class="flex flex-shrink-0 items-center">
+                        <a href="">
+                            Ипотека
+                        </a>
+                    </li>
+                    <li class="flex flex-shrink-0 items-center">
+                        <a href="" class="mr-1">
+                            Видео
+                        </a>
+                        <span class="rounded-full flex flex-shrink-0 items-center justify-center w-6 h-6 bg-D6DCE0 text-xs font-semibold">
+                                8
+                            </span>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="w-full hidden xl:block xl:w-3/12 px-4 mt-5 xl:mt-0">
             //= templates/consult-block-border.html
-        </div>
-        <div class="w-full flex xl:w-9/12 px-4 mt-6">
-            <div class="md:w-20 md:h-20 hidden md:block rounded overflow-hidden mr-3 md:mr-6">
-                <img src="img/elements/map-icon.png" class="w-full">
-            </div>
-            <div class="flex-grow w-full mr-3">
-                <div class="text-base">
-                    Краснодар, Старокубанская, 2/23
-                </div>
-                <div class="text-second text-sm mt-1">
-                    Западный обход, Микрорайон Черемушки (ЧМР)
-                </div>
-                <div class="flex text-second text-sm flex-wrap w-full -mx-2">
-                    <div class="px-2 mt-2">
-                        <div class="flex items-center w-full">
-                            <div class="flex-shrink-0 mr-1">
-                                <svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.34736 6.26L5.01819 4.32C5.31801 4.10059 5.68269 3.98793 6.05402 4C6.50695 4.01129 6.9451 4.16342 7.30756 4.43524C7.67003 4.70705 7.93881 5.08504 8.07652 5.51667C8.23152 6.0025 8.37319 6.33083 8.50152 6.50167C8.88928 7.019 9.39228 7.43884 9.97061 7.72786C10.5489 8.01688 11.1867 8.16712 11.8332 8.16667V9.83333C10.9726 9.83427 10.1225 9.6444 9.34411 9.27739C8.56571 8.91038 7.87835 8.37535 7.33152 7.71083L6.75069 11.0067L8.46819 12.4483L10.3207 17.5383L8.75402 18.1083L7.05402 13.4383L4.22902 11.0675C3.99719 10.8803 3.81979 10.6344 3.71529 10.3553C3.61079 10.0762 3.58301 9.77427 3.63486 9.48083L4.05902 7.07667L3.49486 7.48667L1.72236 9.92667L0.374023 8.94667L2.33319 6.25L2.34736 6.26ZM7.24986 3.58333C6.80783 3.58333 6.38391 3.40774 6.07135 3.09518C5.75879 2.78262 5.58319 2.35869 5.58319 1.91667C5.58319 1.47464 5.75879 1.05072 6.07135 0.738155C6.38391 0.425595 6.80783 0.25 7.24986 0.25C7.69188 0.25 8.11581 0.425595 8.42837 0.738155C8.74093 1.05072 8.91652 1.47464 8.91652 1.91667C8.91652 2.35869 8.74093 2.78262 8.42837 3.09518C8.11581 3.40774 7.69188 3.58333 7.24986 3.58333ZM4.77319 14.5675L2.09486 17.7592L0.81819 16.6883L3.29819 13.7333L3.91986 11.9167L5.41236 13.1667L4.77319 14.5675Z"
-                                          fill="currentColor"/>
-                                </svg>
-                            </div>
-                            <div>
-                                25 мин. до центра (Галерея)
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-2 mt-2">
-                        <div class="flex items-center w-full">
-                            <div class="flex-shrink-0 mr-1">
-                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18.3333 8.24967V14.4997C18.3333 14.7207 18.2455 14.9327 18.0893 15.0889C17.933 15.2452 17.721 15.333 17.5 15.333H16.6667C16.4457 15.333 16.2337 15.2452 16.0774 15.0889C15.9211 14.9327 15.8333 14.7207 15.8333 14.4997V13.6663H4.16667V14.4997C4.16667 14.7207 4.07887 14.9327 3.92259 15.0889C3.76631 15.2452 3.55435 15.333 3.33333 15.333H2.5C2.27899 15.333 2.06702 15.2452 1.91074 15.0889C1.75446 14.9327 1.66667 14.7207 1.66667 14.4997V8.24967L0.630833 7.99134C0.450628 7.9462 0.290674 7.84213 0.176379 7.69568C0.0620851 7.54923 4.88369e-06 7.36878 0 7.18301L0 6.58301C0 6.4725 0.0438987 6.36652 0.122039 6.28838C0.200179 6.21024 0.30616 6.16634 0.416667 6.16634H1.97917L3.76083 1.41467C3.87994 1.09692 4.09321 0.823093 4.37213 0.629802C4.65105 0.436511 4.98232 0.332966 5.32167 0.333008H14.6783C15.0177 0.332966 15.349 0.436511 15.6279 0.629802C15.9068 0.823093 16.1201 1.09692 16.2392 1.41467L18.0208 6.16634H19.5833C19.6938 6.16634 19.7998 6.21024 19.878 6.28838C19.9561 6.36652 20 6.4725 20 6.58301V7.18301C20 7.36878 19.9379 7.54923 19.8236 7.69568C19.7093 7.84213 19.5494 7.9462 19.3692 7.99134L18.3333 8.24967ZM3.33333 9.49967V11.1663C3.33333 11.3874 3.42113 11.5993 3.57741 11.7556C3.73369 11.9119 3.94565 11.9997 4.16667 11.9997H6.87083C6.94279 11.9996 7.01348 11.9808 7.07604 11.9453C7.13859 11.9097 7.19088 11.8586 7.2278 11.7968C7.26472 11.7351 7.28502 11.6648 7.28672 11.5929C7.28842 11.5209 7.27146 11.4498 7.2375 11.3863C6.56667 10.128 5.265 9.49967 3.33333 9.49967ZM16.6667 9.49967C14.7358 9.49967 13.4342 10.1288 12.7617 11.3863C12.7277 11.4498 12.7107 11.5211 12.7125 11.5931C12.7142 11.6651 12.7346 11.7354 12.7716 11.7972C12.8086 11.8589 12.861 11.9101 12.9237 11.9456C12.9863 11.9811 13.0571 11.9997 13.1292 11.9997H15.8333C16.0543 11.9997 16.2663 11.9119 16.4226 11.7556C16.5789 11.5993 16.6667 11.3874 16.6667 11.1663V9.49967ZM5 1.99967L3.69917 5.90301C3.65746 6.02822 3.64609 6.16154 3.666 6.29201C3.6859 6.42247 3.7365 6.54634 3.81364 6.65342C3.89078 6.76051 3.99224 6.84774 4.10969 6.90793C4.22713 6.96813 4.35719 6.99957 4.48917 6.99967H15.5108C15.6428 6.99957 15.7729 6.96813 15.8903 6.90793C16.0078 6.84774 16.1092 6.76051 16.1864 6.65342C16.2635 6.54634 16.3141 6.42247 16.334 6.29201C16.3539 6.16154 16.3425 6.02822 16.3008 5.90301L15 1.99967H5Z"
-                                          fill="currentColor"/>
-                                </svg>
-                            </div>
-                            <div>
-                                15 мин. до центра (Галерея)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="developer-logo-w-120 hidden md:flex items-start flex-shrink-0">
-                <img src="img/developers/neo.png" class="block ml-auto" alt="название застройщика" title="название застройщика">
-            </div>
         </div>
     </div>
 </div>
@@ -138,55 +166,7 @@
     <div class="container px-4">
         <div class="flex">
             <div class="w-full xl:w-9/12">
-                <div class="bg-F2F4F7 overflow-x-auto lg:overflow-y-hidden -mx-4 sm:mx-0 px-3 xl:px-5">
-                    <ul class="filter-categories">
-                        <li class="flex flex-shrink-0 items-center active">
-                            <a href="">
-                                Описание
-                            </a>
-                        </li>
-                        <li class="flex flex-shrink-0 items-center">
-                            <a href="">
-                                Расположение
-                            </a>
-                        </li>
-                        <li class="flex flex-shrink-0 items-center">
-                            <a href="" class="mr-1">
-                                Коттеджи
-                            </a>
-                            <span class="rounded-full flex flex-shrink-0 items-center justify-center w-6 h-6 bg-D6DCE0 text-xs font-semibold">
-                                12
-                            </span>
-                        </li>
-                        <li class="flex flex-shrink-0 items-center">
-                            <a href="">
-                                Стадии строительства
-                            </a>
-                        </li>
-                        <li class="flex flex-shrink-0 items-center">
-                            <a href="" class="mr-1">
-                                Отзывы
-                            </a>
-                            <span class="rounded-full flex flex-shrink-0 items-center justify-center w-6 h-6 bg-D6DCE0 text-xs font-semibold">
-                                12
-                            </span>
-                        </li>
-                        <li class="flex flex-shrink-0 items-center">
-                            <a href="">
-                                Ипотека
-                            </a>
-                        </li>
-                        <li class="flex flex-shrink-0 items-center">
-                            <a href="" class="mr-1">
-                                Видео
-                            </a>
-                            <span class="rounded-full flex flex-shrink-0 items-center justify-center w-6 h-6 bg-D6DCE0 text-xs font-semibold">
-                                8
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <h2 class="mt-6">
+                <h2>
                     Описание
                 </h2>
                 <div class="mt-4">
@@ -456,93 +436,7 @@
         </div>
     </div>
 </div>
-<section class="mt-16">
-    <div class="container px-4">
-        <div class="w-full xl:w-9/12">
-            <h2>
-                Ход строительства КП Близкий
-            </h2>
-            <div class="form-group inline-flex mt-4">
-                <div class="flex rounded overflow-hidden">
-                    <label class="room-size flex-grow">
-                        <input type="checkbox" name="type-studio" class="room-size__checkbox hidden" value="Все">
-                        <span class="room-size__custom flex items-center justify-center bg-inputs text-xs xs:text-sm text-dark h-12 flex-shrink-0 px-4">
-                        2020
-                    </span>
-                    </label>
-                    <label class="room-size flex flex-grow">
-                        <input type="checkbox" name="type-1" class="room-size__checkbox hidden" value="Вторича">
-                        <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark border-border border-l h-12 px-4">
-                        2019
-                    </span>
-                    </label>
-                    <label class="room-size flex flex-grow">
-                        <input type="checkbox" name="type-2" class="room-size__checkbox hidden" value="Новостройка">
-                        <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark h-12 border-border border-l px-4">
-                        2018
-                    </span>
-                    </label>
-                </div>
-            </div>
-            <ul class="filter-categories overflow-x-auto lg:overflow-x-visible overflow-y-hidden -mx-2 lg:mx-0">
-                <li class="active">
-                    <a href="">
-                        Январь
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Февраль
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Март
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Апрель
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Май
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Июнь
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Июль
-                    </a>
-                </li>
-            </ul>
-            <div class="etaps flex flex-wrap -mx-2 mt-5">
-                <a href="img/etaps/1.jpg" class="etaps__item block w-1/2 md:w-1/4 hover-effect px-2 mt-4">
-                    <span class="etaps__item-inner block bg-no-repeat bg-center bg-cover" style="background-image:url(img/etaps/1.jpg);">
-                    </span>
-                </a>
-                <a href="img/etaps/2.jpg" class="etaps__item block w-1/2 md:w-1/4 hover-effect px-2 mt-4">
-                    <span class="etaps__item-inner block bg-no-repeat bg-center bg-cover" style="background-image:url(img/etaps/2.jpg);">
-                    </span>
-                </a>
-                <a href="img/etaps/3.jpg" class="etaps__item block w-1/2 md:w-1/4 hover-effect px-2 mt-4">
-                    <span class="etaps__item-inner block bg-no-repeat bg-center bg-cover" style="background-image:url(img/etaps/3.jpg);">
-                    </span>
-                </a>
-                <div class="etaps__more block w-1/2 md:w-1/4 hover-effect cursor-pointer px-2 mt-4">
-                    <div class="flex etaps bg-light-bg h-full w-full border border-border rounded justify-center items-center">
-                        Еще 18 фото
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+//= templates/etaps-section.html
 <section class="documents">
     <div class="container px-4 mt-16">
         <div class="w-full xl:w-9/12">
@@ -603,306 +497,133 @@
         </div>
     </div>
 </section>
-<section class="reviews mt-16">
+<section class="mt-16">
     <div class="container px-4">
-        <div class="flex flex-wrap -mx-4">
-            <div class="w-full xl:w-8/12 px-4">
-                <h2>
-                    Отзывы
+        <div class="w-full xl:w-9/12">
+            <div class="flex flex-wrap justify-between items-center w-full">
+                <h2 class="mr-3">
+                    Публикации
                 </h2>
-                <div class="flex flex-wrap whitespace-no-wrap -mx-4">
-                    <div class="px-4 mt-4">
-                        Отзывов - 15
-                    </div>
-                    <div class="px-4 mt-4">
-                        Хороших - 12
-                    </div>
-                    <div class="px-4 mt-4">
-                        Плохих - 3
-                    </div>
-                </div>
-                <div class="review-item bg-light-bg p-4 sm:p-8 mt-5">
-                    <div class="flex items-center sm:flex-no-wrap justify-between -mx-2 mt-4">
-                        <div class="text-base font-semibold px-2">
-                            Александр
-                        </div>
-                        <div class="rating flex px-2">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-gray.svg">
-                        </div>
-                    </div>
-                    <div class="text-dark mt-4">
-                        <p>
-                            Живу в этом доме уже 3-й год. Возле домов хаотично паркуются машины и уже уничтожили весь газон. Из-за этого всегда грязь кругом. Во дворе ужасная детска площадка на которой никогда не играют дети. Все дома вокруг одинаковые, как и другие дома вокруг и в других районах
-                            этого застройщика, из-за чего люди, которые не живут здесь долго ищут подъезд. Вокруг из инфраструктуры только пивнухи.
-                        </p>
-                    </div>
-                    <div class="flex items-center flex-wrap justify-between">
-                        <div class="flex -mx-1">
-                            <div class="px-1 cursor-pointer hover:opacity-75">
-                                <div class="border border-border rounded flex items-center justify-center px-2 h-8">
-                                    <div class="flex-shrink-0 text-icon mr-1">
-                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.33366 6.00007H3.33366V14.0001H1.33366C1.15685 14.0001 0.987279 13.9298 0.862254 13.8048C0.73723 13.6798 0.666992 13.5102 0.666992 13.3334V6.66674C0.666992 6.48993 0.73723 6.32036 0.862254 6.19534C0.987279 6.07031 1.15685 6.00007 1.33366 6.00007ZM4.86233 5.13807L9.12899 0.871408C9.1857 0.814537 9.26103 0.780052 9.34114 0.774295C9.42124 0.768539 9.50074 0.791897 9.56499 0.840074L10.1337 1.26674C10.2916 1.3853 10.4109 1.54798 10.4765 1.73424C10.5421 1.92051 10.5511 2.12204 10.5023 2.31341L9.73366 5.33341H14.0003C14.3539 5.33341 14.6931 5.47388 14.9431 5.72393C15.1932 5.97398 15.3337 6.31312 15.3337 6.66674V8.06941C15.3338 8.24365 15.2999 8.41623 15.2337 8.57741L13.1703 13.5874C13.12 13.7096 13.0345 13.814 12.9247 13.8875C12.8149 13.9609 12.6858 14.0001 12.5537 14.0001H5.33366C5.15685 14.0001 4.98728 13.9298 4.86225 13.8048C4.73723 13.6798 4.66699 13.5102 4.66699 13.3334V5.60941C4.66703 5.43261 4.73729 5.26307 4.86233 5.13807Z"
-                                                  fill="currentColor"/>
-                                        </svg>
-                                    </div>
-                                    <div class="text-xs text-dark font-semibold">
-                                        3
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="px-1 cursor-pointer hover:opacity-75">
-                                <div class="border border-border rounded flex items-center justify-center px-2 h-8">
-                                    <div class="flex-shrink-0 text-icon mr-1">
-                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.6663 7.99993H12.6663V-7.34329e-05H14.6663C14.8432 -7.34329e-05 15.0127 0.0701647 15.1377 0.195189C15.2628 0.320213 15.333 0.489782 15.333 0.666594V7.33326C15.333 7.51007 15.2628 7.67964 15.1377 7.80466C15.0127 7.92969 14.8432 7.99993 14.6663 7.99993ZM11.1377 8.86193L6.87101 13.1286C6.8143 13.1855 6.73897 13.2199 6.65886 13.2257C6.57876 13.2315 6.49926 13.2081 6.43501 13.1599L5.86634 12.7333C5.70841 12.6147 5.58911 12.452 5.5235 12.2658C5.45789 12.0795 5.44891 11.878 5.49767 11.6866L6.26634 8.66659H1.99967C1.64605 8.66659 1.30691 8.52612 1.05687 8.27607C0.806817 8.02602 0.666341 7.68688 0.666341 7.33326V5.93059C0.666161 5.75635 0.700134 5.58377 0.76634 5.42259L2.82967 0.412593C2.88001 0.290448 2.9655 0.186012 3.07529 0.112539C3.18508 0.0390663 3.31423 -0.000128746 3.44634 -7.34329e-05H10.6663C10.8432 -7.34329e-05 11.0127 0.0701647 11.1377 0.195189C11.2628 0.320213 11.333 0.489782 11.333 0.666594V8.39059C11.333 8.56739 11.2627 8.73693 11.1377 8.86193Z"
-                                                  fill="currentColor"/>
-                                        </svg>
-                                    </div>
-                                    <div class="text-xs text-dark font-semibold">
-                                        3
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-xs font-medium">
-                            29 октября 2020
-                        </div>
-                    </div>
-                </div>
-                <div class="review-item bg-light-bg p-4 sm:p-8 mt-10">
-                    <div class="flex items-center sm:flex-no-wrap justify-between -mx-2 mt-4">
-                        <div class="text-base font-semibold px-2">
-                            Александр
-                        </div>
-                        <div class="rating flex px-2">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-gray.svg">
-                        </div>
-                    </div>
-                    <div class="text-dark mt-4">
-                        <p>
-                            Живу в этом доме уже 3-й год. Возле домов хаотично паркуются машины и уже уничтожили весь газон. Из-за этого всегда грязь кругом. Во дворе ужасная детска площадка на которой никогда не играют дети. Все дома вокруг одинаковые, как и другие дома вокруг и в других районах
-                            этого застройщика, из-за чего люди, которые не живут здесь долго ищут подъезд. Вокруг из инфраструктуры только пивнухи.
-                        </p>
-                    </div>
-                    <div class="flex items-center flex-wrap justify-between">
-                        <div class="flex -mx-1">
-                            <div class="px-1 cursor-pointer hover:opacity-75">
-                                <div class="border border-border rounded flex items-center justify-center px-2 h-8">
-                                    <div class="flex-shrink-0 text-icon mr-1">
-                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.33366 6.00007H3.33366V14.0001H1.33366C1.15685 14.0001 0.987279 13.9298 0.862254 13.8048C0.73723 13.6798 0.666992 13.5102 0.666992 13.3334V6.66674C0.666992 6.48993 0.73723 6.32036 0.862254 6.19534C0.987279 6.07031 1.15685 6.00007 1.33366 6.00007ZM4.86233 5.13807L9.12899 0.871408C9.1857 0.814537 9.26103 0.780052 9.34114 0.774295C9.42124 0.768539 9.50074 0.791897 9.56499 0.840074L10.1337 1.26674C10.2916 1.3853 10.4109 1.54798 10.4765 1.73424C10.5421 1.92051 10.5511 2.12204 10.5023 2.31341L9.73366 5.33341H14.0003C14.3539 5.33341 14.6931 5.47388 14.9431 5.72393C15.1932 5.97398 15.3337 6.31312 15.3337 6.66674V8.06941C15.3338 8.24365 15.2999 8.41623 15.2337 8.57741L13.1703 13.5874C13.12 13.7096 13.0345 13.814 12.9247 13.8875C12.8149 13.9609 12.6858 14.0001 12.5537 14.0001H5.33366C5.15685 14.0001 4.98728 13.9298 4.86225 13.8048C4.73723 13.6798 4.66699 13.5102 4.66699 13.3334V5.60941C4.66703 5.43261 4.73729 5.26307 4.86233 5.13807Z"
-                                                  fill="currentColor"/>
-                                        </svg>
-                                    </div>
-                                    <div class="text-xs text-dark font-semibold">
-                                        3
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="px-1 cursor-pointer hover:opacity-75">
-                                <div class="border border-border rounded flex items-center justify-center px-2 h-8">
-                                    <div class="flex-shrink-0 text-icon mr-1">
-                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.6663 7.99993H12.6663V-7.34329e-05H14.6663C14.8432 -7.34329e-05 15.0127 0.0701647 15.1377 0.195189C15.2628 0.320213 15.333 0.489782 15.333 0.666594V7.33326C15.333 7.51007 15.2628 7.67964 15.1377 7.80466C15.0127 7.92969 14.8432 7.99993 14.6663 7.99993ZM11.1377 8.86193L6.87101 13.1286C6.8143 13.1855 6.73897 13.2199 6.65886 13.2257C6.57876 13.2315 6.49926 13.2081 6.43501 13.1599L5.86634 12.7333C5.70841 12.6147 5.58911 12.452 5.5235 12.2658C5.45789 12.0795 5.44891 11.878 5.49767 11.6866L6.26634 8.66659H1.99967C1.64605 8.66659 1.30691 8.52612 1.05687 8.27607C0.806817 8.02602 0.666341 7.68688 0.666341 7.33326V5.93059C0.666161 5.75635 0.700134 5.58377 0.76634 5.42259L2.82967 0.412593C2.88001 0.290448 2.9655 0.186012 3.07529 0.112539C3.18508 0.0390663 3.31423 -0.000128746 3.44634 -7.34329e-05H10.6663C10.8432 -7.34329e-05 11.0127 0.0701647 11.1377 0.195189C11.2628 0.320213 11.333 0.489782 11.333 0.666594V8.39059C11.333 8.56739 11.2627 8.73693 11.1377 8.86193Z"
-                                                  fill="currentColor"/>
-                                        </svg>
-                                    </div>
-                                    <div class="text-xs text-dark font-semibold">
-                                        3
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-xs font-medium">
-                            29 октября 2020
-                        </div>
-                    </div>
-                </div>
-                <div class="review-item bg-light-bg p-4 sm:p-8 mt-10">
-                    <div class="flex items-center sm:flex-no-wrap justify-between -mx-2 mt-4">
-                        <div class="text-base font-semibold px-2">
-                            Александр
-                        </div>
-                        <div class="rating flex px-2">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-gray.svg">
-                        </div>
-                    </div>
-                    <div class="text-dark mt-4">
-                        <p>
-                            Живу в этом доме уже 3-й год. Возле домов хаотично паркуются машины и уже уничтожили весь газон. Из-за этого всегда грязь кругом. Во дворе ужасная детска площадка на которой никогда не играют дети. Все дома вокруг одинаковые, как и другие дома вокруг и в других районах
-                            этого застройщика, из-за чего люди, которые не живут здесь долго ищут подъезд. Вокруг из инфраструктуры только пивнухи.
-                        </p>
-                    </div>
-                    <div class="flex items-center flex-wrap justify-between">
-                        <div class="flex -mx-1">
-                            <div class="px-1 cursor-pointer hover:opacity-75">
-                                <div class="border border-border rounded flex items-center justify-center px-2 h-8">
-                                    <div class="flex-shrink-0 text-icon mr-1">
-                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.33366 6.00007H3.33366V14.0001H1.33366C1.15685 14.0001 0.987279 13.9298 0.862254 13.8048C0.73723 13.6798 0.666992 13.5102 0.666992 13.3334V6.66674C0.666992 6.48993 0.73723 6.32036 0.862254 6.19534C0.987279 6.07031 1.15685 6.00007 1.33366 6.00007ZM4.86233 5.13807L9.12899 0.871408C9.1857 0.814537 9.26103 0.780052 9.34114 0.774295C9.42124 0.768539 9.50074 0.791897 9.56499 0.840074L10.1337 1.26674C10.2916 1.3853 10.4109 1.54798 10.4765 1.73424C10.5421 1.92051 10.5511 2.12204 10.5023 2.31341L9.73366 5.33341H14.0003C14.3539 5.33341 14.6931 5.47388 14.9431 5.72393C15.1932 5.97398 15.3337 6.31312 15.3337 6.66674V8.06941C15.3338 8.24365 15.2999 8.41623 15.2337 8.57741L13.1703 13.5874C13.12 13.7096 13.0345 13.814 12.9247 13.8875C12.8149 13.9609 12.6858 14.0001 12.5537 14.0001H5.33366C5.15685 14.0001 4.98728 13.9298 4.86225 13.8048C4.73723 13.6798 4.66699 13.5102 4.66699 13.3334V5.60941C4.66703 5.43261 4.73729 5.26307 4.86233 5.13807Z"
-                                                  fill="currentColor"/>
-                                        </svg>
-                                    </div>
-                                    <div class="text-xs text-dark font-semibold">
-                                        3
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="px-1 cursor-pointer hover:opacity-75">
-                                <div class="border border-border rounded flex items-center justify-center px-2 h-8">
-                                    <div class="flex-shrink-0 text-icon mr-1">
-                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.6663 7.99993H12.6663V-7.34329e-05H14.6663C14.8432 -7.34329e-05 15.0127 0.0701647 15.1377 0.195189C15.2628 0.320213 15.333 0.489782 15.333 0.666594V7.33326C15.333 7.51007 15.2628 7.67964 15.1377 7.80466C15.0127 7.92969 14.8432 7.99993 14.6663 7.99993ZM11.1377 8.86193L6.87101 13.1286C6.8143 13.1855 6.73897 13.2199 6.65886 13.2257C6.57876 13.2315 6.49926 13.2081 6.43501 13.1599L5.86634 12.7333C5.70841 12.6147 5.58911 12.452 5.5235 12.2658C5.45789 12.0795 5.44891 11.878 5.49767 11.6866L6.26634 8.66659H1.99967C1.64605 8.66659 1.30691 8.52612 1.05687 8.27607C0.806817 8.02602 0.666341 7.68688 0.666341 7.33326V5.93059C0.666161 5.75635 0.700134 5.58377 0.76634 5.42259L2.82967 0.412593C2.88001 0.290448 2.9655 0.186012 3.07529 0.112539C3.18508 0.0390663 3.31423 -0.000128746 3.44634 -7.34329e-05H10.6663C10.8432 -7.34329e-05 11.0127 0.0701647 11.1377 0.195189C11.2628 0.320213 11.333 0.489782 11.333 0.666594V8.39059C11.333 8.56739 11.2627 8.73693 11.1377 8.86193Z"
-                                                  fill="currentColor"/>
-                                        </svg>
-                                    </div>
-                                    <div class="text-xs text-dark font-semibold">
-                                        3
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-xs font-medium">
-                            29 октября 2020
-                        </div>
-                    </div>
-                </div>
-                <div class="review-item bg-light-bg p-4 sm:p-8 mt-10">
-                    <div class="flex items-center sm:flex-no-wrap justify-between -mx-2 mt-4">
-                        <div class="text-base font-semibold px-2">
-                            Александр
-                        </div>
-                        <div class="rating flex px-2">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-orange.svg">
-                            <img src="img/elements/star-gray.svg">
-                        </div>
-                    </div>
-                    <div class="text-dark mt-4">
-                        <p>
-                            Живу в этом доме уже 3-й год. Возле домов хаотично паркуются машины и уже уничтожили весь газон. Из-за этого всегда грязь кругом. Во дворе ужасная детска площадка на которой никогда не играют дети. Все дома вокруг одинаковые, как и другие дома вокруг и в других районах
-                            этого застройщика, из-за чего люди, которые не живут здесь долго ищут подъезд. Вокруг из инфраструктуры только пивнухи.
-                        </p>
-                    </div>
-                    <div class="flex items-center flex-wrap justify-between">
-                        <div class="flex -mx-1">
-                            <div class="px-1 cursor-pointer hover:opacity-75">
-                                <div class="border border-border rounded flex items-center justify-center px-2 h-8">
-                                    <div class="flex-shrink-0 text-icon mr-1">
-                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1.33366 6.00007H3.33366V14.0001H1.33366C1.15685 14.0001 0.987279 13.9298 0.862254 13.8048C0.73723 13.6798 0.666992 13.5102 0.666992 13.3334V6.66674C0.666992 6.48993 0.73723 6.32036 0.862254 6.19534C0.987279 6.07031 1.15685 6.00007 1.33366 6.00007ZM4.86233 5.13807L9.12899 0.871408C9.1857 0.814537 9.26103 0.780052 9.34114 0.774295C9.42124 0.768539 9.50074 0.791897 9.56499 0.840074L10.1337 1.26674C10.2916 1.3853 10.4109 1.54798 10.4765 1.73424C10.5421 1.92051 10.5511 2.12204 10.5023 2.31341L9.73366 5.33341H14.0003C14.3539 5.33341 14.6931 5.47388 14.9431 5.72393C15.1932 5.97398 15.3337 6.31312 15.3337 6.66674V8.06941C15.3338 8.24365 15.2999 8.41623 15.2337 8.57741L13.1703 13.5874C13.12 13.7096 13.0345 13.814 12.9247 13.8875C12.8149 13.9609 12.6858 14.0001 12.5537 14.0001H5.33366C5.15685 14.0001 4.98728 13.9298 4.86225 13.8048C4.73723 13.6798 4.66699 13.5102 4.66699 13.3334V5.60941C4.66703 5.43261 4.73729 5.26307 4.86233 5.13807Z"
-                                                  fill="currentColor"/>
-                                        </svg>
-                                    </div>
-                                    <div class="text-xs text-dark font-semibold">
-                                        3
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="px-1 cursor-pointer hover:opacity-75">
-                                <div class="border border-border rounded flex items-center justify-center px-2 h-8">
-                                    <div class="flex-shrink-0 text-icon mr-1">
-                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.6663 7.99993H12.6663V-7.34329e-05H14.6663C14.8432 -7.34329e-05 15.0127 0.0701647 15.1377 0.195189C15.2628 0.320213 15.333 0.489782 15.333 0.666594V7.33326C15.333 7.51007 15.2628 7.67964 15.1377 7.80466C15.0127 7.92969 14.8432 7.99993 14.6663 7.99993ZM11.1377 8.86193L6.87101 13.1286C6.8143 13.1855 6.73897 13.2199 6.65886 13.2257C6.57876 13.2315 6.49926 13.2081 6.43501 13.1599L5.86634 12.7333C5.70841 12.6147 5.58911 12.452 5.5235 12.2658C5.45789 12.0795 5.44891 11.878 5.49767 11.6866L6.26634 8.66659H1.99967C1.64605 8.66659 1.30691 8.52612 1.05687 8.27607C0.806817 8.02602 0.666341 7.68688 0.666341 7.33326V5.93059C0.666161 5.75635 0.700134 5.58377 0.76634 5.42259L2.82967 0.412593C2.88001 0.290448 2.9655 0.186012 3.07529 0.112539C3.18508 0.0390663 3.31423 -0.000128746 3.44634 -7.34329e-05H10.6663C10.8432 -7.34329e-05 11.0127 0.0701647 11.1377 0.195189C11.2628 0.320213 11.333 0.489782 11.333 0.666594V8.39059C11.333 8.56739 11.2627 8.73693 11.1377 8.86193Z"
-                                                  fill="currentColor"/>
-                                        </svg>
-                                    </div>
-                                    <div class="text-xs text-dark font-semibold">
-                                        3
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-xs font-medium">
-                            29 октября 2020
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full flex justify-center mt-10">
-                    <button class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none w-full sm:w-auto h-12 px-6">
-                        <span class="flex justify-center items-center w-full h-full font-bold text-sm">
-                            Загрузить еще
-                        </span>
-                    </button>
+                <div>
+                    <a href="#" class="text-primary hover:opacity-75">
+                        Публикации про объект
+                    </a>
                 </div>
             </div>
-            <div class="w-full xl:w-4/12 px-4 mt-5 xl:mt-0">
-                <h2>
-                    Ваш отзыв
-                </h2>
-                <div class="text-light mt-4">
-                    Оставиьте отзыв или просто оценку
+            <ul class="filter-categories -mx-2">
+                <li class="active">
+                    <a href="#">
+                        Мнения экспертов
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Новости
+                    </a>
+                </li>
+            </ul>
+            <div class="border border-border rounded p-4 sm:p-5 lg:p-8 mt-5">
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-7/12 lg:w-8/12">
+                        <div class="flex flex-wrap w-full items-center justify-between">
+                            <div class="w-full md:w-1/2 lg:w-8/12">
+                                <div class="bottom-builder-info flex w-full">
+                                    <a href="#" class="flex-shrink-0 rounded-full bg-no-repeat bg-cover bg-center hover-effect w-12 lg:w-16 h-12 lg:h-16 mr-3 lg:mr-4" style="background-image:url(img/backgrounds/nataly.jpg);">
+                                    </a>
+                                    <div class="w-full">
+                                        <a href="#" class="flex text-sm lg:text-xl font-semibold hover:opacity-75">
+                                            Наталья Наталья
+                                        </a>
+                                        <div class="text-xs lg:text-sm text-light">
+                                            Ипотечный брокер
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-1/2 lg:w-4/12 md:pl-2 md:pr-8 mt-4 md:mt-0">
+                                <div class="flex md:justify-end -mx-1">
+                                    <div class="px-1 cursor-pointer hover:opacity-75">
+                                        <div class="border border-border rounded flex items-center justify-center px-2 h-8">
+                                            <div class="flex-shrink-0 text-icon mr-1">
+                                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.33366 6.00007H3.33366V14.0001H1.33366C1.15685 14.0001 0.987279 13.9298 0.862254 13.8048C0.73723 13.6798 0.666992 13.5102 0.666992 13.3334V6.66674C0.666992 6.48993 0.73723 6.32036 0.862254 6.19534C0.987279 6.07031 1.15685 6.00007 1.33366 6.00007ZM4.86233 5.13807L9.12899 0.871408C9.1857 0.814537 9.26103 0.780052 9.34114 0.774295C9.42124 0.768539 9.50074 0.791897 9.56499 0.840074L10.1337 1.26674C10.2916 1.3853 10.4109 1.54798 10.4765 1.73424C10.5421 1.92051 10.5511 2.12204 10.5023 2.31341L9.73366 5.33341H14.0003C14.3539 5.33341 14.6931 5.47388 14.9431 5.72393C15.1932 5.97398 15.3337 6.31312 15.3337 6.66674V8.06941C15.3338 8.24365 15.2999 8.41623 15.2337 8.57741L13.1703 13.5874C13.12 13.7096 13.0345 13.814 12.9247 13.8875C12.8149 13.9609 12.6858 14.0001 12.5537 14.0001H5.33366C5.15685 14.0001 4.98728 13.9298 4.86225 13.8048C4.73723 13.6798 4.66699 13.5102 4.66699 13.3334V5.60941C4.66703 5.43261 4.73729 5.26307 4.86233 5.13807Z"
+                                                          fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                            <div class="text-xs text-dark font-semibold">
+                                                3333
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-1 cursor-pointer hover:opacity-75">
+                                        <div class="border border-border rounded flex items-center justify-center px-2 h-8">
+                                            <div class="flex-shrink-0 text-icon mr-1">
+                                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.6663 7.99993H12.6663V-7.34329e-05H14.6663C14.8432 -7.34329e-05 15.0127 0.0701647 15.1377 0.195189C15.2628 0.320213 15.333 0.489782 15.333 0.666594V7.33326C15.333 7.51007 15.2628 7.67964 15.1377 7.80466C15.0127 7.92969 14.8432 7.99993 14.6663 7.99993ZM11.1377 8.86193L6.87101 13.1286C6.8143 13.1855 6.73897 13.2199 6.65886 13.2257C6.57876 13.2315 6.49926 13.2081 6.43501 13.1599L5.86634 12.7333C5.70841 12.6147 5.58911 12.452 5.5235 12.2658C5.45789 12.0795 5.44891 11.878 5.49767 11.6866L6.26634 8.66659H1.99967C1.64605 8.66659 1.30691 8.52612 1.05687 8.27607C0.806817 8.02602 0.666341 7.68688 0.666341 7.33326V5.93059C0.666161 5.75635 0.700134 5.58377 0.76634 5.42259L2.82967 0.412593C2.88001 0.290448 2.9655 0.186012 3.07529 0.112539C3.18508 0.0390663 3.31423 -0.000128746 3.44634 -7.34329e-05H10.6663C10.8432 -7.34329e-05 11.0127 0.0701647 11.1377 0.195189C11.2628 0.320213 11.333 0.489782 11.333 0.666594V8.39059C11.333 8.56739 11.2627 8.73693 11.1377 8.86193Z"
+                                                          fill="currentColor"/>
+                                                </svg>
+                                            </div>
+                                            <div class="text-xs text-dark font-semibold">
+                                                3333
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm md:pr-8 mt-4">
+                            <p>
+                                Летние акции от ГК «Дарстрой» уже действуют: скидка 2 000 ₽ с каждого квадратного метра! Летние акции от ГК «Дарстрой» уже действуют: скидка 2 000 ₽ с каждого квадратного метра!
+                            </p>
+                        </div>
+                        <div class="text-light mt-4">
+                            29.06.2018
+                        </div>
+                    </div>
+                    <div class="w-full md:w-5/12 lg:w-4/12 md:border-l border-border md:px-4 lg:px-6 mt-4 md:mt-0">
+                        <div class="flex items-start mb-2">
+                            <div class="text-dark font-semibold w-1/2 md:px-2">
+                                Качество
+                            </div>
+                            <div class="rating flex flex-shrink-0 w-1/2 px-2 mt-1">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-gray.svg">
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-2">
+                            <div class="text-dark font-semibold w-1/2 md:px-2">
+                                Цена
+                            </div>
+                            <div class="rating flex flex-shrink-0 w-1/2 px-2 mt-1">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-gray.svg">
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-2">
+                            <div class="text-dark font-semibold w-1/2 md:px-2">
+                                Транспортная доступность
+                            </div>
+                            <div class="rating flex flex-shrink-0 w-1/2 px-2 mt-1">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-orange.svg">
+                                <img src="img/elements/star-gray.svg">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex mt-4">
-                    <img src="img/elements/star-big-img.svg">
-                    <img src="img/elements/star-big-img.svg">
-                    <img src="img/elements/star-big-img.svg">
-                    <img src="img/elements/star-big-img.svg">
-                    <img src="img/elements/star-big-gray-img.svg">
-                </div>
-                <form class="max-w-lg" action="">
-                    <div class="form-group mt-5">
-                        <label for="write-name" class="text-sm text-light">
-                            Как вас зовут?
-                        </label>
-                        <div class="form-control w-full mt-1">
-                            <input type="text" name="name" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="write-name">
-                        </div>
-                    </div>
-                    <div class="form-group mt-5">
-                        <label for="write-email" class="text-sm text-light">
-                            Электронная почта
-                        </label>
-                        <div class="form-control w-full mt-1">
-                            <input type="email" name="email" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="write-email" placeholder="sample@gmail.com">
-                        </div>
-                    </div>
-                    <div class="form-group mt-5">
-                        <label for="write-question" class="text-sm text-light">
-                            Ваш отзыв
-                        </label>
-                        <div class="form-control w-full mt-1">
-                        <textarea name="type" class="write-question w-full bg-inputs text-sm text-dark rounded placeholder-light outline-none px-4 py-4 h-12" id="write-question">
-                        </textarea>
-                        </div>
-                    </div>
-                    <div class="form-group mt-5">
-                        <label class="flex items-center">
-                            <input name="i-agree" type="checkbox" class="hidden check-gray">
-                            <span class="check-gray__custom inline-flex relative w-5 h-5 flex-shrink-0 rounded border border-border mr-2"></span>
-                            <span class="block">
-                                <span class="text-light">Я согласен на обработку </span>
-                                <a href="#" target="_blank" class="hover:opacity-75">персональных данных</a>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="form-group mt-5">
-                        <button type="submit" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
-                            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
-                                Отправить
-                            </span>
-                        </button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
 </section>
+//= templates/reviews-section.html
 <section class="mt-16">
     <div class="container px-4">
         //= templates/man-form.html
