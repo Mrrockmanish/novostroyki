@@ -79,6 +79,10 @@ a {
     width: s(124);
 }
 
+.header {
+    z-index: 999;
+}
+
 .bigger-title {
     line-height: 1.33;
     font-weight: bold;
@@ -402,6 +406,17 @@ h3 {
         width: s(8);
         height: s(8);
         background-color: $purple;
+    }
+
+    &_green {
+        &::before {
+            background-color: $green;
+        }
+    }
+    &_orange {
+        &::before {
+            background-color: $orange;
+        }
     }
 }
 
@@ -895,6 +910,31 @@ h3 {
         @media (min-width: 768px) {
             width: 30rem;
             flex-shrink: 0;
+        }
+    }
+}
+
+.developer-public {
+    @media (min-width: 768px) {
+        max-width: 50%;
+    }
+    @media (min-width: 1266px) {
+        max-width: s(426);
+    }
+}
+
+.lk-form-block {
+    max-width: s(482);
+}
+
+.blue-tabs {
+    &__tab {
+        cursor: pointer;
+        transition: .3s;
+        border-bottom: s(2) solid transparent;
+        &.active {
+            border-bottom: s(2) solid $primary;
+            pointer-events: none;
         }
     }
 }

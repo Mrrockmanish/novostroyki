@@ -227,6 +227,23 @@ $(document).ready(function () {
   magnificGallery('.carousel-full', 'a');
 
 
+  const tabs = (tabsWrap, tab, tabsContent) => {
+    $(tabsWrap).on('click', `${tab}:not(.active)`, function (){
+      //получаем имя таба
+      const tabName = $(this).data('tab');
+      // снимаем класс с активного таба
+      $(this).closest(tabsWrap).find(`${tab}.active`).removeClass('active');
+      // добавляем класс табу на который кликнули
+      $(this).addClass('active');
+      // прячем действующий контент таба
+      $(this).closest(tabsWrap).find(tabsContent).find('[data-tab]').hide();
+      // показываем контент по имени таба
+      $(this).closest(tabsWrap).find(tabsContent).find(`[data-tab=${tabName}]`).fadeIn(300);
+    });
+  };
+  // для личного кабинета
+  tabs('.lk-form-block', '.blue-tabs__tab', '.lk-form-block__content');
+
 
 
 

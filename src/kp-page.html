@@ -124,54 +124,7 @@
                     <img src="img/developers/neo.png" class="block ml-auto" alt="название застройщика" title="название застройщика">
                 </div>
             </div>
-            <div class="bg-F2F4F7 overflow-x-auto lg:overflow-y-hidden -mx-4 sm:mx-0 px-3 xl:px-5 mt-5">
-                <ul class="filter-categories">
-                    <li class="flex flex-shrink-0 items-center active">
-                        <a href="">
-                            Описание
-                        </a>
-                    </li>
-                    <li class="flex flex-shrink-0 items-center">
-                        <a href="">
-                            Расположение
-                        </a>
-                    </li>
-                    <li class="flex flex-shrink-0 items-center">
-                        <a href="" class="mr-1">
-                            Коттеджи
-                        </a>
-                        <span class="rounded-full flex flex-shrink-0 items-center justify-center w-6 h-6 bg-D6DCE0 text-xs font-semibold">
-                                12
-                            </span>
-                    </li>
-                    <li class="flex flex-shrink-0 items-center">
-                        <a href="">
-                            Стадии строительства
-                        </a>
-                    </li>
-                    <li class="flex flex-shrink-0 items-center">
-                        <a href="" class="mr-1">
-                            Отзывы
-                        </a>
-                        <span class="rounded-full flex flex-shrink-0 items-center justify-center w-6 h-6 bg-D6DCE0 text-xs font-semibold">
-                                12
-                            </span>
-                    </li>
-                    <li class="flex flex-shrink-0 items-center">
-                        <a href="">
-                            Ипотека
-                        </a>
-                    </li>
-                    <li class="flex flex-shrink-0 items-center">
-                        <a href="" class="mr-1">
-                            Видео
-                        </a>
-                        <span class="rounded-full flex flex-shrink-0 items-center justify-center w-6 h-6 bg-D6DCE0 text-xs font-semibold">
-                                8
-                            </span>
-                    </li>
-                </ul>
-            </div>
+            //= templates/mkr-tabs.html
         </div>
         <div class="w-full hidden xl:block xl:w-3/12 px-4 mt-5 xl:mt-0">
             //= templates/consult-block-border.html
@@ -422,12 +375,12 @@
                 </div>
             </div>
             <div class="flex flex-wrap -mx-4">
-                //= templates/building-3col.html
-                //= templates/building-3col.html
-                //= templates/building-3col.html
-                //= templates/building-3col.html
-                //= templates/building-3col.html
-                //= templates/building-3col.html
+                //= templates/object-3col.html
+                //= templates/object-3col.html
+                //= templates/object-3col.html
+                //= templates/object-3col.html
+                //= templates/object-3col.html
+                //= templates/object-3col.html
             </div>
             //= templates/pagination-section.html
         </div>
@@ -447,13 +400,19 @@
                 Расположение
             </h2>
             //= templates/location-block.html
+            <div class="mt-16">
+                //= templates/etaps.html
+            </div>
         </div>
     </div>
 </div>
-//= templates/etaps-section.html
 //= templates/documents-section.html
 //= templates/publication-section.html
-//= templates/reviews-section.html
+<div class="mt-16">
+    <div class="container px-4">
+        //= templates/reviews.html
+    </div>
+</div>
 <section class="mt-16">
     <div class="container px-4">
         //= templates/man-form.html

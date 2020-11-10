@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body class="relative">
+//= templates/header.html
+//= templates/breadcrumb.html
+<div class="mt-6">
+    <div class="container px-4">
+        <h1>
+            Личный кабинет
+        </h1>
+        <div class="lk-form-block border border-border rounded p-4 sm:p-10 mt-6">
+            <div class="flex blue-tabs border-b border-border">
+                <div data-tab="вход" class="blue-tabs__tab w-1/2 active pb-4 text-center">
+                    Вход
+                </div>
+                <div data-tab="регистрация" class="blue-tabs__tab w-1/2 pb-4 text-center">
+                    Регистрация
+                </div>
+            </div>
+            <div class="lk-form-block__content">
+                <form data-tab="вход" action="">
+                    <div class="form-group mt-5">
+                        <label for="entry--email" class="text-sm text-light">
+                            Электронная почта
+                        </label>
+                        <div class="form-control w-full mt-1">
+                            <input type="email" name="email" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="entry--email" placeholder="sample@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-group mt-5">
+                        <label for="entry-pass" class="text-sm text-light">
+                            Пароль
+                        </label>
+                        <div class="form-control w-full mt-1">
+                            <input type="password" name="password" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="entry-pass" placeholder="sample@gmail.com">
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <a href="#" class="text-primary hover:opacity-75">Я забыл пароль</a>
+                    </div>
+                    <div class="form-group mt-5">
+                        <button type="submit" class="bg-primary w-full rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
+                        <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                            Войти
+                        </span>
+                        </button>
+                    </div>
+                </form>
+                <form data-tab="регистрация" class="hidden" action="">
+                    <div class="form-group mt-5">
+                        <label for="registration-email" class="text-sm text-light">
+                            Электронная почта
+                        </label>
+                        <div class="form-control w-full mt-1">
+                            <input type="email" name="email" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="registration-email" placeholder="sample@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-group mt-5">
+                        <label for="registration-name" class="text-sm text-light">
+                            Как вас зовут?
+                        </label>
+                        <div class="form-control w-full mt-1">
+                            <input type="email" name="email" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="registration-name" placeholder="sample@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-group mt-5">
+                        <label for="pass" class="text-sm text-light">
+                            Пароль
+                        </label>
+                        <div class="form-control w-full mt-1">
+                            <input type="password" name="password" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="pass" placeholder="sample@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-group mt-5">
+                        <label class="flex items-center">
+                            <input name="i-agree" type="checkbox" class="hidden check-gray">
+                            <span class="check-gray__custom inline-flex relative w-5 h-5 flex-shrink-0 rounded border border-border mr-2"></span>
+                            <span class="block">
+                            <span class="text-light">Я согласен на обработку </span>
+                            <a href="#" target="_blank" class="hover:opacity-75">персональных данных</a>
+                        </span>
+                        </label>
+                    </div>
+                    <div class="form-group mt-5">
+                        <button type="submit" class="bg-primary w-full rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
+                        <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                            Войти
+                        </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="mt-16">
+    <div class="container px-4">
+        <h2>
+            Популяные ЖК
+        </h2>
+    </div>
+    <div class="container pl-2 lg:px-4">
+        //= templates/buildings-tabs.html
+        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch lg:-mx-4 pb-4">
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+        </div>
+    </div>
+    <div class="flex mt-6 justify-center">
+        <a href="#" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
+            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                Смотреть все новостройки
+            </span>
+        </a>
+    </div>
+</section>
+//= templates/services.html
+//= templates/viewed.html
+<div class="mt-12">
+    //= templates/tags.html
+</div>
+
+//= templates/footer.html
+//= templates/scripts.html
+</body>
+
+</html>
