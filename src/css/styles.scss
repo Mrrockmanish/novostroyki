@@ -37,6 +37,7 @@ body {
     font-weight: 400;
     word-wrap: break-word;
     padding-top: s(42);
+    position: relative;
     @media (min-width: 1024px) {
         padding-top: 0;
     }
@@ -948,12 +949,41 @@ h3 {
 
 .carousel-wrap {
     &__more-photo {
-        bottom: 1.5rem;
-        left: 1.5rem;
+        bottom: 1rem;
+        left: 0.5rem;
+
+        @media (min-width: 572px) {
+            bottom: 1.5rem;
+            left: 1.5rem;
+        }
     }
 
     &__achievements {
-        top: 1.5rem;
-        left: 1.5rem;
+        top: 0.5rem;
+        left: 0.5rem;
+
+        @media (min-width: 572px) {
+            top: 1.5rem;
+            left: 1.5rem;
+        }
+    }
+}
+
+.video-item {
+    iframe {
+        max-width: 100%;
+    }
+}
+
+.mobile-menu {
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.mobile-menu {
+    &__close {
+        top: 1rem;
+        right: 0
     }
 }

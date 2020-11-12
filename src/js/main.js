@@ -251,6 +251,21 @@ $(document).ready(function () {
   // для личного кабинета
   tabs('.lk-form-block', '.blue-tabs__tab', '.lk-form-block__content');
 
+  // мобильное меню
+
+  $('.bars').on('click', function () {
+    $('.mobile-menu').fadeIn();
+    $('body').addClass('overflow-hidden');
+  });
+
+  $('.mobile-menu__close').on('click', function () {
+    $('.mobile-menu').fadeOut();
+    $('body').removeClass('overflow-hidden');
+  });
+
+
+
+
 
 
 

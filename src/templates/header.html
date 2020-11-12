@@ -70,7 +70,7 @@
                           fill="currentColor"/>
                 </svg>
             </a>
-            <div class="like hidden lg:flex items-center text-red hover:opacity-75 cursor-pointer px-2">
+            <div class="favorite hidden lg:flex items-center text-red hover:opacity-75 cursor-pointer px-2">
                 <svg class="flex flex-shrink-0 mr-1" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.00035 1.01932C8.56635 -0.38668 10.9863 -0.340013 12.495 1.17132C14.003 2.68332 14.055 5.09132 12.6523 6.66199L6.99901 12.3233L1.34701 6.66199C-0.0556549 5.09132 -0.00298804 2.67932 1.50435 1.17132C3.01435 -0.338013 5.42968 -0.38868 7.00035 1.01932Z"
                           fill="currentColor"/>
@@ -92,3 +92,90 @@
         </div>
     </div>
 </header>
+<div class="mobile-menu hidden fixed md:hidden w-full h-full bg-white px-4">
+    <div class="relative w-full h-full">
+        <div class="mobile-menu__close absolute z-20">
+            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.63672" y="1" width="20" height="2" transform="rotate(45 1.63672 1)" fill="#1E1F21"/>
+                <rect x="0.222656" y="15.002" width="20" height="2" transform="rotate(-45 0.222656 15.002)" fill="#1E1F21"/>
+            </svg>
+        </div>
+        <div class="relative flex flex-col w-full h-full overflow-y-auto pt-10 z-10">
+            <ul class="text-xl">
+                <li>
+                    <a href="#" class="block py-2">
+                        Новостройки
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2">
+                        Застройщики
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2">
+                        Коттеджи
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2">
+                        Коммерческая
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2">
+                        Ипотека
+                    </a>
+                </li>
+            </ul>
+            <div class="border-t border-border mt-6 pt-6">
+                <div class="text-primary text-2xl font-bold hover:opacity-75">
+                    <a href="tel:+78005113902">
+                        8 800 511-39-02
+                    </a>
+                </div>
+                <div class="city-choice flex items-center cursor-pointer my-4">
+                    <svg class="flex flex-shrink-0 mr-1" width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 14.8188L1.75734 10.5761C0.918228 9.73699 0.346791 8.66789 0.115286 7.50401C-0.11622 6.34013 0.00260456 5.13373 0.456732 4.03738C0.91086 2.94103 1.6799 2.00396 2.66659 1.34467C3.65328 0.685388 4.81332 0.333496 6 0.333496C7.18669 0.333496 8.34672 0.685388 9.33342 1.34467C10.3201 2.00396 11.0891 2.94103 11.5433 4.03738C11.9974 5.13373 12.1162 6.34013 11.8847 7.50401C11.6532 8.66789 11.0818 9.73699 10.2427 10.5761L6 14.8188ZM9.3 9.63344C9.9526 8.98078 10.397 8.14926 10.577 7.24403C10.7571 6.3388 10.6646 5.40051 10.3114 4.54781C9.95817 3.69512 9.36003 2.96632 8.59261 2.45356C7.82519 1.9408 6.92296 1.66711 6 1.66711C5.07704 1.66711 4.17481 1.9408 3.40739 2.45356C2.63997 2.96632 2.04183 3.69512 1.68861 4.54781C1.33539 5.40051 1.24294 6.3388 1.42297 7.24403C1.603 8.14926 2.04741 8.98078 2.7 9.63344L6 12.9334L9.3 9.63344ZM6 7.66678C5.64638 7.66678 5.30724 7.5263 5.05719 7.27625C4.80715 7.0262 4.66667 6.68707 4.66667 6.33344C4.66667 5.97982 4.80715 5.64068 5.05719 5.39064C5.30724 5.14059 5.64638 5.00011 6 5.00011C6.35362 5.00011 6.69276 5.14059 6.94281 5.39064C7.19286 5.64068 7.33334 5.97982 7.33334 6.33344C7.33334 6.68707 7.19286 7.0262 6.94281 7.27625C6.69276 7.5263 6.35362 7.66678 6 7.66678Z"
+                              fill="#3B454E"/>
+                    </svg>
+                    <div class="text-sm">
+                        Краснодар
+                    </div>
+                </div>
+            </div>
+            <div class="mt-auto pb-4">
+                <div class="flex -mx-1">
+                    <div class="w-1/2 px-1">
+                        <a href="#" class="border border-border bg-light-bg rounded-md flex items-center justify-center flex-col w-full h-full px-4 py-4">
+                        <span class="favorite flex items-center text-red hover:opacity-75 cursor-pointer h-5 px-2">
+                            <svg class="flex flex-shrink-0 mr-1" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.00035 1.01932C8.56635 -0.38668 10.9863 -0.340013 12.495 1.17132C14.003 2.68332 14.055 5.09132 12.6523 6.66199L6.99901 12.3233L1.34701 6.66199C-0.0556549 5.09132 -0.00298804 2.67932 1.50435 1.17132C3.01435 -0.338013 5.42968 -0.38868 7.00035 1.01932Z"
+                                      fill="currentColor"/>
+                            </svg>
+                            <div class="font-medium text-dark text-sm">
+                                1
+                            </div>
+                        </span>
+                            <span class="font-semibold">
+                            Избранное
+                        </span>
+                        </a>
+                    </div>
+                    <div class="w-1/2 px-1">
+                        <a href="#" class="border border-border bg-light-bg rounded-md flex items-center justify-center flex-col w-full h-full px-4 py-4">
+                        <span class="flex items-center text-red hover:opacity-75 cursor-pointer h-5 px-2">
+                            <svg class="flex flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.3327 14.666H2.66602V13.3327C2.66602 12.4486 3.01721 11.6008 3.64233 10.9757C4.26745 10.3505 5.11529 9.99935 5.99935 9.99935H9.99935C10.8834 9.99935 11.7312 10.3505 12.3564 10.9757C12.9815 11.6008 13.3327 12.4486 13.3327 13.3327V14.666ZM7.99935 8.66602C7.47406 8.66602 6.95392 8.56255 6.46862 8.36153C5.98331 8.16051 5.54236 7.86588 5.17092 7.49444C4.79949 7.12301 4.50485 6.68205 4.30383 6.19675C4.10281 5.71145 3.99935 5.1913 3.99935 4.66602C3.99935 4.14073 4.10281 3.62058 4.30383 3.13528C4.50485 2.64998 4.79949 2.20902 5.17092 1.83759C5.54236 1.46615 5.98331 1.17152 6.46862 0.970497C6.95392 0.769479 7.47406 0.666016 7.99935 0.666016C9.06021 0.666016 10.0776 1.08744 10.8278 1.83759C11.5779 2.58773 11.9993 3.60515 11.9993 4.66602C11.9993 5.72688 11.5779 6.7443 10.8278 7.49444C10.0776 8.24459 9.06021 8.66602 7.99935 8.66602Z" fill="#D0D6DA"/>
+                            </svg>
+                        </span>
+                            <span class="font-semibold">
+                            Войти
+                        </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
