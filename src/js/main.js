@@ -229,7 +229,7 @@ $(document).ready(function () {
   // для этапов строительства
   magnificGallery('.etaps', '.etaps__item');
   // для карусели объектов
-  magnificGallery('.carousel-full', 'a');
+  magnificGallery('.carousel-wrap', '.carousel-wrap__photo');
   // для карточки застройщика
   magnificGallery('.mkr-cards-gallery', 'a');
 

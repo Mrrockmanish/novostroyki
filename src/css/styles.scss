@@ -945,3 +945,15 @@ h3 {
         bottom: s(12);
     }
 }
+
+.carousel-wrap {
+    &__more-photo {
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+
+    &__achievements {
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+}
