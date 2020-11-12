@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body class="relative">
+//= templates/header.html
+<section class="border-t border-b border-border py-6">
+    <div class="container px-4">
+        <form class="flex flex-wrap items-end -mx-2">
+            <div class="form-group w-full sm:w-1/2 xl:w-1/5 px-2">
+                <label for="build-class" class="text-sm text-light">
+                    Класс жилья
+                </label>
+                <div class="form-control w-full mt-1">
+                    <select name="type" class="w-full bg-inputs text-sm text-dark rounded placeholder-light px-4 h-12" id="build-class">
+                        <option value="Любой">Любой</option>
+                        <option value="Эконом">Эконом</option>
+                        <option value="Комфорт">Комфорт</option>
+                        <option value="Элитный">Элитный</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group w-full sm:w-1/2 xl:w-1/5 px-2 mt-3 sm:mt-0">
+                <label for="build-town" class="text-sm text-light">
+                    Район
+                </label>
+                <div class="form-control w-full mt-1">
+                    <select name="type" class="w-full bg-inputs text-sm text-dark rounded placeholder-light px-4 h-12" id="build-town">
+                        <option value="Любой">Любой</option>
+                        <option value="Центральный">Центральный</option>
+                        <option value="Юбилейный">Юбилейный</option>
+                        <option value="Школьный">Школьный</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group w-full sm:w-1/2 xl:w-1/5 px-2 mt-3 xl:mt-0">
+                <div class="flex w-full text-light text-sm leading-7">
+                    Комнаты
+                </div>
+                <div class="flex">
+                    <label class="room-size flex-grow">
+                        <input type="checkbox" name="type-studio" class="room-size__checkbox hidden" value="Все">
+                        <span class="room-size__custom flex items-center justify-center bg-inputs text-xs xs:text-sm text-dark rounded-l h-12 flex-shrink-0">
+                            Студия
+                        </span>
+                    </label>
+                    <label class="room-size flex flex-grow">
+                        <input type="checkbox" name="type-1" class="room-size__checkbox hidden" value="Вторича">
+                        <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark border-border border-l h-12">
+                            1
+                        </span>
+                    </label>
+                    <label class="room-size flex flex-grow">
+                        <input type="checkbox" name="type-2" class="room-size__checkbox hidden" value="Новостройка">
+                        <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark h-12 border-border border-l">
+                            2
+                        </span>
+                    </label>
+                    <label class="room-size flex flex-grow">
+                        <input type="checkbox" name="type-3" class="room-size__checkbox hidden" value="Коттедж">
+                        <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark border-border border-l rounded-r h-12">
+                            3+
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group w-full sm:w-1/2 xl:w-1/5 px-2 mt-3 xl:mt-0">
+                <label for="build-price" class="text-sm text-light">
+                    Цена
+                </label>
+                <div class="form-control w-full mt-1">
+                    <span class="form-control__unit block text-dark absolute">
+                        ₽
+                    </span>
+                    <input type="text" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="build-price" placeholder="до 10 000 0000">
+                </div>
+            </div>
+            <div class="form-group w-full sm:w-1/2 xl:w-1/5 px-2 mt-3 xl:mt-0">
+                <label for="building-complete" class="text-sm text-light">
+                    Срок сдачи
+                </label>
+                <div class="form-control w-full mt-1">
+                    <select name="building-complete" class="w-full bg-inputs text-sm text-dark rounded placeholder-light px-4 h-12" id="building-complete">
+                        <option value="Любой срок">Любой срок</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group w-full sm:w-1/2 xl:w-3/12 px-2 mt-3">
+                <label for="building-name" class="text-sm text-light xl:hidden">
+                    Название ЖК или застройщика
+                </label>
+                <div class="form-control w-full mt-1 xl:mt-0">
+                    <input type="text" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="building-name" placeholder="Название ЖК или застройщика">
+                </div>
+            </div>
+            <div class="form-group self-center flex w-full md:w-9/12 lg:w-7/12 xl:w-6/12 px-2 mt-4 sm:mt-3">
+                <div class="flex flex-wrap -mx-2">
+                    <label class="form-control w-1/2 sm:w-1/3 px-2">
+                        <input type="checkbox" name="mortgage" class="hidden check-inline" checked>
+                        <span class="check-inline__custom flex items-center cursor-pointer">
+                        <span class="check-inline__icon flex-shrink-0 mr-1">
+                            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>Ипотека от 3.1%</span>
+                    </span>
+                    </label>
+                    <label class="form-control w-1/2 sm:w-1/3 px-2">
+                        <input type="checkbox" name="military-mortgage" class="hidden check-inline">
+                        <span class="check-inline__custom flex items-center cursor-pointer">
+                        <span class="check-inline__icon flex-shrink-0 mr-1">
+                            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>Военная ипотека</span>
+                    </span>
+                    </label>
+                    <label class="form-control w-1/2 sm:w-1/3 px-2 mt-3 sm:mt-0">
+                        <input type="checkbox" name="credit" class="hidden check-inline">
+                        <span class="check-inline__custom flex items-center cursor-pointer">
+                        <span class="check-inline__icon flex-shrink-0 mr-1">
+                            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>Рассрочка</span>
+                    </span>
+                    </label>
+                    <label class="form-control w-1/2 sm:w-1/3 px-2 mt-3 sm:mt-2">
+                        <input type="checkbox" name="mat-capital" class="hidden check-inline">
+                        <span class="check-inline__custom flex items-center cursor-pointer">
+                        <span class="check-inline__icon flex-shrink-0 mr-1">
+                            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span>Материнский капитал</span>
+                    </span>
+                    </label>
+                    <label class="form-control w-1/2 sm:w-1/3 px-2 mt-3 sm:mt-2">
+                        <input type="checkbox" name="repair" class="hidden check-inline">
+                        <span class="check-inline__custom flex items-center cursor-pointer">
+                            <span class="check-inline__icon flex-shrink-0 mr-1">
+                                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                            <span>С ремонтом</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group flex md:justify-end w-full md:w-3/12 lg:w-5/12 xl:w-3/12 px-2 mt-5 sm:mt-3">
+                <button type="submit" class="bg-primary hover:bg-border font-bold text-sm h-12 rounded text-white hover:text-dark hover transition duration-300 select-none px-4">
+                    <span class="flex items-center justify-center w-full h-full">
+                        <span class="mr-1">Показать 557</span>
+                        <span class="flex flex-shrink-0">
+                            <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 4.50022L1.49973 9.00049L-6.56019e-08 7.49969L3.00053 4.50022L-3.27824e-07 1.50075L1.49973 -4.29809e-05L6 4.50022Z" fill="currentColor">
+                                </path>
+                            </svg>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+<main class="mt-6">
+    <div class="container px-4">
+        <div class="flex flex-wrap items-start -mx-4">
+            <div class="w-full xl:w-7/12 px-4">
+                <h1>
+                    Новостройки в
+                    <select class="text-light font-bold cursor-pointer" name="filter-city">
+                        <option value="Краснодаре">Краснодаре</option>
+                        <option value="Краснодаре">Санкт-Перербурге</option>
+                    </select>
+                </h1>
+            </div>
+            <div class="w-full xl:w-5/12 mt-4 sm:mt-2 px-4">
+                //= templates/view-variants.html
+            </div>
+        </div>
+    </div>
+    <div class="container pl-2 lg:px-4">
+        <div class="flex flex-wrap items-start mt-5 lg:mt-4 lg:-mx-4">
+            <div class="w-full xl:w-9/12 overflow-hidden lg:px-4">
+                <ul class="flex lg:flex-wrap text-primary text-xs lg:text-sm whitespace-no-wrap overflow-x-auto lg:overflow-x-visible pb-2 lg:-mx-3">
+                    <li class="px-2 lg:px-3">
+                        <a href="#" class="hover:opacity-75">Новостройки 2020 г. 231</a>
+                    </li>
+                    <li class="px-2 lg:px-3">
+                        <a href="#" class="hover:opacity-75">Сданные новостройки 12</a>
+                    </li>
+                    <li class="px-2 lg:px-3">
+                        <a href="#" class="hover:opacity-75">До 2.5 млн ₽ 198</a>
+                    </li>
+                    <li class="px-2 lg:px-3">
+                        <a href="#" class="hover:opacity-75">До 3 млн ₽ 198</a>
+                    </li>
+                    <li class="px-2 lg:px-3">
+                        <a href="#" class="hover:opacity-75">До 4 млн. ₽ 278</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-full xl:w-3/12 xl:text-right mt-2 xl:mt-0 pb-2 px-2 lg:px-4">
+                <a href="#" class="hover:opacity-75">
+                    Список всех новостроек Краснодара
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container px-4">
+        <div class="mkr-item w-full border border-border rounded p-4 sm:p-8 mt-4">
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full md:w-1/2 lg:w-4/12 max-w-sm px-3">
+                    <div class="mkr-cards-gallery rounded overflow-hidden">
+                        <div class="relative">
+                            <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                            </a>
+                            <div class="mkr-item__achievements absolute flex flex-col items-start font-bold text-white text-xs">
+                                <div class="rounded inline-flex justify-center items-center bg-primary h-6 px-2 mt-1">
+                                    ТОП ЖК
+                                </div>
+                                <div class="rounded inline-flex justify-center items-center bg-green h-6 px-2 mt-1">
+                                    ТОП новостроек
+                                </div>
+                                <div class="rounded inline-flex justify-center items-center bg-orange h-6 px-2 mt-1">
+                                    Надёжный застройщик
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-1 mt-2">
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                    <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                                </a>
+                            </div>
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                    <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                                </a>
+                            </div>
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/1.jpg" class="flex h-full w-full items-center justify-center border border-border rounded bg-light-bg hover-effect">
+                                    +18
+                                </a>
+                                <a href="img/buildings/2.jpg" class="hidden w-full h-full hover-effect"></a>
+                                <a href="img/buildings/3.jpg" class="hidden w-full h-full hover-effect"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-5/12 xl:w-6/12 px-3 mt-5 md:mt-0">
+                    <div class="flex justify-between items-center">
+                        <div class="w-8/12 xl:w-10/12 pr-3">
+                            <a href="#" class="tooltip flex items-center hover:opacity-75" title="Надёжный застройщик">
+                                <span class="flex-shrink-0 mr-1">
+                                    <img src="img/elements/dev-check.svg">
+                                </span>
+                                <span class="text-main text-sm whitespace-no-wrap w-full truncate">
+                                    СпецСтройКубань и компания
+                                </span>
+                            </a>
+                        </div>
+                        <div class="w-4/12 xl:w-2/12">
+                            <div class="flex items-center justify-end">
+                                <div class="flex items-center mr-4">
+                                    <div class="flex-shrink-0 items-center mr-1">
+                                        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.66732 0H8.33398C9.74847 0 11.105 0.561903 12.1052 1.5621C13.1054 2.56229 13.6673 3.91885 13.6673 5.33333C13.6673 6.74782 13.1054 8.10438 12.1052 9.10457C11.105 10.1048 9.74847 10.6667 8.33398 10.6667V13C5.00065 11.6667 0.333984 9.66667 0.333984 5.33333C0.333984 3.91885 0.895888 2.56229 1.89608 1.5621C2.89628 0.561903 4.25283 0 5.66732 0Z" fill="#D0D6DA"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-dark font-semibold text-sm">
+                                        2
+                                    </span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 mr-1">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.00002 12.1735L3.29802 14.8055L4.34802 9.52016L0.391357 5.8615L5.74269 5.22683L8.00002 0.333496L10.2574 5.22683L15.6087 5.8615L11.652 9.52016L12.702 14.8055L8.00002 12.1735ZM8.00002 10.6455L10.8314 12.2302L10.1987 9.04816L12.5807 6.84483L9.35869 6.46283L8.00002 3.51683L6.64136 6.4635L3.41936 6.84483L5.80136 9.04816L5.16869 12.2302L8.00002 10.6455Z" fill="#FF9F2F">
+
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="text-dark font-semibold text-sm">4.5</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="flex mt-2">
+                        <div class="w-10/12 pr-3">
+                            <div class="w-full truncate text-xl sm:text-2xl font-bold">
+                                МКР Южане
+                            </div>
+                        </div>
+                        <div class="flex justify-end w-2/12">
+                            <div class="bg-white text-red border border-border rounded flex items-center justify-center w-6 h-6 absolute z-20">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.00035 1.01932C8.56635 -0.38668 10.9863 -0.340013 12.495 1.17132C14.003 2.68332 14.055 5.09132 12.6523 6.66199L6.99901 12.3233L1.34701 6.66199C-0.0556549 5.09132 -0.00298804 2.67932 1.50435 1.17132C3.01435 -0.338013 5.42968 -0.38868 7.00035 1.01932Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center flex-wrap">
+                        <div class="w-full sm:w-8/12 pr-3 mt-1">
+                            <div class="flex -mx-1">
+                                <div class="px-1">
+                                    <div class="mortgage-info text-green bg-green-007 text-xs font-semibold flex items-center justify-center h-6">
+                                        Ипотека от 5,5%
+                                    </div>
+                                </div>
+                                <div class="px-1 tooltip" title="информация">
+                                    <div class="rounded-full flex flex-shrink-0 text-orange bg-orange-007 items-center justify-center w-6 h-6">
+                                        <img src="img/elements/percent.svg">
+                                    </div>
+                                </div>
+                                <div class="px-1 tooltip" title="информация">
+                                    <div class="rounded-full flex flex-shrink-0 text-purple bg-purple-007 items-center justify-center w-6 h-6">
+                                        <img src="img/elements/box.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-4/12 sm:text-right mt-1">
+                            <span class="text-primary font-medium text-xs">2020-2021 гг.</span>
+                        </div>
+                    </div>
+                    <div class="text-second mt-2">
+                        Старокубанская, 2/23 или очень длинное название улицы может быть в две строки но не длиннее
+                    </div>
+                    <div class="leading-relaxed mt-3">
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        Студия
+                                    </div>
+                                    <div>
+                                        от 22 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 2,1 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        1-комн.
+                                    </div>
+                                    <div>
+                                        от 32 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 2,8 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        2-комн.
+                                    </div>
+                                    <div>
+                                        от 50 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 4,3 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        3-комн.
+                                    </div>
+                                    <div>
+                                        от 71 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 5,6 млн ₽
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <a href="#" class="w-1/2 block font-medium text-primary text-sm truncate hover:opacity-75">
+                            389 квартир
+                        </a>
+                        <div class="building-status w-1/2 font-medium text-main text-sm truncate text-right">
+                            Комфорт класс
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full mx-auto max-w-xs lg:w-3/12 xl:w-2/12 px-3 mt-5 lg:mt-0">
+                    <button class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none w-full call h-12 px-6">
+                        <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                            Перезвоните мне
+                        </span>
+                    </button>
+                    <button class="flex items-center justify-center w-full h-12 bg-inputs hover:bg-primary rounded text-dark hover:text-white call-write px-4 mt-2">
+                            <span class="font-bold text-sm">
+                                Написать нам
+                            </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mkr-item w-full border border-border rounded p-4 sm:p-8 mt-4">
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full md:w-1/2 lg:w-4/12 max-w-sm px-3">
+                    <div class="mkr-cards-gallery rounded overflow-hidden">
+                        <div class="relative">
+                            <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                            </a>
+                            <div class="mkr-item__achievements absolute flex flex-col items-start font-bold text-white text-xs">
+                                <div class="rounded inline-flex justify-center items-center bg-primary h-6 px-2 mt-1">
+                                    ТОП ЖК
+                                </div>
+                                <div class="rounded inline-flex justify-center items-center bg-green h-6 px-2 mt-1">
+                                    ТОП новостроек
+                                </div>
+                                <div class="rounded inline-flex justify-center items-center bg-orange h-6 px-2 mt-1">
+                                    Надёжный застройщик
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-1 mt-2">
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                    <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                                </a>
+                            </div>
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                    <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                                </a>
+                            </div>
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/1.jpg" class="flex h-full w-full items-center justify-center border border-border rounded bg-light-bg hover-effect">
+                                    +18
+                                </a>
+                                <a href="img/buildings/2.jpg" class="hidden w-full h-full hover-effect"></a>
+                                <a href="img/buildings/3.jpg" class="hidden w-full h-full hover-effect"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-5/12 xl:w-6/12 px-3 mt-5 md:mt-0">
+                    <div class="flex justify-between items-center">
+                        <div class="w-8/12 xl:w-10/12 pr-3">
+                            <a href="#" class="tooltip flex items-center hover:opacity-75" title="Надёжный застройщик">
+                                <span class="flex-shrink-0 mr-1">
+                                    <img src="img/elements/dev-check.svg">
+                                </span>
+                                <span class="text-main text-sm whitespace-no-wrap w-full truncate">
+                                    СпецСтройКубань и компания
+                                </span>
+                            </a>
+                        </div>
+                        <div class="w-4/12 xl:w-2/12">
+                            <div class="flex items-center justify-end">
+                                <div class="flex items-center mr-4">
+                                    <div class="flex-shrink-0 items-center mr-1">
+                                        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.66732 0H8.33398C9.74847 0 11.105 0.561903 12.1052 1.5621C13.1054 2.56229 13.6673 3.91885 13.6673 5.33333C13.6673 6.74782 13.1054 8.10438 12.1052 9.10457C11.105 10.1048 9.74847 10.6667 8.33398 10.6667V13C5.00065 11.6667 0.333984 9.66667 0.333984 5.33333C0.333984 3.91885 0.895888 2.56229 1.89608 1.5621C2.89628 0.561903 4.25283 0 5.66732 0Z" fill="#D0D6DA"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-dark font-semibold text-sm">
+                                        2
+                                    </span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 mr-1">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.00002 12.1735L3.29802 14.8055L4.34802 9.52016L0.391357 5.8615L5.74269 5.22683L8.00002 0.333496L10.2574 5.22683L15.6087 5.8615L11.652 9.52016L12.702 14.8055L8.00002 12.1735ZM8.00002 10.6455L10.8314 12.2302L10.1987 9.04816L12.5807 6.84483L9.35869 6.46283L8.00002 3.51683L6.64136 6.4635L3.41936 6.84483L5.80136 9.04816L5.16869 12.2302L8.00002 10.6455Z" fill="#FF9F2F">
+
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="text-dark font-semibold text-sm">4.5</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="flex mt-2">
+                        <div class="w-10/12 pr-3">
+                            <div class="w-full truncate text-xl sm:text-2xl font-bold">
+                                МКР Южане
+                            </div>
+                        </div>
+                        <div class="flex justify-end w-2/12">
+                            <div class="bg-white text-red border border-border rounded flex items-center justify-center w-6 h-6 absolute z-20">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.00035 1.01932C8.56635 -0.38668 10.9863 -0.340013 12.495 1.17132C14.003 2.68332 14.055 5.09132 12.6523 6.66199L6.99901 12.3233L1.34701 6.66199C-0.0556549 5.09132 -0.00298804 2.67932 1.50435 1.17132C3.01435 -0.338013 5.42968 -0.38868 7.00035 1.01932Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center flex-wrap">
+                        <div class="w-full sm:w-8/12 pr-3 mt-1">
+                            <div class="flex -mx-1">
+                                <div class="px-1">
+                                    <div class="mortgage-info text-green bg-green-007 text-xs font-semibold flex items-center justify-center h-6">
+                                        Ипотека от 5,5%
+                                    </div>
+                                </div>
+                                <div class="px-1 tooltip" title="информация">
+                                    <div class="rounded-full flex flex-shrink-0 text-orange bg-orange-007 items-center justify-center w-6 h-6">
+                                        <img src="img/elements/percent.svg">
+                                    </div>
+                                </div>
+                                <div class="px-1 tooltip" title="информация">
+                                    <div class="rounded-full flex flex-shrink-0 text-purple bg-purple-007 items-center justify-center w-6 h-6">
+                                        <img src="img/elements/box.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-4/12 sm:text-right mt-1">
+                            <span class="text-primary font-medium text-xs">2020-2021 гг.</span>
+                        </div>
+                    </div>
+                    <div class="text-second mt-2">
+                        Старокубанская, 2/23 или очень длинное название улицы может быть в две строки но не длиннее
+                    </div>
+                    <div class="leading-relaxed mt-3">
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        Студия
+                                    </div>
+                                    <div>
+                                        от 22 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 2,1 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        1-комн.
+                                    </div>
+                                    <div>
+                                        от 32 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 2,8 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        2-комн.
+                                    </div>
+                                    <div>
+                                        от 50 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 4,3 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        3-комн.
+                                    </div>
+                                    <div>
+                                        от 71 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 5,6 млн ₽
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <a href="#" class="w-1/2 block font-medium text-primary text-sm truncate hover:opacity-75">
+                            389 квартир
+                        </a>
+                        <div class="building-status w-1/2 font-medium text-main text-sm truncate text-right">
+                            Комфорт класс
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full mx-auto max-w-xs lg:w-3/12 xl:w-2/12 px-3 mt-5 lg:mt-0">
+                    <button class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none w-full call h-12 px-6">
+                        <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                            Перезвоните мне
+                        </span>
+                    </button>
+                    <button class="flex items-center justify-center w-full h-12 bg-inputs hover:bg-primary rounded text-dark hover:text-white call-write px-4 mt-2">
+                            <span class="font-bold text-sm">
+                                Написать нам
+                            </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mkr-item w-full border border-border rounded p-4 sm:p-8 mt-4">
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full md:w-1/2 lg:w-4/12 max-w-sm px-3">
+                    <div class="mkr-cards-gallery rounded overflow-hidden">
+                        <div class="relative">
+                            <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                            </a>
+                            <div class="mkr-item__achievements absolute flex flex-col items-start font-bold text-white text-xs">
+                                <div class="rounded inline-flex justify-center items-center bg-primary h-6 px-2 mt-1">
+                                    ТОП ЖК
+                                </div>
+                                <div class="rounded inline-flex justify-center items-center bg-green h-6 px-2 mt-1">
+                                    ТОП новостроек
+                                </div>
+                                <div class="rounded inline-flex justify-center items-center bg-orange h-6 px-2 mt-1">
+                                    Надёжный застройщик
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-1 mt-2">
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                    <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                                </a>
+                            </div>
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                    <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                                </a>
+                            </div>
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/1.jpg" class="flex h-full w-full items-center justify-center border border-border rounded bg-light-bg hover-effect">
+                                    +18
+                                </a>
+                                <a href="img/buildings/2.jpg" class="hidden w-full h-full hover-effect"></a>
+                                <a href="img/buildings/3.jpg" class="hidden w-full h-full hover-effect"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-5/12 xl:w-6/12 px-3 mt-5 md:mt-0">
+                    <div class="flex justify-between items-center">
+                        <div class="w-8/12 xl:w-10/12 pr-3">
+                            <a href="#" class="tooltip flex items-center hover:opacity-75" title="Надёжный застройщик">
+                                <span class="flex-shrink-0 mr-1">
+                                    <img src="img/elements/dev-check.svg">
+                                </span>
+                                <span class="text-main text-sm whitespace-no-wrap w-full truncate">
+                                    СпецСтройКубань и компания
+                                </span>
+                            </a>
+                        </div>
+                        <div class="w-4/12 xl:w-2/12">
+                            <div class="flex items-center justify-end">
+                                <div class="flex items-center mr-4">
+                                    <div class="flex-shrink-0 items-center mr-1">
+                                        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.66732 0H8.33398C9.74847 0 11.105 0.561903 12.1052 1.5621C13.1054 2.56229 13.6673 3.91885 13.6673 5.33333C13.6673 6.74782 13.1054 8.10438 12.1052 9.10457C11.105 10.1048 9.74847 10.6667 8.33398 10.6667V13C5.00065 11.6667 0.333984 9.66667 0.333984 5.33333C0.333984 3.91885 0.895888 2.56229 1.89608 1.5621C2.89628 0.561903 4.25283 0 5.66732 0Z" fill="#D0D6DA"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-dark font-semibold text-sm">
+                                        2
+                                    </span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 mr-1">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.00002 12.1735L3.29802 14.8055L4.34802 9.52016L0.391357 5.8615L5.74269 5.22683L8.00002 0.333496L10.2574 5.22683L15.6087 5.8615L11.652 9.52016L12.702 14.8055L8.00002 12.1735ZM8.00002 10.6455L10.8314 12.2302L10.1987 9.04816L12.5807 6.84483L9.35869 6.46283L8.00002 3.51683L6.64136 6.4635L3.41936 6.84483L5.80136 9.04816L5.16869 12.2302L8.00002 10.6455Z" fill="#FF9F2F">
+
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="text-dark font-semibold text-sm">4.5</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="flex mt-2">
+                        <div class="w-10/12 pr-3">
+                            <div class="w-full truncate text-xl sm:text-2xl font-bold">
+                                МКР Южане
+                            </div>
+                        </div>
+                        <div class="flex justify-end w-2/12">
+                            <div class="bg-white text-red border border-border rounded flex items-center justify-center w-6 h-6 absolute z-20">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.00035 1.01932C8.56635 -0.38668 10.9863 -0.340013 12.495 1.17132C14.003 2.68332 14.055 5.09132 12.6523 6.66199L6.99901 12.3233L1.34701 6.66199C-0.0556549 5.09132 -0.00298804 2.67932 1.50435 1.17132C3.01435 -0.338013 5.42968 -0.38868 7.00035 1.01932Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center flex-wrap">
+                        <div class="w-full sm:w-8/12 pr-3 mt-1">
+                            <div class="flex -mx-1">
+                                <div class="px-1">
+                                    <div class="mortgage-info text-green bg-green-007 text-xs font-semibold flex items-center justify-center h-6">
+                                        Ипотека от 5,5%
+                                    </div>
+                                </div>
+                                <div class="px-1 tooltip" title="информация">
+                                    <div class="rounded-full flex flex-shrink-0 text-orange bg-orange-007 items-center justify-center w-6 h-6">
+                                        <img src="img/elements/percent.svg">
+                                    </div>
+                                </div>
+                                <div class="px-1 tooltip" title="информация">
+                                    <div class="rounded-full flex flex-shrink-0 text-purple bg-purple-007 items-center justify-center w-6 h-6">
+                                        <img src="img/elements/box.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-4/12 sm:text-right mt-1">
+                            <span class="text-primary font-medium text-xs">2020-2021 гг.</span>
+                        </div>
+                    </div>
+                    <div class="text-second mt-2">
+                        Старокубанская, 2/23 или очень длинное название улицы может быть в две строки но не длиннее
+                    </div>
+                    <div class="leading-relaxed mt-3">
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        Студия
+                                    </div>
+                                    <div>
+                                        от 22 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 2,1 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        1-комн.
+                                    </div>
+                                    <div>
+                                        от 32 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 2,8 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        2-комн.
+                                    </div>
+                                    <div>
+                                        от 50 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 4,3 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        3-комн.
+                                    </div>
+                                    <div>
+                                        от 71 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 5,6 млн ₽
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <a href="#" class="w-1/2 block font-medium text-primary text-sm truncate hover:opacity-75">
+                            389 квартир
+                        </a>
+                        <div class="building-status w-1/2 font-medium text-main text-sm truncate text-right">
+                            Комфорт класс
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full mx-auto max-w-xs lg:w-3/12 xl:w-2/12 px-3 mt-5 lg:mt-0">
+                    <button class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none w-full call h-12 px-6">
+                        <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                            Перезвоните мне
+                        </span>
+                    </button>
+                    <button class="flex items-center justify-center w-full h-12 bg-inputs hover:bg-primary rounded text-dark hover:text-white call-write px-4 mt-2">
+                            <span class="font-bold text-sm">
+                                Написать нам
+                            </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mkr-item w-full border border-border rounded p-4 sm:p-8 mt-4">
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full md:w-1/2 lg:w-4/12 max-w-sm px-3">
+                    <div class="mkr-cards-gallery rounded overflow-hidden">
+                        <div class="relative">
+                            <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                            </a>
+                            <div class="mkr-item__achievements absolute flex flex-col items-start font-bold text-white text-xs">
+                                <div class="rounded inline-flex justify-center items-center bg-primary h-6 px-2 mt-1">
+                                    ТОП ЖК
+                                </div>
+                                <div class="rounded inline-flex justify-center items-center bg-green h-6 px-2 mt-1">
+                                    ТОП новостроек
+                                </div>
+                                <div class="rounded inline-flex justify-center items-center bg-orange h-6 px-2 mt-1">
+                                    Надёжный застройщик
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-1 mt-2">
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                    <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                                </a>
+                            </div>
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/mkr.jpg" class="block w-full h-full hover-effect">
+                                    <img src="img/buildings/mkr.jpg" alt="название" title="название">
+                                </a>
+                            </div>
+                            <div class="w-1/3 px-1">
+                                <a href="img/buildings/1.jpg" class="flex h-full w-full items-center justify-center border border-border rounded bg-light-bg hover-effect">
+                                    +18
+                                </a>
+                                <a href="img/buildings/2.jpg" class="hidden w-full h-full hover-effect"></a>
+                                <a href="img/buildings/3.jpg" class="hidden w-full h-full hover-effect"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-5/12 xl:w-6/12 px-3 mt-5 md:mt-0">
+                    <div class="flex justify-between items-center">
+                        <div class="w-8/12 xl:w-10/12 pr-3">
+                            <a href="#" class="tooltip flex items-center hover:opacity-75" title="Надёжный застройщик">
+                                <span class="flex-shrink-0 mr-1">
+                                    <img src="img/elements/dev-check.svg">
+                                </span>
+                                <span class="text-main text-sm whitespace-no-wrap w-full truncate">
+                                    СпецСтройКубань и компания
+                                </span>
+                            </a>
+                        </div>
+                        <div class="w-4/12 xl:w-2/12">
+                            <div class="flex items-center justify-end">
+                                <div class="flex items-center mr-4">
+                                    <div class="flex-shrink-0 items-center mr-1">
+                                        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.66732 0H8.33398C9.74847 0 11.105 0.561903 12.1052 1.5621C13.1054 2.56229 13.6673 3.91885 13.6673 5.33333C13.6673 6.74782 13.1054 8.10438 12.1052 9.10457C11.105 10.1048 9.74847 10.6667 8.33398 10.6667V13C5.00065 11.6667 0.333984 9.66667 0.333984 5.33333C0.333984 3.91885 0.895888 2.56229 1.89608 1.5621C2.89628 0.561903 4.25283 0 5.66732 0Z" fill="#D0D6DA"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-dark font-semibold text-sm">
+                                        2
+                                    </span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 mr-1">
+                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.00002 12.1735L3.29802 14.8055L4.34802 9.52016L0.391357 5.8615L5.74269 5.22683L8.00002 0.333496L10.2574 5.22683L15.6087 5.8615L11.652 9.52016L12.702 14.8055L8.00002 12.1735ZM8.00002 10.6455L10.8314 12.2302L10.1987 9.04816L12.5807 6.84483L9.35869 6.46283L8.00002 3.51683L6.64136 6.4635L3.41936 6.84483L5.80136 9.04816L5.16869 12.2302L8.00002 10.6455Z" fill="#FF9F2F">
+
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="text-dark font-semibold text-sm">4.5</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="flex mt-2">
+                        <div class="w-10/12 pr-3">
+                            <div class="w-full truncate text-xl sm:text-2xl font-bold">
+                                МКР Южане
+                            </div>
+                        </div>
+                        <div class="flex justify-end w-2/12">
+                            <div class="bg-white text-red border border-border rounded flex items-center justify-center w-6 h-6 absolute z-20">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.00035 1.01932C8.56635 -0.38668 10.9863 -0.340013 12.495 1.17132C14.003 2.68332 14.055 5.09132 12.6523 6.66199L6.99901 12.3233L1.34701 6.66199C-0.0556549 5.09132 -0.00298804 2.67932 1.50435 1.17132C3.01435 -0.338013 5.42968 -0.38868 7.00035 1.01932Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center flex-wrap">
+                        <div class="w-full sm:w-8/12 pr-3 mt-1">
+                            <div class="flex -mx-1">
+                                <div class="px-1">
+                                    <div class="mortgage-info text-green bg-green-007 text-xs font-semibold flex items-center justify-center h-6">
+                                        Ипотека от 5,5%
+                                    </div>
+                                </div>
+                                <div class="px-1 tooltip" title="информация">
+                                    <div class="rounded-full flex flex-shrink-0 text-orange bg-orange-007 items-center justify-center w-6 h-6">
+                                        <img src="img/elements/percent.svg">
+                                    </div>
+                                </div>
+                                <div class="px-1 tooltip" title="информация">
+                                    <div class="rounded-full flex flex-shrink-0 text-purple bg-purple-007 items-center justify-center w-6 h-6">
+                                        <img src="img/elements/box.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full sm:w-4/12 sm:text-right mt-1">
+                            <span class="text-primary font-medium text-xs">2020-2021 гг.</span>
+                        </div>
+                    </div>
+                    <div class="text-second mt-2">
+                        Старокубанская, 2/23 или очень длинное название улицы может быть в две строки но не длиннее
+                    </div>
+                    <div class="leading-relaxed mt-3">
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        Студия
+                                    </div>
+                                    <div>
+                                        от 22 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 2,1 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        1-комн.
+                                    </div>
+                                    <div>
+                                        от 32 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 2,8 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        2-комн.
+                                    </div>
+                                    <div>
+                                        от 50 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 4,3 млн ₽
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center border-b border-border hover:opacity-75 py-1 ">
+                            <div class="w-7/12 text-sm text-light truncate">
+                                <div class="flex">
+                                    <div class="w-32">
+                                        3-комн.
+                                    </div>
+                                    <div>
+                                        от 71 м²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-5/12 text-sm text-main text-right truncate">
+                                от 5,6 млн ₽
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <a href="#" class="w-1/2 block font-medium text-primary text-sm truncate hover:opacity-75">
+                            389 квартир
+                        </a>
+                        <div class="building-status w-1/2 font-medium text-main text-sm truncate text-right">
+                            Комфорт класс
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full mx-auto max-w-xs lg:w-3/12 xl:w-2/12 px-3 mt-5 lg:mt-0">
+                    <button class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none w-full call h-12 px-6">
+                        <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                            Перезвоните мне
+                        </span>
+                    </button>
+                    <button class="flex items-center justify-center w-full h-12 bg-inputs hover:bg-primary rounded text-dark hover:text-white call-write px-4 mt-2">
+                            <span class="font-bold text-sm">
+                                Написать нам
+                            </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        //= templates/pagination-section.html
+    </div>
+</main>
+<section class="mt-16">
+    <div class="container px-4">
+        <h2>
+            Популяные ЖК
+        </h2>
+    </div>
+    <div class="container pl-2 lg:px-4">
+        //= templates/buildings-tabs.html
+        <div class="overflow-x-auto flex flex-no-wrap lg:flex-wrap items-start lg:items-stretch lg:-mx-4 pb-4">
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+            //= templates/building-example-one.html
+        </div>
+    </div>
+    <div class="flex mt-6 justify-center">
+        <a href="#" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark select-none h-12 px-6">
+            <span class="flex justify-center items-center w-full h-full font-bold text-sm">
+                Смотреть все новостройки
+            </span>
+        </a>
+    </div>
+</section>
+//= templates/services.html
+//= templates/viewed.html
+<div class="mt-12">
+    //= templates/tags.html
+</div>
+
+//= templates/footer.html
+//= templates/scripts.html
+</body>
+</html>

@@ -7,7 +7,9 @@ $(document).ready(function () {
   // показываем скрытый контент по клику на заголовок
   const slideContent = (caption, content, chevron) => {
     $(caption).on('click', function (){
-      $(this).find(chevron).toggleClass('open');
+      if (chevron) {
+        $(this).find(chevron).toggleClass('open');
+      }
       $(this).next(content).fadeToggle();
     })
   };
@@ -19,6 +21,9 @@ $(document).ready(function () {
   slideContent('.question__caption', '.question__content', '.question__chevron');
   // для точек на карте
   slideContent('.map-points__caption', '.map-points__content', '.map-points__chevron');
+  // для комнат
+  slideContent('.room-item__caption', '.room-item__content');
+
 
 
   // слайдер застройщики
@@ -225,6 +230,8 @@ $(document).ready(function () {
   magnificGallery('.etaps', '.etaps__item');
   // для карусели объектов
   magnificGallery('.carousel-full', 'a');
+  // для карточки застройщика
+  magnificGallery('.mkr-cards-gallery', 'a');
 
 
   const tabs = (tabsWrap, tab, tabsContent) => {

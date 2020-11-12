@@ -938,3 +938,10 @@ h3 {
         }
     }
 }
+
+.mkr-item {
+    &__achievements {
+        left: s(12);
+        bottom: s(12);
+    }
+}
