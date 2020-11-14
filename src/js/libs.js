@@ -1,6 +1,8 @@
 //= ../../node_modules/jquery/dist/jquery.js
 //= ../../jquery-ui-custom/jquery-ui.js
 
+//= ../../bower_components/sumoselect/jquery.sumoselect.min.js
+
 //= ../../node_modules/jquery.maskedinput/src/jquery.maskedinput.js
 
 //= ../../node_modules/magnific-popup/dist/jquery.magnific-popup.js

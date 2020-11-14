@@ -7,23 +7,21 @@
     <div class="container px-4">
         <form class="flex flex-wrap items-end -mx-2">
             <div class="form-group w-full sm:w-1/2 xl:w-1/5 px-2">
-                <label for="cottage-type" class="text-sm text-light">
+                <div class="flex w-full text-light text-sm leading-7">
                     Тип
-                </label>
-                <div class="form-control w-full mt-1">
-                    <select name="type" class="w-full bg-inputs text-sm text-dark rounded placeholder-light px-4 h-12" id="cottage-type">
-                        <option value="Любой">Любой</option>
-                        <option value="Эконом">Эконом</option>
-                        <option value="Комфорт">Комфорт</option>
-                        <option value="Элитный">Элитный</option>
+                </div>
+                <div class="form-control gray-select w-full">
+                    <select multiple="multiple" data-placeholder="Тип" name="building-class" class="customMultiple" tabindex="-1">
+                        <option value="Коттедж">Коттедж</option>
+                        <option value="Таунхаус">Таунхаус</option>
                     </select>
                 </div>
             </div>
             <div class="form-group w-full sm:w-1/2 xl:w-1/5 px-2 mt-3 xl:mt-0">
-                <label for="build-price" class="text-sm text-light">
+                <div class="flex w-full text-light text-sm leading-7">
                     Цена
-                </label>
-                <div class="form-control w-full mt-1">
+                </div>
+                <div class="form-control w-full">
                     <span class="form-control__unit block text-dark absolute">
                         ₽
                     </span>
@@ -34,7 +32,7 @@
                 <div class="flex w-full text-light text-sm leading-7">
                     Площадь
                 </div>
-                <div class="flex mt-1">
+                <div class="flex">
                     <div class="form-control w-1/2">
                         <span class="form-control__unit block text-dark absolute">
                             м²
@@ -50,35 +48,50 @@
                 </div>
             </div>
             <div class="form-group w-full sm:w-1/2 xl:w-1/5 px-2 mt-3 xl:mt-0">
-                <label for="area" class="text-sm text-light">
+                <div class="flex w-full text-light text-sm leading-7">
                     Земельный участок
-                </label>
-                <div class="form-control w-full mt-1">
+                </div>
+                <div class="form-control w-full">
                     <span class="form-control__unit block text-dark absolute">
                         м²
                     </span>
                     <input type="text" class="w-full bg-inputs text-sm text-dark placeholder-light rounded pl-4 pr-8 h-12" id="area" placeholder="до 10 000 0000">
                 </div>
             </div>
-            <div class="form-group w-full sm:w-1/2 xl:w-1/5 px-2 mt-3 sm:mt-0">
-                <label for="build-town" class="text-sm text-light">
+            <div class="form-group w-full sm:w-1/2 xl:w-1/5 px-2 mt-3 xl:mt-0">
+                <div class="flex w-full text-light text-sm leading-7">
                     Район
-                </label>
-                <div class="form-control w-full mt-1">
-                    <select name="type" class="w-full bg-inputs text-sm text-dark rounded placeholder-light px-4 h-12" id="build-town">
-                        <option value="Любой">Любой</option>
+                </div>
+                <div class="form-control gray-select w-full">
+                    <select multiple="multiple" data-placeholder="Выберите район" name="town" class="customSearchMultiple" tabindex="-1">
                         <option value="Центральный">Центральный</option>
-                        <option value="Юбилейный">Юбилейный</option>
                         <option value="Школьный">Школьный</option>
+                        <option value="Юбилейный">Юбилейный</option>
+                        <option value="Славянский">Славянский</option>
+                        <option value="Фестивальный">Фестивальный</option>
+                        <option value="Пашковский">Пашковский</option>
+                        <option value="Гидростроителей">Гидростроителей</option>
+                        <option value="Юбилейный">Юбилейный</option>
+                        <option value="Дубинка">Дубинка</option>
+                        <option value="Лента">Лента</option>
                     </select>
                 </div>
             </div>
             <div class="form-group w-full sm:w-1/2 xl:w-3/12 px-2 mt-3">
-                <label for="building-name" class="text-sm text-light xl:hidden">
-                    Название коттеджа или застройщика
-                </label>
-                <div class="form-control w-full mt-1 xl:mt-0">
-                    <input type="text" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="building-name" placeholder="Название коттеджа или застройщика">
+                <div class="form-control gray-select w-full">
+                    <select multiple="multiple" data-placeholder="Название ЖК или застройщика" name="building-name" class="customSearchMultiple" tabindex="-1">
+                        <optgroup label="Застройщики">
+                            <option value="СтройИнвестКубань">СтройИнвестКубань</option>
+                            <option value="ССК">ССК</option>
+                            <option value="Девелопмент-Юг">Девелопмент-Юг</option>
+                            <option value="Неометрия">Неометрия</option>
+                        </optgroup>
+                        <optgroup label="ЖК">
+                            <option value="Южане">Южане</option>
+                            <option value="Панорама">Панорама</option>
+                            <option value="Версаль">Версаль</option>
+                        </optgroup>
+                    </select>
                 </div>
             </div>
             <div class="form-group self-center flex w-full md:w-9/12 lg:w-7/12 xl:w-6/12 px-2 mt-4 sm:mt-3">

@@ -1,9 +1,13 @@
+@import "../../bower_components/sumoselect/sumoselect";
+
 @import '../../node_modules/magnific-popup/dist/magnific-popup';
 @import '../../bower_components/arcticModal/arcticmodal/jquery.arcticmodal';
 
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
 @import "jquery-ui-custom/jquery-ui";
+
+
 
 $black: #000000;
 $white: #FFFFFF;
@@ -244,4 +248,61 @@ $root-font-size: 16;
 
 .ui-tooltip {
   box-shadow: 1px 2px 4px rgba(0,0,0,.16)!important;
+}
+
+.gray-select {
+  .CaptionCont {
+    background-color: $inputs;
+    border: none;
+    border-radius: .25rem;
+    padding-left: 1rem;
+  }
+}
+
+.SumoSelect {
+  height: s(48);
+  width: 100%;
+
+  .CaptionCont {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    span.placeholder {
+      font-style: normal;
+      color: $light;
+    }
+  }
+
+  .search-txt {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    padding-left: 1rem!important;
+  }
+
+  &.open>.optWrapper {
+    top: s(48);
+  }
+
+  .select-all {
+    border-bottom: 1px solid #f5f5f5;
+    padding: 6px 6px 6px 35px;
+    height: auto;
+  }
+
+}
+
+.SumoSelect>.optWrapper.multiple>.options li.opt.selected span i {
+  background-color: $primary;
+}
+
+.SumoSelect>.CaptionCont>label>i {
+  background-image: url(../img/elements/select-chevron.svg);
+  width: s(9);
+  height: s(6);
+}
+
+.SumoSelect.open>.CaptionCont, .SumoSelect:focus>.CaptionCont, .SumoSelect:hover>.CaptionCont {
+  box-shadow: none;
 }

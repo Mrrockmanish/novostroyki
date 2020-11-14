@@ -264,6 +264,41 @@ $(document).ready(function () {
   });
 
 
+  //кастомные селекты
+
+  const customSelectMultiple = (el) => {
+    $(el).each(function (el) {
+      $(this).SumoSelect({
+        placeholder: $(this).data('placeholder'),
+        captionFormat: '{0} выбрано',
+        captionFormatAllSelected: '{0} выбрано',
+        selectAll: true,
+        locale :  ['OK', 'Отмена', 'Выбрать все'],
+      });
+    })
+  };
+
+  customSelectMultiple('.customMultiple');
+
+  const customSearchMultiple = (el) => {
+    $(el).each(function (el) {
+      $(this).SumoSelect({
+        placeholder: $(this).data('placeholder'),
+        captionFormat: '{0} выбрано',
+        captionFormatAllSelected: '{0} выбрано',
+        search: true,
+        selectAll: true,
+        searchText : 'Введите название...',
+        locale :  ['OK', 'Отмена', 'Выбрать все'],
+      });
+    })
+  };
+
+  customSearchMultiple('.customSearchMultiple');
+
+
+
+
 
 
 

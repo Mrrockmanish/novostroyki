@@ -1,84 +1,54 @@
 <form class="w-full">
     <div class="form-group mt-5">
-        <label for="type" class="text-sm text-light">
-            Тип жилья
-        </label>
-        <div class="form-control w-full mt-1">
-            <select name="type" class="w-full bg-inputs text-sm text-dark rounded placeholder-light px-4 h-12" id="type">
-                <option value="Новостройки">Новостройки</option>
-                <option value="Новостройки">Коттеджи</option>
-                <option value="Новостройки">Объекты</option>
+        <div class="text-light text-sm leading-7">
+            Название ЖК или застройщика
+        </div>
+        <div class="form-control gray-select w-full">
+            <select multiple="multiple" data-placeholder="Название ЖК или застройщика" name="building-name" class="customSearchMultiple" tabindex="-1">
+                <optgroup label="Застройщики">
+                    <option value="СтройИнвестКубань">СтройИнвестКубань</option>
+                    <option value="ССК">ССК</option>
+                    <option value="Девелопмент-Юг">Девелопмент-Юг</option>
+                    <option value="Неометрия">Неометрия</option>
+                </optgroup>
+                <optgroup label="ЖК">
+                    <option value="Южане">Южане</option>
+                    <option value="Панорама">Панорама</option>
+                    <option value="Версаль">Версаль</option>
+                </optgroup>
             </select>
         </div>
     </div>
-    <div class="form-group flex flex-wrap w-full flex-col mt-5">
-        <div class="flex w-full text-light text-sm leading-7">
-            Тип жилья
+    <div class="form-group mt-5">
+        <div class="text-light text-sm leading-7">
+            Тип недвижимости
         </div>
-        <div class="flex">
-            <label class="room-size flex-grow">
-                <input type="checkbox" name="type-all" class="room-size__checkbox hidden" value="Все">
-                <span class="room-size__custom flex items-center justify-center bg-inputs text-xs xs:text-sm text-dark rounded-l h-12 flex-shrink-0">
-                    Все
-                </span>
-            </label>
-            <label class="room-size flex flex-grow">
-                <input type="checkbox" name="type-second" class="room-size__checkbox hidden" value="Вторича">
-                <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark border-border border-l h-12">
-                    Вторичка
-                </span>
-            </label>
-            <label class="room-size flex flex-grow">
-                <input type="checkbox" name="type-new" class="room-size__checkbox hidden" value="Новостройка">
-                <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark h-12 border-border border-l">
-                    Новостройка
-                </span>
-            </label>
-            <label class="room-size flex flex-grow">
-                <input type="checkbox" name="type-cottage" class="room-size__checkbox hidden" value="Коттедж">
-                <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-xs xs:text-sm text-dark border-border border-l rounded-r h-12">
-                    Коттедж
-                </span>
-            </label>
-        </div>
-    </div>
-    <div class="form-group flex flex-wrap w-full flex-col mt-5">
-        <div class="flex w-full text-light text-sm leading-7">
-            Комнаты
-        </div>
-        <div class="flex">
-            <label class="room-size">
-                <input type="checkbox" name="room-studio" class="room-size__checkbox hidden" value="Все">
-                <span class="room-size__custom flex items-center justify-center bg-inputs text-sm text-dark rounded-l h-12 px-4 flex-shrink-0">
-                                    Студия
-                                </span>
-            </label>
-            <label class="room-size flex">
-                <input type="checkbox" name="room-1" class="room-size__checkbox hidden" value="Вторича">
-                <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-sm text-dark border-border border-l px-4 h-12">
-                                    1
-                                </span>
-            </label>
-            <label class="room-size flex">
-                <input type="checkbox" name="room-2" class="room-size__checkbox hidden" value="Новостройка">
-                <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-sm text-dark h-12 border-border border-l px-4">
-                                    2
-                                </span>
-            </label>
-            <label class="room-size flex">
-                <input type="checkbox" name="room-3" class="room-size__checkbox hidden" value="Коттедж">
-                <span class="room-size__custom flex flex-grow items-center justify-center bg-inputs text-sm text-dark border-border border-l px-4 rounded-r h-12">
-                                    3+
-                                </span>
-            </label>
+        <div class="form-control gray-select w-full">
+            <select multiple="multiple" data-placeholder="Тип недвижимости" name="building-class" class="customMultiple" tabindex="-1">
+                <option value="Новостройка">Квартира</option>
+                <option value="Котедж">Котедж</option>
+                <option value="Земельный участок">Земельный участок</option>
+                <option value="Коммерческая">Коммерческая</option>
+            </select>
         </div>
     </div>
     <div class="form-group mt-5">
-        <label for="email" class="text-sm text-light">
+        <div class="text-light text-sm leading-7">
+            Интересуемые события
+        </div>
+        <div class="form-control gray-select w-full">
+            <select multiple="multiple" data-placeholder="Интересуемые события" name="news-type" class="customMultiple" tabindex="-1">
+                <option value="Новости">Новости</option>
+                <option value="Акции застройщиков">Акции застройщиков</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group mt-5">
+        <div class="text-light text-sm leading-7">
             Электронная почта
-        </label>
-        <div class="form-control w-full mt-1">
-            <input type="text" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" id="email" placeholder="sample@gmail.com">
+        </div>
+        <div class="form-control w-full">
+            <input type="text" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" placeholder="sample@gmail.com">
         </div>
     </div>
     <div class="form-group text-sm leading-none mt-5">
