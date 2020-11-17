@@ -297,6 +297,149 @@ $(document).ready(function () {
   customSearchMultiple('.customSearchMultiple');
 
 
+  //перетаскивание мышью в шахматке
+
+  const cardsSlider = document.getElementById("cardsSlider");
+
+  let isGrabbed = false;
+  let initialPos;
+  let scrollLeft;
+
+  const initializeDrag = (e) => {
+    cardsSlider.classList.add('active')
+    isGrabbed = true;
+    initialPos = e.pageX - cardsSlider.offsetLeft;
+    scrollLeft = cardsSlider.scrollLeft;
+  }
+
+  const handleDragging = (e) => {
+    if (!isGrabbed) return;
+    e.preventDefault();
+    const xPos = e.pageX - cardsSlider.offsetLeft
+    const walk = (xPos - initialPos) * 2;
+    cardsSlider.scrollLeft = scrollLeft - walk;
+  }
+
+  const deInitializeDrag = () => {
+    isGrabbed = false;
+    cardsSlider.classList.remove('active');
+  }
+
+  if (cardsSlider) {
+    cardsSlider.addEventListener('mousedown', initializeDrag);
+    cardsSlider.addEventListener('mousemove', handleDragging);
+    cardsSlider.addEventListener('mouseleave', deInitializeDrag);
+    cardsSlider.addEventListener('mouseup', deInitializeDrag);
+  }
+
+
+  // медиа запрос
+  const mql = window.matchMedia('all and (min-width: 1024px');
+
+
+  // разделение экрана на странице с картой
+  const splitScreen = () => {
+    let c_width = $('.map-view-container').width();
+
+    const leftPan = $(".pan1");
+    const rightPan = $(".pan2");
+    const r = $("#resize");
+
+    let leftPan_width = leftPan.width()/c_width * 10;
+    let unlock = false;
+
+    $(document).mousemove(function(e) {
+      const minWidth = 34;
+      const maxWidth =  66;
+
+      let change = Math.floor(e.clientX/c_width * 100);
+
+      if(unlock) {
+        if(change > minWidth && change < maxWidth) {
+          // $("#debug").text(change);
+          leftPan.css("width", change + "%");
+          rightPan.css("width", 100 - change + "%");
+        }
+      }
+    });
+
+    r.mousedown(function(e) {
+      leftPan_width = leftPan.width()/c_width * 100;
+      unlock = true;
+      r.css("background-color", "rgba(0, 0, 0, 0.2)");
+    });
+
+    $(document).mousedown(function(e) {
+      if(unlock) {
+        e.preventDefault();
+        $('.right-no-click').removeClass('hidden');
+      }
+    });
+
+    $(document).mouseup(function(e) {
+      unlock = false;
+      // $("#debug").text("");
+      r.css("background-color", "rgba(0, 0, 0, 0.1)");
+      $('.right-no-click').addClass('hidden');
+    });
+
+    $(window).resize(function (){
+      c_width = $('.map-view-container').width();
+      leftPan.css("width", '50%');
+      rightPan.css("width", '50%');
+    });
+
+  };
+
+  if (mql.matches) {
+    splitScreen();
+  }
+
+
+
+  //прилипающий блок останавливающийся перед футером
+  const stickyOrderInfo = () => {
+    $(window).scroll(function() {
+      const stickyBlock = $('.pan2');
+
+      const distanceUnderTop = $('.map-view-container').offset().top;
+      const scrollPosition = $(window).scrollTop();
+      const endPosition = $('.stop-map').offset().top;
+      const mapHeight = $('.map-block').height();
+
+      if (scrollPosition >= distanceUnderTop && scrollPosition < endPosition - mapHeight) {
+        $('.pan2').css({
+          'position': 'fixed',
+          'top': 0,
+          'right': 0
+        });
+      }
+
+      else if (scrollPosition >= endPosition - mapHeight) {
+        $('.pan2').css({
+          'position': 'relative',
+          'top': endPosition - mapHeight - distanceUnderTop + 'px'
+        })
+          .removeClass('map-block_fixed');
+      }
+
+      else {
+        $('.pan2').css({
+          'position': 'relative'
+        });
+      }
+
+      // if ($(window).scrollTop() >= distance) {
+      //   stickyBlock.removeClass('map-block_fixed');
+      // } else {
+      //   stickyBlock.addClass('map-block_fixed');
+      // }
+    });
+  };
+
+  if (mql.matches) {
+    stickyOrderInfo();
+  }
 
 
 

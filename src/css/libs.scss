@@ -259,6 +259,15 @@ $root-font-size: 16;
   }
 }
 
+.white-select {
+  .CaptionCont {
+    background-color: white;
+    border: none;
+    border-radius: .25rem;
+    padding-left: 1rem;
+  }
+}
+
 .SumoSelect {
   height: s(48);
   width: 100%;

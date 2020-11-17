@@ -40,14 +40,13 @@
                     </div>
                 </div>
                 <div class="form-group mt-5">
-                    <label for="write-theme" class="text-sm text-light">
+                    <div class="flex w-full text-light text-sm leading-7">
                         Тема
-                    </label>
-                    <div class="form-control w-full mt-1">
-                        <select name="type" class="w-full bg-inputs text-sm text-dark rounded placeholder-light px-4 h-12" id="write-theme">
-                            <option value="Новостройки">Размещение информации на сайте</option>
-                            <option value="Новостройки">Реклама на сайте</option>
-                            <option value="Новостройки">Другое</option>
+                    </div>
+                    <div class="form-control gray-select w-full">
+                        <select multiple="multiple" data-placeholder="Тема" name="building-class" class="customMultiple" tabindex="-1">
+                            <option value="Размещение ракламы на сайте">Размещение ракламы на сайте</option>
+                            <option value="Вакансии">Вакансии</option>
                         </select>
                     </div>
                 </div>

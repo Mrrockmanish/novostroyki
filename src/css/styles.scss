@@ -23,6 +23,8 @@ $D6DCE0: #D6DCE0;
 $F2F4F7: #F2F4F7;
 $icon: #D0D6DA;
 
+$light-bg: #F8F9FB;
+
 @function s($size) {
     @return $size / $root-font-size * 1rem;
 }
@@ -329,6 +331,12 @@ h3 {
         @media (min-width: 1024px) {
             width: 33.33333%;
         }
+    }
+
+    &_fix-width {
+        flex-grow: 1;
+        min-width: s(288);
+        max-width: s(288);
     }
 
     &__developer-name {
@@ -868,7 +876,7 @@ h3 {
 .map-points {
     width: s(200);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    right: s(24);
+    right: s(16);
     top: s(48);
 
     &__chevron {
@@ -986,4 +994,145 @@ h3 {
         top: 1rem;
         right: 0
     }
+}
+
+.chess {
+    &__area {
+        cursor: grab;
+        &:active {
+            cursor: grabbing;
+        }
+    }
+
+    &__room {
+        color: white;
+
+        &_green {
+            .chess__room-entry {
+                background-color: $green;
+            }
+            .chess__room-number {
+                color: $green;
+            }
+        }
+        &_orange {
+            .chess__room-entry {
+                background-color: $orange;
+            }
+            .chess__room-number {
+                color: $orange;
+            }
+        }
+    }
+
+    &__props {
+        width: s(75);
+    }
+
+    &__room-price {
+        font-weight: bold;
+        line-height: 1;
+        font-size: s(11);
+    }
+
+    &__room-area {
+        line-height: 1;
+        font-size: s(11);
+        margin-top: s(4);
+    }
+
+    &__room-number {
+        display: flex;
+        flex-shrink: 0;
+        background: white;
+        align-items: center;
+        justify-content: center;
+        width: s(16);
+        height: s(16);
+        border-radius: 50%;
+        font-size: s(11);
+        font-weight: 600;
+    }
+
+    &__room-entry {
+        min-width: s(110);
+        height: s(40);
+        border: s(1) solid $border;
+        border-radius: s(4);
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: $light-bg;
+        padding: s(6) s(8);
+    }
+}
+
+.map-view-container {
+    @media (min-width: 1024px) {
+        max-width: 100%;
+    }
+}
+
+.pan1 {
+    width: 100%;
+    //min-width: 200px;
+
+    @media (min-width: 1024px) {
+        width: 50%;
+    }
+}
+
+.pan2 {
+    width: 100%;
+    background-color: transparent;
+    flex-grow: 1;
+
+    @media (min-width: 1024px) {
+        width: 50%;
+    }
+}
+
+#resize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-right: 0;
+    width: s(5);
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: e-resize;
+}
+
+.map-block {
+
+    &_fixed {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    &__iframe-wrap {
+        width: 100%;
+        height: s(400);
+
+        @media (min-width: 1024px) {
+            height: 100%;
+        }
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (min-width: 1024px) {
+        height: 100vh;
+    }
+
+}
+
+.resize-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
 }
