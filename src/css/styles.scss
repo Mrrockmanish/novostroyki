@@ -392,6 +392,12 @@ h3 {
     }
 }
 
+.developer {
+    &__properties {
+        margin-top: - s(4);
+    }
+}
+
 .developer-item {
     max-width: s(293);
 
@@ -462,6 +468,10 @@ h3 {
             width: 100%;
             height: s(220);
         }
+    }
+
+    &__name {
+        margin-top: - s(3);
     }
 
     &__left-img {
@@ -631,6 +641,8 @@ h3 {
 }
 
 .company-menu {
+    margin-top: s(14);
+
     li {
         &.active {
             pointer-events: none;
@@ -709,6 +721,14 @@ h3 {
     &__desc {
         max-width: s(405);
     }
+
+    &_fordevelopers {
+
+        @media (min-width: 768px) {
+            height: auto;
+        }
+    }
+
 }
 
 .consult-block {
@@ -1135,4 +1155,27 @@ h3 {
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
+}
+
+.box-modal {
+    border-radius: s(8);
+
+    &_close {
+        right: s(16);
+        top: s(16);
+    }
+
+    max-width: s(290);
+
+    @media (min-width: 375px) {
+        max-width: s(345);
+    }
+
+    @media (min-width: 576px) {
+        max-width: s(546);
+    }
+
+    @media (min-width: 768px) {
+        max-width: s(617);
+    }
 }

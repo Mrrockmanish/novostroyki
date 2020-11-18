@@ -399,51 +399,55 @@ $(document).ready(function () {
 
   //прилипающий блок останавливающийся перед футером
   const stickyOrderInfo = () => {
-    $(window).scroll(function() {
-      const stickyBlock = $('.pan2');
 
-      const distanceUnderTop = $('.map-view-container').offset().top;
-      const scrollPosition = $(window).scrollTop();
-      const endPosition = $('.stop-map').offset().top;
-      const mapHeight = $('.map-block').height();
+    const mapViewContainer = $('.map-view-container')[0];
 
-      if (scrollPosition >= distanceUnderTop && scrollPosition < endPosition - mapHeight) {
-        $('.pan2').css({
-          'position': 'fixed',
-          'top': 0,
-          'right': 0
-        });
-      }
+    if (mapViewContainer !== undefined) {
+      $(window).scroll(function() {
+        const stickyBlock = $('.pan2');
 
-      else if (scrollPosition >= endPosition - mapHeight) {
-        $('.pan2').css({
-          'position': 'relative',
-          'top': endPosition - mapHeight - distanceUnderTop + 'px'
-        })
-          .removeClass('map-block_fixed');
-      }
+        const distanceUnderTop = $('.map-view-container').offset().top;
+        const scrollPosition = $(window).scrollTop();
+        const endPosition = $('.stop-map').offset().top;
+        const mapHeight = $('.map-block').height();
 
-      else {
-        $('.pan2').css({
-          'position': 'relative'
-        });
-      }
+        if (scrollPosition >= distanceUnderTop && scrollPosition < endPosition - mapHeight) {
+          $('.pan2').css({
+            'position': 'fixed',
+            'top': 0,
+            'right': 0
+          });
+        }
 
-      // if ($(window).scrollTop() >= distance) {
-      //   stickyBlock.removeClass('map-block_fixed');
-      // } else {
-      //   stickyBlock.addClass('map-block_fixed');
-      // }
-    });
+        else if (scrollPosition >= endPosition - mapHeight) {
+          $('.pan2').css({
+            'position': 'relative',
+            'top': endPosition - mapHeight - distanceUnderTop + 'px'
+          })
+            .removeClass('map-block_fixed');
+        }
+
+        else {
+          $('.pan2').css({
+            'position': 'relative'
+          });
+        }
+
+      });
+    }
   };
 
   if (mql.matches) {
     stickyOrderInfo();
   }
 
+  $('.call').on('click', function (){
+    $('.call-modal').arcticmodal();
+  });
 
-
-
+  $('.call-write').on('click', function (){
+    $('.write-modal').arcticmodal();
+  });
 
 
 
