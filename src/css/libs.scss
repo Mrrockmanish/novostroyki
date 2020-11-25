@@ -7,6 +7,8 @@
 @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
 @import "jquery-ui-custom/jquery-ui";
 
+@import "node_modules/animate.css/source/attention_seekers/heartBeat";
+
 
 
 $black: #000000;
@@ -188,6 +190,7 @@ $root-font-size: 16;
 
 .building-carousel {
   cursor: grab;
+  margin-bottom: 0 !important;
   
   &:active {
     cursor: grabbing;
@@ -212,6 +215,24 @@ $root-font-size: 16;
       width: s(20);
       height: s(20);
     }
+  }
+  .slick-dots {
+    bottom: s(5) !important;
+  }
+
+  li  {
+    width: s(10);
+  }
+
+  li button:before {
+    width: s(10);
+    color: white;
+    opacity: .75;
+  }
+
+  li.slick-active button:before {
+    color: white;
+    opacity: 1;
   }
 }
 
@@ -319,3 +340,4 @@ $root-font-size: 16;
 .arcticmodal-container_i2 {
   padding: s(16);
 }
+

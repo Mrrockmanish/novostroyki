@@ -131,7 +131,7 @@ $(document).ready(function () {
       fade: true,
       slidesToScroll: 1,
       slidesToShow: 1,
-      dots: false,
+      dots: true,
       arrows: true,
       prevArrow: '<div class="slick-prev slick-arrow">' +
         '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
@@ -440,7 +440,7 @@ $(document).ready(function () {
   if (mql.matches) {
     stickyOrderInfo();
   }
-
+  // модалки
   $('.call').on('click', function (){
     $('.call-modal').arcticmodal();
   });
@@ -449,6 +449,17 @@ $(document).ready(function () {
     $('.write-modal').arcticmodal();
   });
 
+  //добавляем класс active по клику
+
+  const toggleClassActiveByClick = (element) => {
+    element.on('click', function () {
+      $(this).toggleClass('active');
+    })
+  };
+
+  toggleClassActiveByClick($('.building__favorite-icon'));
+  toggleClassActiveByClick($('.review-item__like'));
+  toggleClassActiveByClick($('.review-item__dislike'));
 
 
 });

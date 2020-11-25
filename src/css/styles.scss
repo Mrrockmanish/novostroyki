@@ -366,14 +366,20 @@ h3 {
         right: s(12);
         top: s(12);
         color: $icon;
+        cursor: pointer;
         &.active {
             color: red;
+            svg {
+                animation-name: heartBeat;
+                animation-duration: .5s;
+                animation-fill-mode: both;
+            }
         }
     }
 
     &__achievements {
         left: s(12);
-        bottom: s(12);
+        bottom: 1.5rem;
     }
 }
 
@@ -527,6 +533,13 @@ h3 {
         li {
             padding-top: s(8);
             padding-bottom: s(8);
+        }
+
+        a {
+            transition: .3s;
+            &:hover {
+                opacity: .5;
+            }
         }
     }
 }
@@ -1177,5 +1190,18 @@ h3 {
 
     @media (min-width: 768px) {
         max-width: s(617);
+    }
+}
+
+.review-item {
+    &__like, &__dislike {
+        &.active {
+            color: $primary;
+            svg {
+                animation-name: heartBeat;
+                animation-duration: .5s;
+                animation-fill-mode: both;
+            }
+        }
     }
 }
