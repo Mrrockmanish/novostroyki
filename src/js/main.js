@@ -461,5 +461,28 @@ $(document).ready(function () {
   toggleClassActiveByClick($('.review-item__like'));
   toggleClassActiveByClick($('.review-item__dislike'));
 
+  //грузим изображение из текущего слайда блока консультантов в иконку вызова этого блока на мобильных аппаратах
+  const loadCurrentManagerInMobileCall = () => {
+    const currentSlideImg = $('.consult-block__slider').find('.slick-current .consult-block__avatar').attr('style');
+    $('.consult-call').find('.consult-call__manager-inner').attr('style', currentSlideImg);
+  };
+  loadCurrentManagerInMobileCall();
+
+  //после пролистывания менеджера меняем изображение в иконке вызова блока консультации на текущего менеджера
+  $('.consult-block__slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    loadCurrentManagerInMobileCall();
+  });
+
+
+  $('.consult-call').on('click', function () {
+    $(this).addClass('active');
+    $(this).prev('.consult-block').removeClass('visual-hide-md').addClass('fadeIn');
+  });
+
+  $('.consult-block__close').on('click', function () {
+    console.log('ddd');
+    $(this).closest('.consult-block').next('.consult-call').removeClass('active');
+    $(this).closest('.consult-block').addClass('visual-hide-md').removeClass('fadeIn');
+  });
 
 });

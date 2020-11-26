@@ -1,44 +1,74 @@
-<div class="consult-block border border-border text-center bg-white rounded shadow-md lg:shadow-none lg:ml-auto px-5 py-4 mt-6 lg:mt-0">
-    <div>
-        Вас проконсультирует
-    </div>
-    <div class="consult-block__slider">
-        <div class="consult-block__slide">
-            <div class="consult-block__avatar rounded-full bg-no-repeat bg-center bg-cover bg-inputs mx-auto mt-3" style="background-image:url(img/backgrounds/consult-avatar.jpg);">
+<div class="consult-block xl:border border-border fixed xl:static visual-hide-md text-center bg-white rounded lg:ml-auto px-5 py-4 mt-6 lg:mt-0">
+    <div class="relative">
+        <div class="consult-block__close xl:hidden absolute">
+            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.63672" y="1" width="20" height="2" transform="rotate(45 1.63672 1)" fill="#1E1F21"/>
+                <rect x="0.222656" y="15.002" width="20" height="2" transform="rotate(-45 0.222656 15.002)" fill="#1E1F21"/>
+            </svg>
+        </div>
+        <div>
+            Вас проконсультирует
+        </div>
+        <div class="consult-block__slider">
+            <div class="consult-block__slide">
+                <div class="consult-block__avatar rounded-full bg-no-repeat bg-center bg-cover bg-inputs mx-auto mt-3" style="background-image:url(img/backgrounds/consult-avatar.jpg);">
 
+                </div>
+                <div class="font-semibold text-lg mt-3">
+                    Наталья
+                </div>
+                <div>
+                    <a href="tel:+78612034542" class="text-primary hover:opacity-50">8 861 203-45-42</a>
+                </div>
             </div>
-            <div class="font-semibold text-lg mt-3">
-                Наталья
-            </div>
-            <div>
-                <a href="tel:+78612034542" class="text-primary hover:opacity-50">8 861 203-45-42</a>
-            </div>
-        </div>
-        <div class="consult-block__slide">
-            <div class="consult-block__avatar rounded-full bg-no-repeat bg-center bg-cover bg-inputs mx-auto mt-3" style="background-image:url(img/backgrounds/consult-avatar.jpg);">
+            <div class="consult-block__slide">
+                <div class="consult-block__avatar rounded-full bg-no-repeat bg-center bg-cover bg-inputs mx-auto mt-3" style="background-image:url(img/backgrounds/nataly.jpg);">
 
-            </div>
-            <div class="font-semibold text-lg mt-3">
-                Наталья
-            </div>
-            <div>
-                <a href="tel:+78612034542" class="text-primary hover:opacity-50">8 861 203-45-42</a>
-            </div>
-        </div>
-    </div>
-    <div class="mt-3">
-        Звоните по телефону или оставьте свой номер и я вам перезвоню
-    </div>
-    <form action="">
-        <div class="form-group mt-4">
-            <div class="form-control w-full mt-1">
-                <input type="tel" name="tel" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" placeholder="+7 (___) ___ - __ - __">
+                </div>
+                <div class="font-semibold text-lg mt-3">
+                    Наталья
+                </div>
+                <div>
+                    <a href="tel:+78612034542" class="text-primary hover:opacity-50">8 861 203-45-42</a>
+                </div>
             </div>
         </div>
-        <button type="submit" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark w-full select-none h-12 px-6 mt-3">
+        <div class="mt-3">
+            Звоните по телефону или оставьте свой номер и я вам перезвоню
+        </div>
+        <form action="">
+            <div class="form-group mt-4">
+                <div class="form-control w-full mt-1">
+                    <input type="tel" name="tel" class="w-full bg-inputs text-sm text-dark placeholder-light rounded px-4 h-12" placeholder="+7 (___) ___ - __ - __">
+                </div>
+            </div>
+            <button type="submit" class="bg-primary rounded hover:bg-border transition duration-300 text-white hover:text-dark w-full select-none h-12 px-6 mt-3">
             <span class="flex justify-center items-center w-full h-full font-bold text-sm">
                 Перезвоните мне
             </span>
-        </button>
-    </form>
+            </button>
+        </form>
+    </div>
+</div>
+<div class="consult-call xl:hidden fixed">
+    <div class="consult-call__inner relative w-full h-full">
+        <div class="consult-call__manager absolute rounded-full overflow-hidden">
+            <div class="consult-call__manager-inner bg-white relative w-full h-full bg-no-repeat bg-center bg-cover "></div>
+        </div>
+        <div class="consult-call__phone-icon-wrap absolute w-full h-full left-0 top-0">
+            <div class="relative w-full h-full">
+                <div class="consult-call__phone-icon flex items-center justify-center bg-white rounded-full w-6 h-6 absolute right-0 bottom-0">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.5 7.21V8.978C9.50006 9.10459 9.4521 9.22649 9.3658 9.3191C9.2795 9.41171 9.16128 9.46814 9.035 9.477C8.8165 9.492 8.638 9.5 8.5 9.5C4.0815 9.5 0.5 5.9185 0.5 1.5C0.5 1.362 0.5075 1.1835 0.523 0.965C0.531861 0.838722 0.588291 0.720505 0.680902 0.634204C0.773513 0.547903 0.895411 0.499943 1.022 0.5H2.79C2.85202 0.499937 2.91185 0.52293 2.95786 0.56451C3.00388 0.606091 3.0328 0.663291 3.039 0.725C3.0505 0.84 3.061 0.9315 3.071 1.001C3.17037 1.69446 3.374 2.36892 3.675 3.0015C3.7225 3.1015 3.6915 3.221 3.6015 3.285L2.5225 4.056C3.18223 5.59323 4.40727 6.81827 5.9445 7.478L6.7145 6.401C6.74597 6.357 6.79189 6.32544 6.84425 6.31183C6.8966 6.29821 6.95208 6.3034 7.001 6.3265C7.63351 6.62693 8.30779 6.83006 9.001 6.929C9.0705 6.939 9.162 6.95 9.276 6.961C9.33762 6.96732 9.3947 6.99629 9.43618 7.04229C9.47765 7.08829 9.50058 7.14806 9.5005 7.21H9.5Z" fill="#18BE6E"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="consult-call__green-round w-full h-full rounded-full bg-green">
+
+        </div>
+        <div class="consult-call__white-round bg-white rounded-full absolute">
+
+        </div>
+    </div>
 </div>

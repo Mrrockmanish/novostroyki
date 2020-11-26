@@ -745,7 +745,27 @@ h3 {
 }
 
 .consult-block {
+    z-index: 91;
+    transition: .6s;
     max-width: s(294);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: .3s;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+
+    @media (min-width: 1267.9px) {
+        transform: translate(0, 0);
+        display: block!important;
+        animation: none;
+    }
+
+    &__close {
+        right: 0;
+        top: -2rem;
+    }
 
     &__avatar {
         width: s(98);
@@ -1203,5 +1223,59 @@ h3 {
                 animation-fill-mode: both;
             }
         }
+    }
+}
+
+.consult-call {
+    width: s(128);
+    height: s(128);
+    right: 0;
+    bottom: 0;
+    transform: translate(40%, 40%);
+    z-index: 90;
+
+    &.active {
+        .consult-call__white-round {
+            animation-name: consultEffect;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    &__white-round {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__manager {
+        left: 0;
+        top: 0;
+        width: s(64);
+        height: s(64);
+        border: s(2) solid white;
+    }
+    &__phone-icon-wrap {
+        width: s(64);
+        height: s(64);
+    }
+}
+
+@keyframes consultEffect {
+    from {
+        width: 0;
+        height: 0;
+    }
+    to {
+        width: s(3000);
+        height: s(3000);
+    }
+}
+
+.visual-hide-md {
+    @media (max-width: 1267.9px) {
+        opacity: 0;
+        z-index: -1!important;
     }
 }
