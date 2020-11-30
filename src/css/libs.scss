@@ -4,7 +4,7 @@
 @import '../../bower_components/arcticModal/arcticmodal/jquery.arcticmodal';
 
 @import "../../node_modules/slick-carousel/slick/slick.scss";
-@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "slick-theme";
 @import "jquery-ui-custom/jquery-ui";
 
 @import "node_modules/animate.css/source/attention_seekers/heartBeat";
@@ -188,10 +188,18 @@ $root-font-size: 16;
   }
 }
 
+.building {
+  &:hover {
+    .slick-arrow {
+      opacity: 1;
+    }
+  }
+}
+
 .building-carousel {
   cursor: grab;
   margin-bottom: 0 !important;
-  
+
   &:active {
     cursor: grabbing;
   }
@@ -199,21 +207,36 @@ $root-font-size: 16;
   .slick-arrow {
     border: none;
     background: rgba(0,0,0,.4);
-    width: s(35);
-    height: s(35);
+    width: s(25);
+    height: s(25);
+    transition: .3s;
+    opacity: 1;
+    @media (min-width: 1024px) {
+      width: s(35);
+      height: s(35);
+      opacity: 0;
+    }
   }
   .slick-prev {
     left: s(4);
     svg {
-      width: s(20);
-      height: s(20);
+      width: s(15);
+      height: s(15);
+      @media (min-width: 1024px) {
+        width: s(20);
+        height: s(20);
+      }
     }
   }
   .slick-next {
     right: s(4);
     svg {
-      width: s(20);
-      height: s(20);
+      width: s(15);
+      height: s(15);
+      @media (min-width: 1024px) {
+        width: s(20);
+        height: s(20);
+      }
     }
   }
   .slick-dots {
@@ -339,5 +362,13 @@ $root-font-size: 16;
 
 .arcticmodal-container_i2 {
   padding: s(16);
+}
+
+.arcticmodal-close {
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    opacity: .5;
+  }
 }
 

@@ -79,6 +79,7 @@ $(document).ready(function () {
     slidesToScroll: 6,
     slidesToShow: 6,
     dots: false,
+    infinite: false,
     arrows: true,
     prevArrow: '<div class="slick-prev slick-arrow">' +
       '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
@@ -125,24 +126,52 @@ $(document).ready(function () {
   });
 
   //слайдер фото в карточках
-  $('.building').find('.building-carousel').each(function (){
-    $(this).slick({
-      lazyLoad: 'ondemand',
-      fade: true,
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      dots: true,
-      arrows: true,
-      prevArrow: '<div class="slick-prev slick-arrow">' +
-        '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-        '<path d="M2.82823 5.00002L5.65723 2.17202L4.24323 0.757019L0.000226974 5.00002L4.24323 9.24302L5.65723 7.82802L2.82823 5.00002Z" fill="white"/>\n' +
-        '</svg></div>',
-      nextArrow: '<div class="slick-next slick-arrow">' +
-        '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-        '<path d="M3.17177 5.00002L0.342773 2.17202L1.75677 0.757019L5.99977 5.00002L1.75677 9.24302L0.342773 7.82802L3.17177 5.00002Z" fill="white"/>\n' +
-        '</svg></div>'
+  const buildingCarousel = () => {
+    $('.building').find('.building-carousel').each(function (){
+      $(this).slick({
+        lazyLoad: 'ondemand',
+        infinite: false,
+        fade: true,
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        dots: true,
+        arrows: true,
+        prevArrow: '<div class="slick-prev slick-arrow">' +
+          '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+          '<path d="M2.82823 5.00002L5.65723 2.17202L4.24323 0.757019L0.000226974 5.00002L4.24323 9.24302L5.65723 7.82802L2.82823 5.00002Z" fill="white"/>\n' +
+          '</svg></div>',
+        nextArrow: '<div class="slick-next slick-arrow">' +
+          '<svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+          '<path d="M3.17177 5.00002L0.342773 2.17202L1.75677 0.757019L5.99977 5.00002L1.75677 9.24302L0.342773 7.82802L3.17177 5.00002Z" fill="white"/>\n' +
+          '</svg></div>'
+      });
+
+      $(this).on('afterChange', function (event,slick,currentSlide,nextSlide){
+
+        if (currentSlide === slick.slideCount - 1) {
+          $(this).closest('.building').find('.building__slide-fix').css({
+            'display': 'none'
+          });
+          $(this).closest('.building').find('.building__achievements').css({
+            'display': 'none'
+          });
+        } else {
+          $(this).closest('.building').find('.building__slide-fix').css({
+            'display': 'block'
+          });
+          $(this).closest('.building').find('.building__achievements').css({
+            'display': 'flex'
+          });
+        }
+
+        // console.log();
+
+      });
+
     });
-  });
+  };
+  buildingCarousel();
+
 
   // универсальная функция для одиночных слайдеров
   const singleSlider = (sliderSelector) => {
@@ -457,9 +486,21 @@ $(document).ready(function () {
     })
   };
 
+  const toggleLike = (elementSelector, elementIconSelector) => {
+    $(elementSelector).on('click', `${elementIconSelector}:not(active)`, function () {
+      $(this).closest('.score').find(elementIconSelector + '.active').removeClass('active')
+      $(this).addClass('active');
+    });
+
+    $(elementSelector).on('click', `${elementIconSelector}.active`, function () {
+      $(this).removeClass('active');
+    })
+  }
+
   toggleClassActiveByClick($('.building__favorite-icon'));
-  toggleClassActiveByClick($('.review-item__like'));
-  toggleClassActiveByClick($('.review-item__dislike'));
+  toggleClassActiveByClick($('.add-favorite'));
+  toggleLike('.score','.score__icon');
+
 
   //грузим изображение из текущего слайда блока консультантов в иконку вызова этого блока на мобильных аппаратах
   const loadCurrentManagerInMobileCall = () => {

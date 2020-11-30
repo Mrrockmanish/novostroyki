@@ -5,6 +5,7 @@
 @import 'fonts';
 
 
+
 $root-font-size: 16;
 
 $black: #000000;
@@ -41,7 +42,7 @@ body {
     padding-top: s(42);
     position: relative;
     @media (min-width: 1024px) {
-        padding-top: 0;
+        padding-top: s(53);
     }
 }
 
@@ -333,8 +334,16 @@ h3 {
         }
     }
 
+    &__img-wrap {
+        max-height: s(195);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
     &_fix-width {
-        flex-grow: 1;
         min-width: s(288);
         max-width: s(288);
     }
@@ -765,6 +774,11 @@ h3 {
     &__close {
         right: 0;
         top: -2rem;
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+            opacity: .5;
+        }
     }
 
     &__avatar {
@@ -894,6 +908,11 @@ h3 {
 }
 
 .view-variant {
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        opacity: .5;
+    }
     &.active {
         color: $light;
         pointer-events: none;
@@ -1277,5 +1296,21 @@ h3 {
     @media (max-width: 1267.9px) {
         opacity: 0;
         z-index: -1!important;
+    }
+}
+
+.add-favorite {
+    &__icon-wrap {
+        color: #d0d6da;
+    }
+    &.active {
+        .add-favorite__icon-wrap {
+            color: red;
+            svg {
+                animation-name: heartBeat;
+                animation-duration: .5s;
+                animation-fill-mode: both;
+            }
+        }
     }
 }
