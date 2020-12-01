@@ -61,6 +61,7 @@ body {
 
 input, button, select {
     outline: none!important;
+    cursor: pointer;
 
     &:hover {
         outline: none!important;
@@ -69,6 +70,10 @@ input, button, select {
     &:focus {
         outline: none;
     }
+}
+
+label {
+    cursor: pointer;
 }
 
 p {

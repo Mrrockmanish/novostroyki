@@ -11,7 +11,7 @@
                     <div class="flex w-full items-center flex-wrap">
                         <a href="#" class="tooltip flex items-center mr-4 hover:opacity-50 mt-2" title="Надёжный застройщик">
                             <span class="mr-1">
-                                <img src="img/elements/dev-check.svg">
+                                <img src="img/elements/dev-check.svg" alt="">
                             </span>
                             <span class="text-main text-sm whitespace-no-wrap">
                                 Неометрия
@@ -96,7 +96,7 @@
             //= templates/carousel-full-mkr.html
             <div class="w-full flex mt-6">
                 <div class="md:w-20 md:h-20 hidden md:block rounded overflow-hidden mr-3 md:mr-6">
-                    <img src="img/elements/map-icon.png" class="w-full">
+                    <img src="img/elements/map-icon.png" class="w-full" alt="">
                 </div>
                 <div class="flex-grow w-full mr-3">
                     <div class="text-base">
@@ -143,7 +143,7 @@
         <div class="xl:w-3/12 px-4 mt-0 xl:mt-3">
             //= templates/consult-block-border.html
             <div class="hidden xl:block mt-4">
-                <img src="img/screens/aside-rekl.jpg">
+                <img src="img/screens/aside-rekl.jpg" alt="">
             </div>
         </div>
     </div>
@@ -247,73 +247,55 @@
                     </div>
                 </div>
                 <div class="form-group self-center flex w-full px-2 mt-4 sm:mt-3">
-                    <div class="flex flex-wrap -mx-2">
-                        <label class="form-control px-2 mt-2">
-                            <input type="checkbox" name="mortgage" class="hidden check-inline" checked>
-                            <span class="check-inline__custom flex items-center cursor-pointer">
-                                <span class="check-inline__icon flex-shrink-0 mr-1">
-                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
-                                    </svg>
+                    <div class="flex flex-wrap items-center text-xs -mx-1">
+                        <div class="form-group px-1 mt-2">
+                            <label>
+                                <input name="mortgage" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Ипотека от 3.1%
                                 </span>
-                                <span>Ипотека от 3.1%</span>
-                            </span>
-                        </label>
-                        <label class="form-control px-2 mt-2">
-                            <input type="checkbox" name="mat-capital" class="hidden check-inline">
-                            <span class="check-inline__custom flex items-center cursor-pointer">
-                                <span class="check-inline__icon flex-shrink-0 mr-1">
-                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
-                                    </svg>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-2">
+                            <label>
+                                <input name="mat-capital" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Материнский капитал
                                 </span>
-                                <span>Материнский капитал</span>
-                            </span>
-                        </label>
-                        <label class="form-control px-2 mt-2">
-                            <input type="checkbox" name="military-mortgage" class="hidden check-inline">
-                            <span class="check-inline__custom flex items-center cursor-pointer">
-                                <span class="check-inline__icon flex-shrink-0 mr-1">
-                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
-                                    </svg>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-2">
+                            <label>
+                                <input name="military-mortgage" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Военная ипотека
                                 </span>
-                                <span>Военная ипотека</span>
-                            </span>
-                        </label>
-                        <label class="form-control px-2 mt-2">
-                            <input type="checkbox" name="credit" class="hidden check-inline">
-                            <span class="check-inline__custom flex items-center cursor-pointer">
-                                <span class="check-inline__icon flex-shrink-0 mr-1">
-                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
-                                    </svg>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-2">
+                            <label>
+                                <input name="credit" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    Рассрочка
                                 </span>
-                                <span>Рассрочка</span>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-2">
+                            <label>
+                                <input name="repair" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                С ремонтом
                             </span>
-                        </label>
-                        <label class="form-control px-2 mt-2">
-                            <input type="checkbox" name="credit" class="hidden check-inline">
-                            <span class="check-inline__custom flex items-center cursor-pointer">
-                                <span class="check-inline__icon flex-shrink-0 mr-1">
-                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
-                                    </svg>
+                            </label>
+                        </div>
+                        <div class="form-group px-1 mt-2">
+                            <label>
+                                <input name="action" type="checkbox" class="hidden check-button">
+                                <span class="check-button__custom block bg-white border border-border rounded text-dark p-2">
+                                    По акции
                                 </span>
-                                <span>С ремонтом</span>
-                            </span>
-                        </label>
-                        <label class="form-control px-2 mt-2">
-                            <input type="checkbox" name="credit" class="hidden check-inline">
-                            <span class="check-inline__custom flex items-center cursor-pointer">
-                                <span class="check-inline__icon flex-shrink-0 mr-1">
-                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.12492 6.11796L10.0828 0L11 0.94102L4.12492 8L0 3.76474L0.916505 2.82373L4.12492 6.11796Z" fill="currentColor"/>
-                                    </svg>
-                                </span>
-                                <span>По акции</span>
-                            </span>
-                        </label>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </form>

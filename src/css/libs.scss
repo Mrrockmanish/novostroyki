@@ -315,6 +315,11 @@ $root-font-size: 16;
 .SumoSelect {
   height: s(48);
   width: 100%;
+  cursor: pointer!important;
+  
+  .placeholder {
+    cursor: pointer!important;
+  }
 
   .CaptionCont {
     height: 100%;
