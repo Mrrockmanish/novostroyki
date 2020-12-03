@@ -1,5 +1,6 @@
 //= ../../node_modules/jquery/dist/jquery.js
 //= ../../jquery-ui-custom/jquery-ui.js
+//= ../../node_modules/jquery-ui-touch-punch/jquery.ui.touch-punch.js
 
 //= ../../bower_components/sumoselect/jquery.sumoselect.min.js
 
