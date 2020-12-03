@@ -42,12 +42,7 @@ function css() {
   const plugins = [
     tailwindcss(),
     autoprefixer({ overrideBrowserslist: ['last 4 version'] }),
-    cssnano(),
-    // purgecss({
-    //   content: ['build/*.html'],
-    //   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-    // }),
-
+    cssnano()
   ];
   return gulp.src('src/css/styles.scss')
     .pipe(plumber()) // для отслеживания ошибок
